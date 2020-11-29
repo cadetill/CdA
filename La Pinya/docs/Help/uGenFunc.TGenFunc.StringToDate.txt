@@ -1,0 +1,8 @@
+@abstract(Converts a string to a date.)
+
+The string can contain a date with format yyyy-mm-dd or yyyymmdd.
+If the string can't be convert, returns 01/01/1900
+
+@param(Value string to convert)
+@param(WithSeparator boolean that indicates if the date has separator)
+@return(string converted to date)

@@ -1,0 +1,378 @@
+-- Adminer 3.3.3 MySQL dump
+
+SET NAMES utf8;
+SET foreign_key_checks = 0;
+SET time_zone = 'SYSTEM';
+SET sql_mode = 'NO_AUTO_VALUE_ON_ZERO';
+
+DROP TABLE IF EXISTS `ca_assistencia`;
+CREATE TABLE `ca_assistencia` (
+  `id_soci` int(11) NOT NULL,
+  `id_event` int(11) NOT NULL,
+  `bus` tinyint(4) DEFAULT NULL,
+  `assist` tinyint(4) DEFAULT NULL,
+  PRIMARY KEY (`id_soci`,`id_event`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+
+DROP TABLE IF EXISTS `ca_calendaris`;
+CREATE TABLE `ca_calendaris` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `idcalendar` varchar(150) COLLATE utf8_unicode_ci NOT NULL,
+  `key` varchar(150) COLLATE utf8_unicode_ci NOT NULL,
+  `nom` varchar(150) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
+  `nom_curt` varchar(50) CHARACTER SET utf8 COLLATE utf8_spanish_ci DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+
+DROP TABLE IF EXISTS `ca_colles`;
+CREATE TABLE `ca_colles` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `colla` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+
+DROP TABLE IF EXISTS `ca_disp_socis`;
+CREATE TABLE `ca_disp_socis` (
+  `id_disp` int(11) NOT NULL,
+  `id_soci` int(11) NOT NULL,
+  `actcode` varchar(8) CHARACTER SET utf8 COLLATE utf8_spanish_ci DEFAULT NULL,
+  PRIMARY KEY (`id_disp`,`id_soci`),
+  UNIQUE KEY `ACTCODE` (`actcode`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+
+DROP TABLE IF EXISTS `ca_dispositius`;
+CREATE TABLE `ca_dispositius` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `uuid` varchar(100) CHARACTER SET utf8 COLLATE utf8_spanish_ci DEFAULT NULL,
+  `so` varchar(100) CHARACTER SET utf8 COLLATE utf8_spanish_ci DEFAULT NULL,
+  `alta` date DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+
+DROP TABLE IF EXISTS `ca_events`;
+CREATE TABLE `ca_events` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id_cal` int(11) NOT NULL COMMENT 'id de la taula ca_calendaris',
+  `id_google` varchar(100) COLLATE utf8_unicode_ci NOT NULL COMMENT 'id del JSON de Google Calendars',
+  `any` int(11) NOT NULL COMMENT 'id (any) de la taula ca_temporades',
+  `descrip` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT 'títol de l''esdeveniment. Prové de Google Calendar',
+  `datai` date DEFAULT NULL COMMENT 'data d''inici de l''esdeveniment',
+  `dataf` date DEFAULT NULL COMMENT 'data de fi de l''esdeveniment',
+  `horai` time DEFAULT NULL COMMENT 'hora d''inici de l''esdeveniment',
+  `horaf` time DEFAULT NULL COMMENT 'hora de fi de l''esdeveniment',
+  `lloc` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT 'lloc de l''esdeveniment',
+  `bus` tinyint(4) DEFAULT NULL COMMENT 'indica si l''event té bus',
+  `busd` date DEFAULT NULL COMMENT 'data de la sortida del bus',
+  `bush` time DEFAULT NULL COMMENT 'hora de sortida del bus',
+  `buslloc` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT 'lloc de sortida del bus',
+  `quedar` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT 'lloc de quedar abans de l''esdeveniment',
+  `quedard` date NOT NULL COMMENT 'lloc de quedar',
+  `quedarh` time DEFAULT NULL COMMENT 'hora de quedar',
+  PRIMARY KEY (`id`),
+  KEY `i_any` (`any`),
+  KEY `i_id_google` (`id_cal`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+
+DROP TABLE IF EXISTS `ca_events_colles`;
+CREATE TABLE `ca_events_colles` (
+  `id_event` int(11) NOT NULL,
+  `id_colla` int(11) NOT NULL,
+  PRIMARY KEY (`id_event`,`id_colla`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+
+DROP TABLE IF EXISTS `ca_noticies`;
+CREATE TABLE `ca_noticies` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `titol` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `contingut` longtext COLLATE utf8_unicode_ci,
+  `publicar` date DEFAULT NULL,
+  `hora` time DEFAULT NULL,
+  `usera` int(11) DEFAULT NULL,
+  `datea` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+
+DROP TABLE IF EXISTS `ca_rols`;
+CREATE TABLE `ca_rols` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `descrip` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+
+DROP TABLE IF EXISTS `ca_rols_socis`;
+CREATE TABLE `ca_rols_socis` (
+  `id_rol` int(11) NOT NULL,
+  `id_soci` int(11) NOT NULL,
+  PRIMARY KEY (`id_rol`,`id_soci`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+
+DROP TABLE IF EXISTS `ca_socis`;
+CREATE TABLE `ca_socis` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nom` varchar(150) NOT NULL,
+  `malnom` varchar(50) DEFAULT NULL,
+  `data_naix` date NOT NULL,
+  `data_alta` date NOT NULL,
+  `data_baixa` date DEFAULT NULL,
+  `mail` varchar(100) NOT NULL,
+  `mobil` varchar(15) NOT NULL,
+  `is_casteller` tinyint(4) DEFAULT NULL,
+  `is_graller` tinyint(4) DEFAULT NULL,
+  `sexe` varchar(1) DEFAULT NULL,
+  `alt_esp` int(11) DEFAULT NULL,
+  `alt_ma` int(11) DEFAULT NULL,
+  `adresa` varchar(100) DEFAULT NULL,
+  `poblacio` varchar(50) DEFAULT NULL,
+  `cp` varchar(10) DEFAULT NULL,
+  `pais` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+INSERT INTO `ca_socis` (`id`, `nom`, `malnom`, `data_naix`, `data_alta`, `data_baixa`, `mail`, `mobil`, `is_casteller`, `is_graller`, `sexe`, `alt_esp`, `alt_ma`, `adresa`, `poblacio`, `cp`, `pais`) VALUES
+(1,	'Aïda Ortiz',	'Aida',	'1900-01-01',	'1900-01-01',	'1900-01-01',	'',	'',	0,	0,	'H',	0,	0,	'',	'',	'',	''),
+(2,	'Alba Llacuna',	'Alba',	'0000-00-00',	'0000-00-00',	NULL,	'',	'',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL),
+(3,	'Albert Ferrer Faus',	'Ferrer',	'0000-00-00',	'0000-00-00',	NULL,	'',	'',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL),
+(4,	'Alex Bandera',	'Hereu',	'0000-00-00',	'0000-00-00',	NULL,	'',	'',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL),
+(5,	'Alex Rodriguez',	'Alex',	'0000-00-00',	'0000-00-00',	NULL,	'',	'',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL),
+(6,	'Alexey Gomez',	'Alexey',	'0000-00-00',	'0000-00-00',	NULL,	'',	'',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL),
+(7,	'Andreu Ferrer',	'Andreu',	'0000-00-00',	'0000-00-00',	NULL,	'',	'',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL),
+(8,	'Angel Rodriguez',	'Halcon',	'0000-00-00',	'0000-00-00',	NULL,	'',	'',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL),
+(9,	'Anna Echevarria',	'Echevarria',	'0000-00-00',	'0000-00-00',	NULL,	'',	'',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL),
+(10,	'Anna Frases',	'Frases',	'0000-00-00',	'0000-00-00',	NULL,	'',	'',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL),
+(11,	'Anna Guinart',	'Anna Guinart',	'0000-00-00',	'0000-00-00',	NULL,	'',	'',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL),
+(12,	'Bart Sánchez',	'Bart',	'0000-00-00',	'0000-00-00',	NULL,	'',	'',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL),
+(13,	'Bruna Torredà',	'Bruna',	'0000-00-00',	'0000-00-00',	NULL,	'',	'',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL),
+(14,	'Carla Rivo',	'Carla',	'0000-00-00',	'0000-00-00',	NULL,	'',	'',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL),
+(15,	'Carles Segues',	'Charlio',	'0000-00-00',	'0000-00-00',	NULL,	'',	'',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL),
+(16,	'Carlos Cornellà',	'Carlos',	'0000-00-00',	'0000-00-00',	NULL,	'',	'',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL),
+(17,	'Clara Esteve',	'Clara',	'0000-00-00',	'0000-00-00',	NULL,	'',	'',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL),
+(18,	'Cristina Jodar Garcia',	'Cris',	'1977-01-07',	'0000-00-00',	NULL,	'cadetill@gmail.com',	'357171',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	'AD500',	'Andorra'),
+(19,	'Daniel Carreras',	'Daniel',	'0000-00-00',	'0000-00-00',	NULL,	'',	'',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL),
+(20,	'Daniel Marquez',	'Dani',	'0000-00-00',	'0000-00-00',	NULL,	'',	'',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL),
+(21,	'David Novo',	'Novo',	'0000-00-00',	'0000-00-00',	NULL,	'',	'',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL),
+(22,	'David Venteo',	'Venteo',	'0000-00-00',	'0000-00-00',	NULL,	'',	'',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL),
+(23,	'Deepak Babani',	'Dipu',	'0000-00-00',	'0000-00-00',	NULL,	'',	'',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL),
+(24,	'Domingo Ramirez',	'Mingo',	'0000-00-00',	'0000-00-00',	NULL,	'',	'',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL),
+(25,	'Eduard Miró',	'Edu',	'0000-00-00',	'0000-00-00',	NULL,	'',	'',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL),
+(26,	'Emili Sala',	'Emili',	'0000-00-00',	'0000-00-00',	NULL,	'',	'',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL),
+(27,	'Emma Arcelin',	'Emma',	'0000-00-00',	'0000-00-00',	NULL,	'',	'',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL),
+(28,	'Eric Miró',	'Eric',	'0000-00-00',	'0000-00-00',	NULL,	'',	'',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL),
+(29,	'Fabian Florentin',	'Fabian',	'0000-00-00',	'0000-00-00',	NULL,	'',	'',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL),
+(30,	'Felipe Cardoso',	'Pipo',	'0000-00-00',	'0000-00-00',	NULL,	'',	'',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL),
+(31,	'Ferran Brasó',	'Ferran',	'0000-00-00',	'0000-00-00',	NULL,	'',	'',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL),
+(32,	'Ferran Llorens',	'Nando',	'0000-00-00',	'0000-00-00',	NULL,	'',	'',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL),
+(33,	'Gerard Marsal',	'Marsal',	'0000-00-00',	'0000-00-00',	NULL,	'',	'',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL),
+(34,	'Gloria Llarden',	'Gloria',	'0000-00-00',	'0000-00-00',	NULL,	'',	'',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL),
+(35,	'Guillem Kallis',	'Kallis',	'0000-00-00',	'0000-00-00',	NULL,	'',	'',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL),
+(36,	'Guillem Pons',	'Tito',	'0000-00-00',	'0000-00-00',	NULL,	'',	'',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL),
+(37,	'Guillem Sol',	'Sol',	'0000-00-00',	'0000-00-00',	NULL,	'',	'',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL),
+(38,	'Hector Campillo',	'Hector',	'0000-00-00',	'0000-00-00',	NULL,	'',	'',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL),
+(39,	'Imma Mejia',	'Imma',	'0000-00-00',	'0000-00-00',	NULL,	'',	'',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL),
+(40,	'Irene Gomez',	'Irene',	'0000-00-00',	'0000-00-00',	NULL,	'',	'',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL),
+(41,	'Isak Lax',	'Isak',	'0000-00-00',	'0000-00-00',	NULL,	'',	'',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL),
+(42,	'Jaume Coca',	'Coca',	'0000-00-00',	'0000-00-00',	NULL,	'',	'',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL),
+(43,	'Joan A. Dotu',	'Dotu',	'0000-00-00',	'0000-00-00',	NULL,	'',	'',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL),
+(44,	'Jonathan Gil',	'Jonathan',	'0000-00-00',	'0000-00-00',	NULL,	'',	'',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL),
+(45,	'Jordi Ballesté',	'Ballesté',	'0000-00-00',	'0000-00-00',	NULL,	'',	'',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL),
+(46,	'Jordi Manyes',	'Manyes',	'0000-00-00',	'0000-00-00',	NULL,	'',	'',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL),
+(47,	'Jordi Vilanova',	'Vili',	'0000-00-00',	'0000-00-00',	NULL,	'',	'',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL),
+(49,	'Josep M. Emeric',	'Emeric',	'0000-00-00',	'0000-00-00',	NULL,	'',	'',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL),
+(50,	'Josep M. Gabernet',	'Gabernet',	'0000-00-00',	'0000-00-00',	NULL,	'',	'',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL),
+(51,	'Josep R. Gracia',	'Jota',	'0000-00-00',	'0000-00-00',	NULL,	'',	'',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL),
+(52,	'Juli Peña',	'Juli',	'0000-00-00',	'0000-00-00',	NULL,	'',	'',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL),
+(53,	'Laura Grau',	'Laura',	'0000-00-00',	'0000-00-00',	NULL,	'',	'',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL),
+(54,	'Laura Zamora',	'Zamora',	'0000-00-00',	'0000-00-00',	NULL,	'',	'',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL),
+(55,	'Lluis Armengol',	'Armengol',	'0000-00-00',	'0000-00-00',	NULL,	'',	'',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL),
+(56,	'Llum Juncosa',	'Llum',	'0000-00-00',	'0000-00-00',	NULL,	'',	'',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL),
+(57,	'Manel Alonso',	'Alonso',	'0000-00-00',	'0000-00-00',	NULL,	'',	'',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL),
+(58,	'Manel Pelegrina',	'Pelegrina',	'0000-00-00',	'0000-00-00',	NULL,	'',	'',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL),
+(59,	'Manoli Perpiñan',	'Manoli',	'0000-00-00',	'0000-00-00',	NULL,	'',	'',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL),
+(60,	'Marco Antonio Pulido',	'Marco',	'0000-00-00',	'0000-00-00',	NULL,	'',	'',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL),
+(61,	'Marta Belmonte',	'Marta Bel',	'0000-00-00',	'0000-00-00',	NULL,	'',	'',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL),
+(62,	'Marta Pelegrina',	'Martona',	'0000-00-00',	'0000-00-00',	NULL,	'',	'',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL),
+(63,	'Marta Vidal',	'Marta Vidal',	'0000-00-00',	'0000-00-00',	NULL,	'',	'',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL),
+(64,	'Meritxell Solana',	'Msolana',	'0000-00-00',	'0000-00-00',	NULL,	'',	'',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL),
+(65,	'Meritxell Viñas',	'MViñas',	'0000-00-00',	'0000-00-00',	NULL,	'',	'',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL),
+(66,	'Miquel Fiblà',	'MiquelF',	'0000-00-00',	'0000-00-00',	NULL,	'',	'',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL),
+(67,	'Monica Duran',	'M.Duran',	'0000-00-00',	'0000-00-00',	NULL,	'',	'',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL),
+(68,	'Monica Lusilla',	'M.Lusilla',	'0000-00-00',	'0000-00-00',	NULL,	'',	'',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL),
+(69,	'Montse Diviu',	'M.Diviu',	'0000-00-00',	'0000-00-00',	NULL,	'',	'',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL),
+(70,	'Montse Porta',	'M.Porta',	'0000-00-00',	'0000-00-00',	NULL,	'',	'',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL),
+(71,	'Nancy Bouzas',	'Nancy',	'0000-00-00',	'0000-00-00',	NULL,	'',	'',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL),
+(72,	'Neus Vila',	'Neus',	'0000-00-00',	'0000-00-00',	NULL,	'',	'',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL),
+(73,	'Noe Solana',	'Noe',	'0000-00-00',	'0000-00-00',	NULL,	'',	'',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL),
+(74,	'Núria Erola',	'Erola',	'0000-00-00',	'0000-00-00',	NULL,	'',	'',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL),
+(75,	'Oscar Alonso',	'Oscar',	'0000-00-00',	'0000-00-00',	NULL,	'',	'',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL),
+(76,	'Pablo Casado',	'Pablito',	'0000-00-00',	'0000-00-00',	NULL,	'',	'',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL),
+(77,	'Pere Campos',	'Pere Campos',	'0000-00-00',	'0000-00-00',	NULL,	'',	'',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL),
+(78,	'Rafel de la Fuente',	'Rafel',	'0000-00-00',	'0000-00-00',	NULL,	'',	'',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL),
+(79,	'Ramon Mora',	'RamonM.',	'0000-00-00',	'0000-00-00',	NULL,	'',	'',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL),
+(80,	'Raquel Diaz',	'Raquel',	'0000-00-00',	'0000-00-00',	NULL,	'',	'',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL),
+(81,	'Raquel Rodriguez',	'Raski',	'0000-00-00',	'0000-00-00',	NULL,	'',	'',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL),
+(82,	'Raúl Dominguez',	'Raul 2',	'0000-00-00',	'0000-00-00',	NULL,	'',	'',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL),
+(83,	'Raül Ramos',	'Mazinguer',	'0000-00-00',	'0000-00-00',	NULL,	'',	'',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL),
+(84,	'Roc Duran',	'Roc',	'0000-00-00',	'0000-00-00',	NULL,	'',	'',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL),
+(85,	'Sara Andreu',	'SaraA',	'0000-00-00',	'0000-00-00',	NULL,	'',	'',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL),
+(86,	'Sara Goulao',	'SaraG',	'0000-00-00',	'0000-00-00',	NULL,	'',	'',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL),
+(87,	'Silvia Iscla',	'Iscla',	'0000-00-00',	'0000-00-00',	NULL,	'',	'',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL),
+(88,	'Sofia Martins',	'Xof',	'0000-00-00',	'0000-00-00',	NULL,	'',	'',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL),
+(89,	'Toni Campos',	'Campos',	'0000-00-00',	'0000-00-00',	NULL,	'',	'',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL),
+(90,	'Toni Juncosa',	'Juncosa',	'0000-00-00',	'0000-00-00',	NULL,	'',	'',	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL),
+(91,	'Xavier Escribano',	'X.Escribano',	'1974-01-01',	'1900-01-01',	'1900-01-01',	'',	'',	0,	0,	'H',	0,	0,	'',	'',	'',	''),
+(92,	'Xavier Martinez',	'Cadetill',	'1974-03-04',	'0000-00-00',	NULL,	'cadetill@gmail.com',	'357171',	1,	0,	'H',	NULL,	NULL,	NULL,	NULL,	'AD500',	'Andorra'),
+(116,	'1111',	'11112222',	'1900-01-01',	'2019-08-26',	'1900-01-01',	'2222',	'334455',	1,	1,	'H',	0,	0,	'una',	'esa',	'ad4004',	'and');
+
+DROP TABLE IF EXISTS `ca_status`;
+CREATE TABLE `ca_status` (
+  `status` varchar(2) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`status`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+
+DROP TABLE IF EXISTS `ca_temporades`;
+CREATE TABLE `ca_temporades` (
+  `any` int(11) NOT NULL,
+  `descripcio` varchar(50) CHARACTER SET utf8 COLLATE utf8_spanish_ci DEFAULT NULL,
+  PRIMARY KEY (`any`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+
+DROP TABLE IF EXISTS `ca_test`;
+CREATE TABLE `ca_test` (
+  `datea` datetime DEFAULT NULL,
+  `dir` varchar(100) CHARACTER SET utf8 COLLATE utf8_spanish_ci DEFAULT NULL,
+  `test` longtext COLLATE utf8_unicode_ci
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+
+DROP TABLE IF EXISTS `cda_assistencia`;
+CREATE TABLE `cda_assistencia` (
+  `idEvents` varchar(50) NOT NULL,
+  `idSocis` int(11) NOT NULL,
+  `assist` tinyint(1) DEFAULT NULL,
+  PRIMARY KEY (`idEvents`,`idSocis`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+
+DROP TABLE IF EXISTS `cda_calendars`;
+CREATE TABLE `cda_calendars` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `idcalendar` varchar(150) NOT NULL,
+  `key` varchar(150) NOT NULL,
+  `nom` varchar(150) NOT NULL,
+  `color` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+
+DROP TABLE IF EXISTS `cda_cast_events`;
+CREATE TABLE `cda_cast_events` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `idEvents` varchar(50) NOT NULL,
+  `idCastells` int(11) NOT NULL,
+  `cordons` int(2) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+
+DROP TABLE IF EXISTS `cda_cast_socis`;
+CREATE TABLE `cda_cast_socis` (
+  `idCastEvents` int(11) NOT NULL,
+  `idSocis` int(11) NOT NULL,
+  `rengla` varchar(2) DEFAULT NULL,
+  `posicio` varchar(5) DEFAULT NULL,
+  PRIMARY KEY (`idCastEvents`,`idSocis`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+
+DROP TABLE IF EXISTS `cda_castells`;
+CREATE TABLE `cda_castells` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `tipus` varchar(20) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+
+DROP TABLE IF EXISTS `cda_events`;
+CREATE TABLE `cda_events` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nom` varchar(150) NOT NULL,
+  `data` date DEFAULT NULL,
+  `hora` time DEFAULT NULL,
+  `lloc` varchar(150) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+
+DROP TABLE IF EXISTS `cda_pos_castells`;
+CREATE TABLE `cda_pos_castells` (
+  `idCastells` int(11) NOT NULL,
+  `rengla` varchar(2) NOT NULL,
+  `posrengla` varchar(2) NOT NULL,
+  `costat` varchar(1) NOT NULL DEFAULT '',
+  `ordre` int(2) DEFAULT NULL,
+  PRIMARY KEY (`idCastells`,`rengla`,`posrengla`,`costat`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+
+DROP TABLE IF EXISTS `cda_pos_soci`;
+CREATE TABLE `cda_pos_soci` (
+  `idSocis` int(11) NOT NULL,
+  `idPosicions` int(11) NOT NULL,
+  PRIMARY KEY (`idSocis`,`idPosicions`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+
+DROP TABLE IF EXISTS `cda_posicions`;
+CREATE TABLE `cda_posicions` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `posicio` varchar(50) NOT NULL,
+  `tipus` varchar(1) NOT NULL,
+  `codi` varchar(2) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+
+DROP TABLE IF EXISTS `cda_socis`;
+CREATE TABLE `cda_socis` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nom` varchar(150) COLLATE utf8_unicode_ci NOT NULL,
+  `malnom` varchar(60) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `pass` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
+  `data_naix` date DEFAULT NULL,
+  `data_alta` date DEFAULT NULL,
+  `data_baixa` date DEFAULT NULL,
+  `mail` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `mobil` varchar(15) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `id_rol` int(11) DEFAULT NULL,
+  `casteller` tinyint(1) DEFAULT NULL,
+  `graller` tinyint(1) DEFAULT NULL,
+  `sexe` varchar(1) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `canalla` tinyint(1) DEFAULT NULL,
+  `alt_esp` int(11) DEFAULT NULL,
+  `alt_mans` int(11) DEFAULT NULL,
+  `direccio` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `poblacio` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `pais` varchar(40) COLLATE utf8_unicode_ci DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+
+DROP TABLE IF EXISTS `cda_status`;
+CREATE TABLE `cda_status` (
+  `status` varchar(2) NOT NULL,
+  PRIMARY KEY (`status`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+
+-- 2019-08-31 21:19:13

@@ -1,0 +1,4 @@
+Shows a message to the user.
+
+@param(Msj string with the message to show to the user.)
+@param(Args array of const with the parameters needed to format message.)

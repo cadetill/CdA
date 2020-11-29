@@ -1,0 +1,1 @@
+If in an insert operation the record exists, or in an update/delete it does not exist, this property will return the table name affected.

@@ -1,0 +1,3 @@
+@abstract(Shows (or hide) a load process indicator.)
+
+@param(Show boolean to show or hide process indicator)

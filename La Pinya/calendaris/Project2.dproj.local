@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2017/02/20 10:44:46.000.378,=D:\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2017/02/20 14:11:05.000.870,=D:\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2017/02/28 11:29:47.000.195,=D:\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2017/03/01 09:07:54.000.941,=D:\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2018/01/12 11:16:54.000.647,=D:\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2018/01/12 11:52:24.000.981,=D:\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2018/02/20 15:09:14.000.728,=D:\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2018/02/20 15:11:56.000.145,D:\Documents\Embarcadero\Studio\Projects\Unit2.fmx=D:\Documents\Dropbox\Programacio\CdA\La Pinya\calendaris\Unit2.fmx</Transaction>
+    <Transaction>2018/02/20 15:11:56.000.145,D:\Documents\Embarcadero\Studio\Projects\Unit2.pas=D:\Documents\Dropbox\Programacio\CdA\La Pinya\calendaris\Unit2.pas</Transaction>
+    <Transaction>2018/02/20 15:11:57.000.658,D:\Documents\Embarcadero\Studio\Projects\Project2.dproj=D:\Documents\Dropbox\Programacio\CdA\La Pinya\calendaris\Project2.dproj</Transaction>
+    <Transaction>2018/02/20 15:41:58.000.303,=D:\Documents\Dropbox\Programacio\CdA\La Pinya\src\REST\URESTCalendarMdl.pas</Transaction>
+    <Transaction>2018/02/20 15:46:09.000.433,=D:\Documents\Dropbox\Programacio\CdA\La Pinya\src\Classes\UHelpers.pas</Transaction>
+    <Transaction>2018/02/20 15:59:27.000.294,D:\Documents\Dropbox\Programacio\CdA\La Pinya\src\REST\URESTCalendarMdl.pas=</Transaction>
+    <Transaction>2018/02/20 16:37:22.000.676,=D:\Documents\Dropbox\Programacio\CdA\La Pinya\calendaris\Unit1.pas</Transaction>
+    <Transaction>2018/02/20 16:38:04.000.195,D:\Documents\Dropbox\Programacio\CdA\La Pinya\calendaris\Unit1.dfm=D:\Documents\Dropbox\Programacio\CdA\La Pinya\src\REST\UCalendarMdl.dfm</Transaction>
+    <Transaction>2018/02/20 16:38:04.000.195,D:\Documents\Dropbox\Programacio\CdA\La Pinya\calendaris\Unit1.pas=D:\Documents\Dropbox\Programacio\CdA\La Pinya\src\REST\UCalendarMdl.pas</Transaction>
+    <Transaction>2018/02/20 17:48:07.000.874,=D:\Documents\Dropbox\Programacio\CdA\La Pinya\src\REST\URESTMdl.pas</Transaction>
+    <Transaction>2018/02/21 16:22:19.000.031,=D:\Documents\Dropbox\Programacio\CdA\La Pinya\src\Classes\UToastUnit.pas</Transaction>
+    <Transaction>2018/02/21 16:33:47.000.251,=D:\Documents\Dropbox\Programacio\CdA\La Pinya\calendaris\Unit1.pas</Transaction>
+    <Transaction>2018/02/21 16:34:01.000.506,D:\Documents\Dropbox\Programacio\CdA\La Pinya\calendaris\Unit1.pas=D:\Documents\Dropbox\Programacio\CdA\La Pinya\src\Classes\UMessage.pas</Transaction>
+    <Transaction>2018/02/22 16:39:18.000.762,=D:\Documents\Dropbox\Programacio\CdA\La Pinya\calendaris\Unit1.pas</Transaction>
+    <Transaction>2018/02/22 16:40:02.000.436,D:\Documents\Dropbox\Programacio\CdA\La Pinya\src\Classes\UClasses.pas=D:\Documents\Dropbox\Programacio\CdA\La Pinya\calendaris\Unit1.pas</Transaction>
+    <Transaction>2018/03/01 17:57:06.000.675,=D:\Documents\Dropbox\Programacio\CdA\La Pinya\calendaris\Unit1.pas</Transaction>
+    <Transaction>2018/03/01 17:57:46.000.661,D:\Documents\Dropbox\Programacio\CdA\La Pinya\src\Classes\USets.pas=D:\Documents\Dropbox\Programacio\CdA\La Pinya\calendaris\Unit1.pas</Transaction>
+  </Transactions>
+	<ActiveMobileDevice>
+		<NoProfile iOSSimulator="iPhone5" Android="127.0.0.1:62001"/>
+	</ActiveMobileDevice>
+</BorlandProject>

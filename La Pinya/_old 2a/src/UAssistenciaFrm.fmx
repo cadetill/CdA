@@ -1,0 +1,731 @@
+inherited AssistenciaFrm: TAssistenciaFrm
+  Caption = 'BaseFrm1'
+  ClientHeight = 539
+  DesignerMasterStyle = 0
+  inherited gplLayout: TGridPanelLayout
+    Size.Height = 539.000000000000000000
+    ColumnCollection = <
+      item
+        Value = 100.000000000000000000
+      end>
+    ControlCollection = <
+      item
+        Column = 0
+        Control = pIcons
+        Row = 0
+      end
+      item
+        Column = 0
+        Control = pSoci
+        Row = 1
+      end
+      item
+        Column = 0
+        Control = pData
+        Row = 2
+      end
+      item
+        Column = 0
+        Control = pCastells
+        Row = 3
+      end>
+    RowCollection = <
+      item
+        SizeStyle = Absolute
+        Value = 50.000000000000000000
+      end
+      item
+        SizeStyle = Absolute
+        Value = 45.000000000000000000
+      end
+      item
+        SizeStyle = Absolute
+        Value = 250.000000000000000000
+      end
+      item
+        Value = 100.000000000000000000
+      end
+      item
+        SizeStyle = Auto
+      end>
+    object pIcons: TPanel
+      Align = Client
+      Size.Width = 640.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'pContent'
+      TabOrder = 0
+      object pIconsC: TPanel
+        Align = Center
+        Size.Width = 200.000000000000000000
+        Size.Height = 50.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'pContent'
+        TabOrder = 0
+        object imgBus: TImage
+          MultiResBitmap.Height = 32
+          MultiResBitmap.Width = 32
+          MultiResBitmap = <
+            item
+            end>
+          Align = Left
+          Margins.Left = 5.000000000000000000
+          Margins.Top = 5.000000000000000000
+          Margins.Right = 5.000000000000000000
+          Margins.Bottom = 5.000000000000000000
+          Position.X = 5.000000000000000000
+          Position.Y = 5.000000000000000000
+          Size.Width = 40.000000000000000000
+          Size.Height = 40.000000000000000000
+          Size.PlatformDefault = False
+        end
+        object imgNo: TImage
+          MultiResBitmap.Height = 32
+          MultiResBitmap.Width = 32
+          MultiResBitmap = <
+            item
+            end>
+          Align = Left
+          Margins.Left = 5.000000000000000000
+          Margins.Top = 5.000000000000000000
+          Margins.Right = 5.000000000000000000
+          Margins.Bottom = 5.000000000000000000
+          Position.X = 55.000000000000000000
+          Position.Y = 5.000000000000000000
+          Size.Width = 40.000000000000000000
+          Size.Height = 40.000000000000000000
+          Size.PlatformDefault = False
+        end
+        object imgNone: TImage
+          MultiResBitmap.Height = 32
+          MultiResBitmap.Width = 32
+          MultiResBitmap = <
+            item
+            end>
+          Align = Left
+          Margins.Left = 5.000000000000000000
+          Margins.Top = 5.000000000000000000
+          Margins.Right = 5.000000000000000000
+          Margins.Bottom = 5.000000000000000000
+          Position.X = 105.000000000000000000
+          Position.Y = 5.000000000000000000
+          Size.Width = 40.000000000000000000
+          Size.Height = 40.000000000000000000
+          Size.PlatformDefault = False
+        end
+        object imgOk: TImage
+          MultiResBitmap.Height = 32
+          MultiResBitmap.Width = 32
+          MultiResBitmap = <
+            item
+            end>
+          Align = Left
+          Margins.Left = 5.000000000000000000
+          Margins.Top = 5.000000000000000000
+          Margins.Right = 5.000000000000000000
+          Margins.Bottom = 5.000000000000000000
+          Position.X = 155.000000000000000000
+          Position.Y = 5.000000000000000000
+          Size.Width = 40.000000000000000000
+          Size.Height = 40.000000000000000000
+          Size.PlatformDefault = False
+        end
+      end
+      object imgCar: TImage
+        MultiResBitmap.Height = 32
+        MultiResBitmap.Width = 32
+        MultiResBitmap = <
+          item
+            Width = 32
+            Height = 32
+            PNG = {
+              89504E470D0A1A0A0000000D4948445200000020000000200806000000737A7A
+              F4000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+              020C494441545847E5974F4B15511887AFE69F9216FA016AA5502448940A1619
+              0A2EC2659B56E2F710115BF431A24D44DAD2404573E1465BB4C80BA285A01BCD
+              45847F0AA56ECFEFCCCCE5DC734F759D39B72BF8C073CF99C370DE77CE9977E6
+              4EEEC25317B73E5A7114EFE1550DA4E01097F1397ED340A53CC03D2C047217EF
+              6345DCC023F44D94C503ECC07FF2067D1384F01596E0DE0397F16BDC26FCC4CF
+              A809CE82E66EC77A7314718C6D78628E3CF4A39BF538A6E529BAF3F561113B3B
+              F1306E6DE6E3360D73716BE38B51E41DDAD9EA666CC4B434E377B4E7F42565D0
+              BEFF40FBE459CCCA02DA73EAA29AD0606F412F2A639BA5B8CD823B470BDE8DBA
+              A509F8F6A61A0988622C95CA75BC85BA63EF60C22F7C8CA7E6283D5AD529B44B
+              7E152730AF41ED4BCD70CBF0BF63AF80EA7D037BB05B03556005DFE34D1CD480
+              50024FA2AE41494D625236A11C43FB3E18418D7B1F0C97701BDD49D2AA77896F
+              BB9734A86577D10BE853D40DC226AAAA5C4C6C9584BD34E20AEEA3EF6AD2A83F
+              24EE434E313FA8A313B4E75A76A1E02FD19D24AB2F3079CD37E033D478F104ED
+              F92286BC72D72FA877C34E326697614D38570F22972D1C8ABA99D1D65E8BBAE5
+              24FBE3BA8EA15049FB6214FEB605BEBA4D8B82F93009E4A37E196B711B823FC5
+              F8A89F61D493CF5E1A7D447462286EA3FBB1A3988FD030806F5157FD1A43064F
+              E8C269548C19D42740ADC9E57E03992021096747F3FD0000000049454E44AE42
+              6082}
+            FileName = 
+              'D:\Documents\Dropbox\Programacio\CdA\La Pinya\images\1608602 - c' +
+              'ar_32x32.png'
+          end>
+        Align = Left
+        Margins.Left = 5.000000000000000000
+        Margins.Top = 5.000000000000000000
+        Margins.Right = 5.000000000000000000
+        Margins.Bottom = 5.000000000000000000
+        Position.X = 5.000000000000000000
+        Position.Y = 5.000000000000000000
+        Size.Width = 40.000000000000000000
+        Size.Height = 40.000000000000000000
+        Size.PlatformDefault = False
+      end
+    end
+    object pSoci: TPanel
+      Align = Client
+      Size.Width = 640.000000000000000000
+      Size.Height = 45.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'pContent'
+      TabOrder = 1
+      object cbSoci: TComboBox
+        Align = Client
+        Margins.Left = 5.000000000000000000
+        Margins.Top = 5.000000000000000000
+        Margins.Right = 5.000000000000000000
+        Margins.Bottom = 5.000000000000000000
+        Size.Width = 630.000000000000000000
+        Size.Height = 35.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'sComboBox'
+        TabOrder = 0
+        OnChange = cbSociChange
+      end
+    end
+    object pData: TPanel
+      Align = Client
+      Size.Width = 640.000000000000000000
+      Size.Height = 250.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'pContent'
+      TabOrder = 2
+      inline frData: TCalFrm
+        Align = Client
+        HitTest = False
+        Size.Width = 640.000000000000000000
+        Size.Height = 250.000000000000000000
+        Size.PlatformDefault = False
+        inherited recCal: TCalloutRectangle
+          Size.Width = 620.000000000000000000
+          Size.Height = 230.000000000000000000
+          CalloutWidth = 0.000000000000000000
+          CalloutLength = 0.000000000000000000
+          CalloutOffset = 0.000000000000000000
+          inherited pImages: TPanel
+            Position.Y = 56.000000000000000000
+            Size.Height = 154.000000000000000000
+            inherited imgCalendar: TImage
+              MultiResBitmap.Height = 29
+              MultiResBitmap.Width = 29
+            end
+            inherited imgTime: TImage
+              MultiResBitmap.Height = 32
+              MultiResBitmap.Width = 32
+            end
+            inherited imgPlace: TImage
+              MultiResBitmap.Height = 32
+              MultiResBitmap.Width = 32
+            end
+            inherited imgMeeting: TImage
+              MultiResBitmap.Height = 32
+              MultiResBitmap.Width = 32
+            end
+            inherited imgBus: TImage
+              MultiResBitmap.Height = 32
+              MultiResBitmap.Width = 32
+            end
+            inherited imgColles: TImage
+              MultiResBitmap.Height = 32
+              MultiResBitmap.Width = 32
+            end
+          end
+          inherited pData: TPanel
+            Size.Width = 570.000000000000000000
+            Size.Height = 154.000000000000000000
+            inherited lCalendar: TLabel
+              Size.Width = 570.000000000000000000
+            end
+            inherited lTime: TLabel
+              Size.Width = 570.000000000000000000
+            end
+            inherited lPlace: TLabel
+              Size.Width = 570.000000000000000000
+            end
+            inherited lMeeting: TLabel
+              Size.Width = 570.000000000000000000
+            end
+            inherited lBus: TLabel
+              Size.Width = 570.000000000000000000
+            end
+            inherited lColles: TLabel
+              Size.Width = 570.000000000000000000
+            end
+          end
+          inherited pTitre: TPanel
+            Margins.Top = 15.000000000000000000
+            Position.Y = 15.000000000000000000
+            Size.Width = 604.000000000000000000
+            inherited lDesc: TLabel
+              Size.Width = 517.000000000000000000
+              inherited imgEdit: TImage
+                MultiResBitmap.Height = 48
+                MultiResBitmap.Width = 48
+                Position.X = 487.000000000000000000
+                OnClick = frDataimgEditClick
+              end
+            end
+          end
+          inherited lnCal: TLine
+            Position.Y = 50.000000000000000000
+            Size.Width = 580.000000000000000000
+          end
+        end
+      end
+    end
+    object pCastells: TPanel
+      Align = Client
+      Size.Width = 640.000000000000000000
+      Size.Height = 194.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'pContent'
+      TabOrder = 3
+      object recColles: TCalloutRectangle
+        Align = Top
+        Fill.Kind = None
+        Margins.Left = 10.000000000000000000
+        Margins.Right = 10.000000000000000000
+        Position.X = 10.000000000000000000
+        Size.Width = 620.000000000000000000
+        Size.Height = 43.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Color = claFirebrick
+        CalloutWidth = 1.000000000000000000
+        CalloutLength = 1.000000000000000000
+        object lCastells: TLabel
+          Align = Client
+          StyledSettings = [Family, Style, FontColor]
+          Size.Width = 620.000000000000000000
+          Size.Height = 43.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Size = 16.000000000000000000
+          TextSettings.HorzAlign = Center
+          Text = 'CASTELLS'
+          TabOrder = 0
+          object Image1: TImage
+            MultiResBitmap.Height = 32
+            MultiResBitmap.Width = 32
+            MultiResBitmap = <
+              item
+                Width = 32
+                Height = 32
+                PNG = {
+                  89504E470D0A1A0A0000000D4948445200000020000000200806000000737A7A
+                  F4000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+                  00EE494441545847ED974B0E01411086C7E310AC85B58D583885D8388105128E
+                  200EC13DC40D6C3C7676228EE2F157571BD15364BA33130BF5255FAA7A35FFA4
+                  5F33D1DF53B0D587129CC19619BDD8C239BC99518EF4E1FD833DE845D1561F2A
+                  B64A546D4D4D48804CD1001AE0E701DC83A80C47B06E46324DD8E136C1061EB9
+                  1539C105BC9A91C0044A074C960E618C3B05DFDE3C2B1AB61A7411BA01688EF2
+                  E6EDB67403AC619ED729AD7E7A468CF43D400BB1C6AD48170EB84DB0842B6E45
+                  CEF0C26D3853E86EADA763E885EE020DA0014202EC216D39173AC076DCA627E4
+                  C7846843F7C7841E7EE05651D212450F8CF43DD3B10E5FE60000000049454E44
+                  AE426082}
+                FileName = 
+                  'D:\Documents\DropBox\Programacio\CdA\La Pinya\images\1608798 - p' +
+                  'lus_32x32.png'
+              end>
+            Align = Right
+            Margins.Left = 5.000000000000000000
+            Margins.Top = 5.000000000000000000
+            Margins.Right = 5.000000000000000000
+            Margins.Bottom = 5.000000000000000000
+            Position.X = 582.000000000000000000
+            Position.Y = 5.000000000000000000
+            Size.Width = 33.000000000000000000
+            Size.Height = 33.000000000000000000
+            Size.PlatformDefault = False
+          end
+        end
+      end
+      object lbCastells: TListBox
+        Align = Client
+        Margins.Left = 10.000000000000000000
+        Margins.Top = 5.000000000000000000
+        Margins.Right = 10.000000000000000000
+        Margins.Bottom = 10.000000000000000000
+        Size.Width = 620.000000000000000000
+        Size.Height = 136.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        DisableFocusEffect = True
+        ItemHeight = 40.000000000000000000
+        Items.Strings = (
+          'ListBoxItem1'
+          'ListBoxItem2'
+          'ListBoxItem3')
+        DefaultItemStyles.ItemStyle = ''
+        DefaultItemStyles.GroupHeaderStyle = ''
+        DefaultItemStyles.GroupFooterStyle = ''
+        Viewport.Width = 616.000000000000000000
+        Viewport.Height = 132.000000000000000000
+      end
+    end
+  end
+  object ilImages: TImageList
+    Source = <
+      item
+        MultiResBitmap.Height = 32
+        MultiResBitmap.Width = 32
+        MultiResBitmap.LoadSize = 0
+        MultiResBitmap = <
+          item
+            Width = 32
+            Height = 32
+            PNG = {
+              89504E470D0A1A0A0000000D4948445200000020000000200806000000737A7A
+              F4000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+              0268494441545847CD97CBAB4D511CC7B777E91211AE3CF22A4C505E5D193034
+              3050FE03339219C500E56268626A60206546185074BB2537E59947CABD228981
+              440AE1F35D2F6BEDD679EDBB9DEB539FD6EFACCE59E7B7D77B8F2B5A3309B7E0
+              565C8BCBB01767E06414DFF113BEC397F8000770107F602566E169FC88BF2BFA
+              014FA1DACAD2A807B6E3459C6D3E15C52FD493A9D176188FCBD1B7AF87D88DB7
+              CCA7162CC02F183FC951EC947E8CDBF88C1ABA845C0FECC733360C3CC673A89E
+              6807F5C01E5C653EFD652F9EB561632E609C799D9EC7845C0F8CE0221B16EF51
+              B37B34CCC439362C8671890DF368FC7DB6F7504B70B468A96A59FA76E7634063
+              15D3E74A71032BAFE108ED11376D68D09E126896C07D57D641DC56924099BBE8
+              BB6AB52A6A620DFA76875491632AAACBF5A56F3811EB42F34043A1B67F620F1A
+              E221588FFE4F1FA1BE5817FAF327362C26E0461BA6096C70A5A873FC3D719BEB
+              5C9924B0C295423D50370F5D2974A21AE204E6BA52A88BFC515B075370930D0D
+              FE904BB88E7EA6FE6B2FA3A1BC0F748B70048C55028146093CC383A81B91EE06
+              55D11DE0241EC217AA68869F033AB1A6ABC2A1BB60790CDB75337A74877C83AA
+              BFA20A91EB81ABA8CC3DBA5CBEB56147BCC23B3634E858D74326E41258EA4A8F
+              32CF2E9B16E80E30CD868172DB09F1323C82DAAF17E3355757452DB785A84474
+              AFF4F5610862BAB90F349D035D65CC13882FA53B5197D16DB84B1511C7516F39
+              9D300F0FDB3070096FA3967A761E8803581E33BDE574CA4A2CB7B30F13FECB39
+              F0DC951E6D4A553622FDE6AB0D034F5DD914CD8B13A81FBFC61D5815CD2B6DBF
+              3A4F8E61E945A828FE00173BEFDA2F4345E00000000049454E44AE426082}
+            FileName = 
+              'D:\Documents\Dropbox\Programacio\CdA\La Pinya\images\1608593 - b' +
+              'us_32x32.png'
+          end>
+        Name = '1608593 - bus_32x32'
+      end
+      item
+        MultiResBitmap.Height = 32
+        MultiResBitmap.Width = 32
+        MultiResBitmap.LoadSize = 0
+        MultiResBitmap = <
+          item
+            Width = 32
+            Height = 32
+            PNG = {
+              89504E470D0A1A0A0000000D4948445200000020000000200806000000737A7A
+              F4000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+              027C494441545847ED97B98B14411487CBFB3E5694F54045104410C14D144411
+              4C345633632313FD3F041113C1C0C8C0404C34D140510C143CC140C56B05EF03
+              2F54BCBE5FBFAADED763CD383DDBBA1BF8C147BF9E61AADE5475BDAA1E13FECC
+              385C8C4B713EF6E10C9C8CFA4E7CC7CFF81E5FE3337C8883A8EFDAD22981A9B8
+              1ED7C4B8173EE115BC18E3DF6897C032DC81A9E39FA87FA66B37A8DD39F12AD4
+              F9317C50DC397209CCC4DD38B1B833CE46EBB019375858F0050FA2A6A92497C0
+              5ADC6A61C973BC8A75466000E71577439CC4CB161AB904B6E32A0B1BE7061EB7
+              D0C825B0076759183EA09EEEE13005A75918DEE27E0B8DD60434FF7B2D0C4FF0
+              30765C465DA0A5BA0BFB8BBB10F661F91C8C8DD784D67BE21E0EB773A136D456
+              6249BC16744AE069BC36816FCBF7F1CF1250654CB41D8109B8C0C2F00D5F59D8
+              082F304DA7CA7959637C020B31DD2BE31F1636823A5712427D2CB2B09A40F921
+              3439FC09DF661AE94A02AADD0955BEA6F1CF8176D4029FC0F478151A8DB4D536
+              C178F4235CEEAEBE10EDC4E516FE756EE351057E044684519BC04B3C8D17F0AB
+              3EE8119D01CEE319CCD615FFA0AD46AD04ED5887F03EAA863F421DCB7AE1085E
+              47B5A1AD587D4C42257313B323700795794287CB7716D6E20D3EB6B040DBFA5D
+              0B87C82550AED1884EBFBD1C4A7506D0BFF5B4B69D4D404B7123AA5ECF469D90
+              B48EEBA2DF6F431D6E94C826D461B7C2FF3A30E209F82958819A2FCDD34A7DE0
+              38871F2DEC1AED2D7A963CB7502F275AEA9A86ECA9781D6EB1B0E400EACDA80E
+              73512F389E5378C94263543E03AD255345A9F23AD525FA4D6B195789AF90DBF3
+              55C1F4B98E687A313981E93855071DC374B0D16BBDA65AFBCA357484F00B2683
+              70392F3A29960000000049454E44AE426082}
+            FileName = 
+              'D:\Documents\Dropbox\Programacio\CdA\La Pinya\images\1608593 - b' +
+              'us_d_32x32.png'
+          end>
+        Name = '1608593 - bus_d_32x32'
+      end
+      item
+        MultiResBitmap.Height = 32
+        MultiResBitmap.Width = 32
+        MultiResBitmap.LoadSize = 0
+        MultiResBitmap = <
+          item
+            Width = 32
+            Height = 32
+            PNG = {
+              89504E470D0A1A0A0000000D4948445200000020000000200806000000737A7A
+              F4000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+              022D494441545847DD97CF4B16411C87D75F9504FD019574F09067E99854A2A4
+              92A6201EBD44609EEAD02508BC28080A094117CF828A516A4478F0E0C983072F
+              96545EB4434908410415E9F3D9D991759D5DDF7DF7DD97F081879D9977E6FD7E
+              77E6DDD979BD185AF103EE076E60332651814FF03B6ACC5F7C8797301557F017
+              DAE0D69F7819E3E8C7E818B98A4AAE60065003F7B013BBF047D0760FE3788DEA
+              B38CEDF838A8CBD859A80CAE61CE05D7AFB880F3F84D0D501B5C5D9C0DAEEBF8
+              1635D6123B4E53236F63831AE00676E326DAB64F588F2F71450D0E3473577102
+              1FA2C6BE473182BBF80F97D0B6FB0CA39DAAB0FA115A9480AB8FCB67289480EB
+              F3DFA89BF4D1123C32C5B2518383A66812485AD7BC381F5CBD2A1C32C563A8D3
+              1FBC8E77B11A0B41E3F443BE83D7D4E0E0234E99A27B9DF276117D5C8F6159D1
+              23A88CC40BD4969B277DD8846F504BE463A7A5CDAFE5CB73FCBF96E0D426A0E5
+              EC35C564F248407B865E6033D8A286244A9D8082CFA2B6DB2D3CF2D27151CA04
+              C2C13FE32DFC82891492C0457C8A67FC9A1B57F06D2C8893F6014DA33ED75940
+              01A228B85EB1EAA3D7761DC651D43E603BF7E0348693C874E796936640DBF518
+              DA7E73A88069EEDC726C0684FDE2A4AD389AC40AA60D2E8ADE8A3548A7DC71BF
+              66CE0899A6DD92E6318C269139B848BB0FD824EEE34DCC145CA44D40288949DC
+              F16B1929268192123E11E970BA668AB9F1003BF0C88928FC2FB85C8EE2218DA8
+              B3A0AB63A9D55FF6577801C1F30E000B42EEBD9AA133BB0000000049454E44AE
+              426082}
+            FileName = 
+              'D:\Documents\Dropbox\Programacio\CdA\La Pinya\images\1608596 - c' +
+              'alendar check o.png'
+          end>
+        Name = '1608596 - calendar check o'
+      end
+      item
+        MultiResBitmap.Height = 32
+        MultiResBitmap.Width = 32
+        MultiResBitmap.LoadSize = 0
+        MultiResBitmap = <
+          item
+            Width = 32
+            Height = 32
+            PNG = {
+              89504E470D0A1A0A0000000D4948445200000020000000200806000000737A7A
+              F4000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+              0233494441545847DD97CBCB0E511CC7C76DE156925208B95F16562E8990156B
+              165616B6F237F823FC01E4B66621B2B12151242B97A248CA2D42C8EDF33967E6
+              6D9E79CFF3BCE77DE79927F9D4A7E7CC3C33F3FBCE9C993367A6156956E3015C
+              14968AE20D5EC16761298DC7DA853B7136FE46B7BF849F30C98CF2B7CE023C86
+              F3C252642E6EC607F8DD1509B6E0419C159662A085B81CEFBB22C5F4F2B7CE1A
+              9C89DFF062A9453DB0FFF56353F9FB1CCFE3F5B054144B717E6C8E2715C0E2F2
+              191F957E710554FFA5A8AEE66B7C82EE57D1773F77F2527966EB7019AE44FBFE
+              2BDE41D98EF6EB4FF46CDCAEE92A9C832FF169D9DE86F20317A357C3B6C70E58
+              7C3FEE0E4BBDBCC553B1599C40FB3387DB78153D89E3AE68F00BCFA25D15BA60
+              878D11E255DF1A9B314075D78E92B19AA6D91B9BE370239FE515B81E53376C0A
+              F753EFA925AE48F00E1FDAF01E386963C43CC60B3672CFAA33EA57E02E3AE476
+              89A3A95D3A7605EA01CEA1CF6F9738543B36FC3B5DF0DF067068AF5E4E03E922
+              C0063C8287D1F7C340861DC0E2167680FB80BE4F0632CC00F5E2EFF10CF69D09
+              55E404F0F5BB073D703F52C53FE284E404388AFBF010A6424CB9B8E40470D090
+              8DD80CD1AAB8E404706E772B367B42B42E2E3901FE603384DDD2BAB8E4049066
+              08A7DAAD8B4B6E006986685D5C261340AA1097F134B62A2E930D2086B887130E
+              32394C25C050A94F486EE0ABD8EC0CA7E36BB16746E4C743F5153C2A6EA2F752
+              78945EA0F334BF80BBC669BEDF8CD7902FA4A2F80B280F6EC450E342E3000000
+              0049454E44AE426082}
+            FileName = 
+              'D:\Documents\Dropbox\Programacio\CdA\La Pinya\images\1608596 - c' +
+              'alendar check o_d.png'
+          end>
+        Name = '1608596 - calendar check o_d'
+      end
+      item
+        MultiResBitmap.Height = 32
+        MultiResBitmap.Width = 32
+        MultiResBitmap.LoadSize = 0
+        MultiResBitmap = <
+          item
+            Width = 32
+            Height = 32
+            PNG = {
+              89504E470D0A1A0A0000000D4948445200000020000000200806000000737A7A
+              F4000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+              0179494441545847EDD74B2B06511CC7F18385EBCA4A5116364A52162452560A
+              E5920D9292A5E4C5D8F0026441366E5B14C90B70DF4859790BF8FEE69C333DCF
+              3C675C16332CE6579FCE9933B7FF3C674ECD63BE480FAEF18E0F3C631EDF6509
+              2FD0393AF70ADDF8551AF10A5DA4942ED88FB40C21798EA8A07A54A4DAB5C90C
+              A0C576CD1CC6F1842A4C212DD3AEBDC71816A22D635AD167BBE5492BA0CEB5CA
+              0E8EF0186DA53C894BAD6B1F708CED68CB26789E9EC8474FAD2A35D6851528FE
+              98138CE20CFB1A0864168338C4840688A640D9C28DED9A4BE8DD88B38CE4BC79
+              3E2A20B43FE4003EA1FDB288780AD65D9B67A27BFA021A5C9B67B4D24C4DD435
+              660DCDB65B11BD03BD984193067E107F9C56C2B0ED56E40D1BB66BDFF0D03C65
+              E916A9CB30B7F825A65FA003BB38D540861981A6F30E9D1A50FC14AC465BD946
+              6FFFFF9982A280A280A280A280A280A280A2803F2F20F945B489D26FFA2C3209
+              FDE929FB22D24D4B3F18F3B08738EDB840E8C02C9CA3CD18633E013E59A5FD04
+              90F17F0000000049454E44AE426082}
+            FileName = 
+              'D:\Documents\Dropbox\Programacio\CdA\La Pinya\images\1608598 - c' +
+              'alendar o.png'
+          end>
+        Name = '1608598 - calendar o'
+      end
+      item
+        MultiResBitmap.Height = 32
+        MultiResBitmap.Width = 32
+        MultiResBitmap.LoadSize = 0
+        MultiResBitmap = <
+          item
+            Width = 32
+            Height = 32
+            PNG = {
+              89504E470D0A1A0A0000000D4948445200000020000000200806000000737A7A
+              F4000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+              018B494441545847ED974D2B05511C87AF774A141BF29692B785B061292B2BD6
+              646BEB33F810BE02A54859585958DF6C441429514AA15828C9CBF39B738E66CE
+              9DC1E60E8BF3D4D3FFCCDC39777E77CE99DB3915856CDA7016DB51D73DE21E1E
+              E1778CE23436E107DEE00EDE620955B6FAD4E212B6A20B598F4378814F3A9142
+              37CE635D7464FA2AC8001EE03B26A8B4D5A7131B4DB3B0896BF880FAC241CC42
+              01C53DAACF5674644274986692AC00D5B68A633C470510F1CF7CDC135500F589
+              0F576ABFF81074E130EAD7F7A0C65EECDB3A822DF8861A0E5DE7DB8BCDA800EE
+              E653B6BEA2FAEB3A110DA31BDF319C33CD12566C5DC43ED3FC91335C37CDAFFE
+              3EDB78E88660D2D63C89EEE902D4D89A27D13DDD1C98C006D34C45F341F343AF
+              E76F70D7F5A3E6531ACF58747360193541F2E40E57B35EC3DCF09FC0095EEA44
+              19D1ABAA3FACE809F80176B1A8136544B37F06FFC71084002140081002840021
+              4008F0E701FC0589F66F5AD397136DEDC631B1225A40AD60F3E41437DCB2FC1A
+              B579D4B62A0FAE902D7BE1E513E14439C28FA972760000000049454E44AE4260
+              82}
+            FileName = 
+              'D:\Documents\Dropbox\Programacio\CdA\La Pinya\images\1608598 - c' +
+              'alendar o_d.png'
+          end>
+        Name = '1608598 - calendar o_d'
+      end
+      item
+        MultiResBitmap.Height = 32
+        MultiResBitmap.Width = 32
+        MultiResBitmap.LoadSize = 0
+        MultiResBitmap = <
+          item
+            Width = 32
+            Height = 32
+            PNG = {
+              89504E470D0A1A0A0000000D4948445200000020000000200806000000737A7A
+              F4000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+              0257494441545847D5D73B6814411CC7F1F56D108DA5A0606111B1144B2518F0
+              8946496121218D8D2F500B0B2DC4C6988085A26221690322189F04B5B008062D
+              0445F0813662A521088A0454A2DFDFCEFC8FD59BDDDBCD664FFDC1879D9BDBB9
+              9D9BC7ED5E94920D78859FDE0B74202B33701CE3509B1FB88BA52894E598805D
+              DC7CC532A4A5077FB691C750E772672FD4F013B6A3139F7DDD1EA4E50674CE03
+              6CC151FF5A524761A63F2633DF1F3FE0166EE2A32A488B3F8632CF1F9F61186A
+              6B496DA7A1914D58A90AD28E9D780DAB7B8B15B886115504A2916BC3391C86DA
+              BE84D28B314CE23EAC3ECE29D8502569115AD481D0392167A1A803A1F7BF415F
+              328EA6E0882B362D73B0DF155D07B2E6B5AA2CF0C768164EBA625D74D277ACC5
+              0ECC469EA89D16F236AC5145206F30E88AE179AADA6DC4096DC3A6465B503D52
+              2E413FB9556617D6E10E3445716C5836C7AFAACD05FC5B53F05F75603DBA5DB1
+              2EBA0F9CC092F855C1E45903AB60B7E883AA484417D70D4BEF3D574546A6BC06
+              DEE3A92B46E771C015E38B5F856EDB4AED838B24CF08288B300A3BFF10EC9B4B
+              1F1A3D78D48D80621F90671B2EC443581B93E7E24AE96DF8051A6E3D2159EEE1
+              18F4C18553B403BA955E86A6C3B211FB5CB1788A74602EAEA02B7E154567F0C8
+              15A38BA8DDE38BC6E6316B0DE8E243B0734F4373DE0A75C2EA1B8DC49417E16A
+              E8794EE7F523B9E0D4093D7AEBBD77AAC848A95DB01BFAE3115AED8B31007B88
+              4D4BE96D5836A5B7E1B4E7AF7740F3A92151F470FAC4152B8B76C956FCF64494
+              FC17DC2CDA49B5688BE9593074E274D35FF6EBF0BFA451F40BEA31FD3FC1DB2C
+              680000000049454E44AE426082}
+            FileName = 
+              'D:\Documents\Dropbox\Programacio\CdA\La Pinya\images\1608489 - c' +
+              'alendar o times.png'
+          end>
+        Name = '1608489 - calendar o times'
+      end
+      item
+        MultiResBitmap.Height = 32
+        MultiResBitmap.Width = 32
+        MultiResBitmap.LoadSize = 0
+        MultiResBitmap = <
+          item
+            Width = 32
+            Height = 32
+            PNG = {
+              89504E470D0A1A0A0000000D4948445200000020000000200806000000737A7A
+              F4000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+              0275494441545847D59759CB4D511880B729994A3214320FA1B83125426E0CE5
+              425C29376EE537F811FEC167B8536E442865485C48AE4C51C6C28D10323DCF5A
+              679DF677CEFA6A2FDA074F3DED77EDB3F759EFDE6BD86B8DAAF22CC65D383D94
+              AAEA0D9EC327A194C7FFDA8C9B7002FE40AF3F8BEF31CB98CEB1CE543C8C9343
+              29320957E15DFCE2890C6B70378E0BA598D0349C87773C916374E75867098EC5
+              CF78BAA395FAC7FE36122B3BC7A778122F865255CDC12931EC27978095CB07BC
+              DFF1A32720FD9623BDCDD7F810BD2F31E27DDEE4ABF2C996E15C5C80B6FD27BC
+              85B2016DD76FE8D3785DAF8B70223EC7479D783DCA579C85BE0D63FF3B60E53B
+              704B280DE72D1E8F6175146DCF26DCC4F3E8431CF1440FDF71086DAAD0041B0D
+              06886F7D5D0C6302A9D70E926E9D66B32D867D789163793E2EC75C87CDE17D6A
+              9F9AED890CEFF09E817DE098C1807980A70C9A3E556BD4DFC06D74CA6D136753
+              9BB4FB06EA099C40C76F9B38553B37FC3B4DF05F25B01057C7B00FE7FAAD58FF
+              8236A2690233F020EEC334BF27ACFC006EC7439E28A169022E28FCCA49EA4892
+              2A77A2123B57114D13703DE007E45928C524FC86D42BBF869763D89C923E6012
+              0ED594C44EECADFC6728155092809884E3B7BE2C7B8CBF55B99426E0C76B2F8E
+              0FA5880BD8B5312CA724012BDF8F2B42A9AA6EA0AB1FD983DD6F7C094D13B072
+              3B5CAADC3677D1699FF8A3249A2630135387BB8EA9CD5D399BC40B14F7054534
+              4DE0159E412BBE84F50E67120E51D7FE1E8B28E903AE60AE62AEB79B843B2017
+              B2459424D00A7F3D81FA82E40ABE8C616B384A96E2B015919B87B40B1E148EA4
+              B077747C3BB7BB4E7307DC362EF3DD335E40764855F50BD6816FC49E88CA0200
+              00000049454E44AE426082}
+            FileName = 
+              'D:\Documents\Dropbox\Programacio\CdA\La Pinya\images\1608489 - c' +
+              'alendar o times_d.png'
+          end>
+        Name = '1608489 - calendar o times_d'
+      end>
+    Destination = <
+      item
+        Layers = <
+          item
+            Name = '1608489 - calendar o times'
+            SourceRect.Right = 32.000000000000000000
+            SourceRect.Bottom = 32.000000000000000000
+          end>
+      end
+      item
+        Layers = <
+          item
+            Name = '1608489 - calendar o times_d'
+            SourceRect.Right = 32.000000000000000000
+            SourceRect.Bottom = 32.000000000000000000
+          end>
+      end
+      item
+        Layers = <
+          item
+            Name = '1608593 - bus_32x32'
+            SourceRect.Right = 32.000000000000000000
+            SourceRect.Bottom = 32.000000000000000000
+          end>
+      end
+      item
+        Layers = <
+          item
+            Name = '1608593 - bus_d_32x32'
+            SourceRect.Right = 32.000000000000000000
+            SourceRect.Bottom = 32.000000000000000000
+          end>
+      end
+      item
+        Layers = <
+          item
+            Name = '1608596 - calendar check o'
+            SourceRect.Right = 32.000000000000000000
+            SourceRect.Bottom = 32.000000000000000000
+          end>
+      end
+      item
+        Layers = <
+          item
+            Name = '1608596 - calendar check o_d'
+            SourceRect.Right = 32.000000000000000000
+            SourceRect.Bottom = 32.000000000000000000
+          end>
+      end
+      item
+        Layers = <
+          item
+            Name = '1608598 - calendar o'
+            SourceRect.Right = 32.000000000000000000
+            SourceRect.Bottom = 32.000000000000000000
+          end>
+      end
+      item
+        Layers = <
+          item
+            Name = '1608598 - calendar o_d'
+            SourceRect.Right = 32.000000000000000000
+            SourceRect.Bottom = 32.000000000000000000
+          end>
+      end>
+    Left = 512
+    Top = 16
+  end
+end

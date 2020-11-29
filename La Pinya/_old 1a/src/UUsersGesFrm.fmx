@@ -1,0 +1,58 @@
+inherited UsersGesFrm: TUsersGesFrm
+  Caption = 'BaseChildFrm1'
+  DesignerMasterStyle = 0
+  inherited lBase: TLayout
+    object Layout1: TLayout
+      Align = Client
+      Size.Width = 640.000000000000000000
+      Size.Height = 480.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object lUser: TLabel
+        Align = Top
+        Size.Width = 640.000000000000000000
+        Size.Height = 33.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.HorzAlign = Center
+        Text = 'lUser'
+        TabOrder = 0
+      end
+      object lRols: TLabel
+        Align = Top
+        Position.Y = 33.000000000000000000
+        Size.Width = 640.000000000000000000
+        Size.Height = 24.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'lRols'
+        TabOrder = 1
+      end
+      object ListBox1: TListBox
+        Align = Top
+        Margins.Left = 5.000000000000000000
+        Margins.Right = 5.000000000000000000
+        Position.X = 5.000000000000000000
+        Position.Y = 57.000000000000000000
+        Size.Width = 630.000000000000000000
+        Size.Height = 120.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        DisableFocusEffect = True
+        ItemHeight = 50.000000000000000000
+        DefaultItemStyles.ItemStyle = 'listboxitemlabel'
+        DefaultItemStyles.GroupHeaderStyle = ''
+        DefaultItemStyles.GroupFooterStyle = ''
+        Viewport.Width = 626.000000000000000000
+        Viewport.Height = 116.000000000000000000
+      end
+      object Label1: TLabel
+        Align = Top
+        Position.Y = 177.000000000000000000
+        Size.Width = 640.000000000000000000
+        Size.Height = 24.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Label1'
+        TabOrder = 3
+      end
+    end
+  end
+end

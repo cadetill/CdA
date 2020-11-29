@@ -1,0 +1,146 @@
+object EventsFrm: TEventsFrm
+  Left = 0
+  Top = 0
+  Caption = 'EventsFrm'
+  ClientHeight = 480
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object lbEvents: TListBox
+    Align = Client
+    Size.Width = 640.000000000000000000
+    Size.Height = 367.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    DisableFocusEffect = True
+    DefaultItemStyles.ItemStyle = 'listboxitembottomdetail'
+    DefaultItemStyles.GroupHeaderStyle = ''
+    DefaultItemStyles.GroupFooterStyle = ''
+    Viewport.Width = 640.000000000000000000
+    Viewport.Height = 367.000000000000000000
+    object ListBoxItem1: TListBoxItem
+      Size.Width = 636.000000000000000000
+      Size.Height = 150.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      inline FEvent1: TFEvent
+        Align = Client
+        Size.Width = 636.000000000000000000
+        Size.Height = 150.000000000000000000
+        Size.PlatformDefault = False
+        inherited rCal: TRectangle
+          Size.Width = 626.000000000000000000
+          inherited pTitre: TRectangle
+            Size.Width = 616.000000000000000000
+            inherited lDesc: TLabel
+              Size.Width = 554.000000000000000000
+              TextSettings.Font.StyleExt = {00070000000000000004000000}
+              inherited bEdit: TSpeedButton
+                Position.X = 524.000000000000000000
+              end
+            end
+          end
+          inherited pData: TRectangle
+            Size.Width = 606.000000000000000000
+            inherited rDay: TRectangle
+              Size.Width = 596.000000000000000000
+              inherited lDay: TLabel
+                Size.Width = 561.000000000000000000
+              end
+            end
+            inherited rTime: TRectangle
+              Size.Width = 596.000000000000000000
+              inherited lTime: TLabel
+                Size.Width = 561.000000000000000000
+              end
+            end
+            inherited rPlace: TRectangle
+              Size.Width = 596.000000000000000000
+              inherited lPlace: TLabel
+                Size.Width = 561.000000000000000000
+              end
+            end
+            inherited rColles: TRectangle
+              Size.Width = 596.000000000000000000
+              inherited lColles: TLabel
+                Size.Width = 561.000000000000000000
+              end
+            end
+          end
+          inherited lnCal: TLine
+            Size.Width = 616.000000000000000000
+          end
+        end
+      end
+    end
+  end
+  object rHeader: TRectangle
+    Align = Top
+    Fill.Color = claWhite
+    Size.Width = 640.000000000000000000
+    Size.Height = 113.000000000000000000
+    Size.PlatformDefault = False
+    Stroke.Thickness = 0.000000000000000000
+    object rCalendars: TRectangle
+      Align = Top
+      Fill.Color = claNull
+      Size.Width = 640.000000000000000000
+      Size.Height = 35.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Color = claNull
+      object cbCalendars: TComboBox
+        Align = Client
+        Margins.Left = 40.000000000000000000
+        Margins.Top = 3.000000000000000000
+        Margins.Right = 40.000000000000000000
+        Size.Width = 560.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        OnChange = cbCalendarsChange
+      end
+    end
+    object rSeasons: TRectangle
+      Align = Top
+      Fill.Color = claNull
+      Position.Y = 35.000000000000000000
+      Size.Width = 640.000000000000000000
+      Size.Height = 35.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Color = claNull
+      object cbSeasons: TComboBox
+        Align = Client
+        Margins.Left = 40.000000000000000000
+        Margins.Top = 3.000000000000000000
+        Margins.Right = 40.000000000000000000
+        Size.Width = 560.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        OnChange = cbSeasonsChange
+      end
+    end
+    object rUser: TRectangle
+      Align = Top
+      Fill.Color = claNull
+      Position.Y = 70.000000000000000000
+      Size.Width = 640.000000000000000000
+      Size.Height = 35.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Color = claNull
+      object cbUser: TComboBox
+        Align = Client
+        Margins.Left = 40.000000000000000000
+        Margins.Top = 3.000000000000000000
+        Margins.Right = 40.000000000000000000
+        Size.Width = 560.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        OnChange = cbSeasonsChange
+      end
+    end
+  end
+end

@@ -1,0 +1,3 @@
+@abstract(Check if the device has a wifi connection.)
+
+@return(true if he has, otherwise false)

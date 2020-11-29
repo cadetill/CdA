@@ -1,0 +1,27 @@
+inherited UsersFrm: TUsersFrm
+  DesignerMasterStyle = 0
+  inherited lBase: TLayout
+    object lbUsers: TListBox
+      Align = Client
+      Size.Width = 640.000000000000000000
+      Size.Height = 480.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      DisableFocusEffect = True
+      ItemHeight = 50.000000000000000000
+      DefaultItemStyles.ItemStyle = 'listboxitembottomdetail'
+      DefaultItemStyles.GroupHeaderStyle = ''
+      DefaultItemStyles.GroupFooterStyle = ''
+      Viewport.Width = 640.000000000000000000
+      Viewport.Height = 480.000000000000000000
+      object SearchBox1: TSearchBox
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = Top
+        TabOrder = 0
+        Size.Width = 636.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+      end
+    end
+  end
+end

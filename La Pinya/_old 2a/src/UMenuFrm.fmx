@@ -1,0 +1,265 @@
+object MenuFrm: TMenuFrm
+  Left = 0
+  Top = 0
+  Caption = 'Form2'
+  ClientHeight = 477
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnKeyUp = FormKeyUp
+  OnShow = FormShow
+  DesignerMasterStyle = 0
+  object tbHeader: TToolBar
+    Size.Width = 640.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'tbHeader'
+    TabOrder = 1
+    object bBack: TButton
+      Action = aBack
+      Align = Right
+      Enabled = True
+      ImageIndex = -1
+      Position.X = 560.000000000000000000
+      Size.Width = 40.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'sHeaderButton'
+      TabOrder = 1
+      object imgBack: TImage
+        MultiResBitmap.Height = 48
+        MultiResBitmap.Width = 48
+        MultiResBitmap = <
+          item
+            Width = 48
+            Height = 48
+            PNG = {
+              89504E470D0A1A0A0000000D49484452000000300000003008060000005702F9
+              87000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+              0110494441546843ED96410EC3200C0449FFFFE7368EB054A12618BC96372973
+              494EDB1D030D65B1F873B6FA0CE3BD535F0FB69DFA0A2154A02DAF2025C204CE
+              CA2B288910815E7905210117B09657BC12AFFA84305A1E014C20A3BC0011C82A
+              2FB8CF80A73CE210BB562073F2CAF404BCE511D317A64258CA0BC3414CE585A1
+              30B6F2823990B1BC600A652D2F7483BDE5D1B4C3B814602BAF7C4B9C7EC858CB
+              B7FC14B84B7901761BCD620964F34C81F6BF9699DBAFC0ED3E64EDEEE86E15AF
+              44F4763485334B98835925864219258603D924A6C29824A68358245C210C12EE
+              806C09F7550231450F90BB50A604EC32972501FFD1913381900E999A4502B562
+              61CB7E25812A2F840928AD08B2FC0328E503B6EF8833336EA7A5000000004945
+              4E44AE426082}
+            FileName = 
+              'D:\Documents\Dropbox\Programacio\CdA\La Pinya\images\48\1608523 ' +
+              '- arrow left_48x48_white.png'
+          end>
+        Align = Client
+        HitTest = False
+        Margins.Left = 3.000000000000000000
+        Margins.Top = 3.000000000000000000
+        Margins.Right = 3.000000000000000000
+        Margins.Bottom = 3.000000000000000000
+        Size.Width = 34.000000000000000000
+        Size.Height = 42.000000000000000000
+        Size.PlatformDefault = False
+      end
+    end
+    object bMenu: TButton
+      Align = Left
+      Size.Width = 40.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'sHeaderButton'
+      TabOrder = 3
+      object imgMenu: TImage
+        MultiResBitmap.Width = 36
+        MultiResBitmap = <
+          item
+            Width = 36
+            Height = 48
+            PNG = {
+              89504E470D0A1A0A0000000D49484452000000240000003008060000007947D8
+              15000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+              003E494441545847EDD5211200200C03C1C2FFFF0C080C2A8302B16B5A792E05
+              C0A98D65FF5FE8FB7E4350220878CD9625821241C06BB62C11940802E04AD504
+              9A430C161441E2B60000000049454E44AE426082}
+            FileName = 
+              'D:\Documents\Dropbox\Programacio\CdA\La Pinya\images\213111 - f0' +
+              'c9_48x48_menu.png'
+          end>
+        Align = Client
+        HitTest = False
+        Size.Width = 40.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+      end
+    end
+    object bAccept: TButton
+      Action = aAccept
+      Align = Right
+      Enabled = True
+      ImageIndex = -1
+      Position.X = 600.000000000000000000
+      Size.Width = 40.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'sHeaderButton'
+      TabOrder = 0
+      object imgAccept: TImage
+        MultiResBitmap.Height = 48
+        MultiResBitmap.Width = 48
+        MultiResBitmap = <
+          item
+            Width = 48
+            Height = 48
+            PNG = {
+              89504E470D0A1A0A0000000D49484452000000300000003008060000005702F9
+              87000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+              011A494441546843ED95DB0AC32010054DFFFF9FDB1E50B0468D7B55E8CE4B02
+              A9BB33D09014044110FC3557BE1EC5FB4BBE4DD7977CDBE5B8805ABE308B382A
+              A0275F18451C1330932FF4228E0858912FB411DB0328F2853AE295AF5BE0C8B7
+              6C0BD090075B02B4E481FB3B209527BFC4F5C2F630156D793015EA2DE44658C8
+              83A1CC6C2135C24A1E741FAC2C5C8DB09407B78794854FC3ADE5C1CF0F380B47
+              4B3CE481F83BD013F592072A1FB25AD8531E88FF429A50E5C1EDC0AE088E3CE8
+              1EF28EE0CA83E141AF08893C981EB68E90CA83C70156111AF26069887684963C
+              581EA415A1290F48C3A411DAF2803C901B61210F5843A91156F2803D7835C252
+              1E88863F4558CB03F1825184873C5059D24678C9074110044252FA004BCEA413
+              6330CDA10000000049454E44AE426082}
+            FileName = 
+              'D:\Documents\Dropbox\Programacio\CdA\La Pinya\images\1608619 - c' +
+              'heck_48x48_white.png'
+          end>
+        Align = Client
+        HitTest = False
+        Margins.Left = 3.000000000000000000
+        Margins.Top = 3.000000000000000000
+        Margins.Right = 3.000000000000000000
+        Margins.Bottom = 3.000000000000000000
+        Size.Width = 34.000000000000000000
+        Size.Height = 42.000000000000000000
+        Size.PlatformDefault = False
+      end
+    end
+    object lHeader: TLabel
+      Align = Client
+      StyledSettings = [Family]
+      Size.Width = 520.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 18.000000000000000000
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      TextSettings.FontColor = claWhite
+      TextSettings.HorzAlign = Center
+      Text = 'lHeader'
+      TabOrder = 4
+    end
+  end
+  object pContent: TPanel
+    Align = Client
+    Size.Width = 640.000000000000000000
+    Size.Height = 429.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'pContent'
+    TabOrder = 2
+  end
+  object mvMenu: TMultiView
+    MasterButton = bMenu
+    Mode = Drawer
+    Size.Width = 250.000000000000000000
+    Size.Height = 437.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'sMiltiView'
+    Visible = False
+    TabOrder = 0
+    object bHome: TButton
+      Action = aHome
+      Align = Top
+      Enabled = True
+      ImageIndex = -1
+      Size.Width = 250.000000000000000000
+      Size.Height = 49.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'sButtonMenu'
+      TabOrder = 3
+    end
+    object bConfig: TButton
+      Action = aConfig
+      Align = Top
+      Enabled = True
+      ImageIndex = -1
+      Position.Y = 49.000000000000000000
+      Size.Width = 250.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'sButtonMenu'
+      TabOrder = 2
+    end
+    object bCalendar: TButton
+      Action = aCalendar
+      Align = Top
+      Enabled = True
+      ImageIndex = -1
+      Position.Y = 97.000000000000000000
+      Size.Width = 250.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'sButtonMenu'
+      TabOrder = 1
+    end
+    object bAdmin: TButton
+      Action = aAdmin
+      Align = Top
+      Enabled = True
+      ImageIndex = -1
+      Position.Y = 145.000000000000000000
+      Size.Width = 250.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'sButtonMenu'
+      TabOrder = 0
+    end
+    object Label1: TLabel
+      Align = Bottom
+      StyledSettings = [Family, Style]
+      Position.Y = 389.000000000000000000
+      Size.Width = 250.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 18.000000000000000000
+      TextSettings.FontColor = claWhite
+      TextSettings.HorzAlign = Center
+      Text = 'Castellers d'#39'Andorra'
+      TabOrder = 4
+    end
+  end
+  object alActions: TActionList
+    Left = 528
+    Top = 136
+    object aBack: TAction
+      Category = 'HeaderMenu'
+      ShortCut = 27
+      OnExecute = aBackExecute
+    end
+    object aAccept: TAction
+      Category = 'HeaderMenu'
+      OnExecute = aAcceptExecute
+    end
+    object aHome: TAction
+      Category = 'MultiViewMenu'
+      Text = 'INICI'
+      OnExecute = aHomeExecute
+    end
+    object aConfig: TAction
+      Category = 'MultiViewMenu'
+      Text = 'CONFIGURACI'#211
+      OnExecute = aConfigExecute
+    end
+    object aCalendar: TAction
+      Category = 'MultiViewMenu'
+      Text = 'CALENDARI'
+      OnExecute = aCalendarExecute
+    end
+    object aAdmin: TAction
+      Category = 'MultiViewMenu'
+      Text = 'ADMINISTRACI'#211
+    end
+  end
+end

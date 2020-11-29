@@ -1,0 +1,79 @@
+object SeasonsFrm: TSeasonsFrm
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 480
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object lbSeasons: TListBox
+    Align = Client
+    Size.Width = 640.000000000000000000
+    Size.Height = 480.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    DisableFocusEffect = True
+    ItemHeight = 50.000000000000000000
+    DefaultItemStyles.ItemStyle = 'listboxitembottomdetail'
+    DefaultItemStyles.GroupHeaderStyle = ''
+    DefaultItemStyles.GroupFooterStyle = ''
+    Viewport.Width = 636.000000000000000000
+    Viewport.Height = 454.000000000000000000
+    object ListBoxItem1: TListBoxItem
+      ItemData.Detail = 'detail'
+      Size.Width = 636.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'test'
+      object SpeedButton1: TSpeedButton
+        Align = Right
+        Position.X = 596.000000000000000000
+        Size.Width = 40.000000000000000000
+        Size.Height = 50.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'trashtoolbutton'
+        Text = 'SpeedButton1'
+      end
+      object SpeedButton2: TSpeedButton
+        Align = Right
+        Position.X = 556.000000000000000000
+        Size.Width = 40.000000000000000000
+        Size.Height = 50.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'composetoolbutton'
+        Text = 'SpeedButton2'
+      end
+      object SpeedButton3: TSpeedButton
+        Align = Right
+        Position.X = 516.000000000000000000
+        Size.Width = 40.000000000000000000
+        Size.Height = 50.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'refreshtoolbutton'
+        Text = 'SpeedButton3'
+      end
+    end
+    object lbiSearch: TSearchBox
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Align = Top
+      TabOrder = 0
+      Size.Width = 636.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      object bAdd: TSpeedButton
+        Align = Right
+        Margins.Right = 25.000000000000000000
+        Position.X = 586.000000000000000000
+        Size.Width = 25.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'additembutton'
+        Text = 'bAdd'
+        OnClick = bAddClick
+      end
+    end
+  end
+end

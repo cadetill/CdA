@@ -1,0 +1,2 @@
+@abstract(Class destructor.)
+Destroy all objects (individual calendars) created by the class.

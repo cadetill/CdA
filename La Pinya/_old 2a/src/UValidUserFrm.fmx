@@ -1,0 +1,251 @@
+inherited ValidUserFrm: TValidUserFrm
+  Caption = 'Benvingut/da a la CdAPP'
+  ClientHeight = 504
+  ClientWidth = 409
+  DesignerMasterStyle = 0
+  inherited lyMain: TLayout
+    Size.Width = 409.000000000000000000
+    Size.Height = 504.000000000000000000
+    object lHeader1: TLabel
+      Align = Top
+      Margins.Left = 10.000000000000000000
+      Margins.Top = 20.000000000000000000
+      Margins.Right = 10.000000000000000000
+      Position.X = 10.000000000000000000
+      Position.Y = 20.000000000000000000
+      Size.Width = 389.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      Text = '1. Introdueix les dades sol'#183'licitades.'
+      TabOrder = 9
+    end
+    object lHeader2: TLabel
+      Align = Top
+      Margins.Left = 10.000000000000000000
+      Margins.Right = 10.000000000000000000
+      Position.X = 10.000000000000000000
+      Position.Y = 42.000000000000000000
+      Size.Width = 389.000000000000000000
+      Size.Height = 23.000000000000000000
+      Size.PlatformDefault = False
+      Text = '2. Fes clic en '#8220'Obtenir codi'#8221'.'
+      TabOrder = 8
+    end
+    object lHeader3: TLabel
+      Align = Top
+      Margins.Left = 10.000000000000000000
+      Margins.Right = 10.000000000000000000
+      Position.X = 10.000000000000000000
+      Position.Y = 65.000000000000000000
+      Size.Width = 389.000000000000000000
+      Size.Height = 42.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.VertAlign = Leading
+      Text = '3. Consulta el correu electr'#242'nic i posa el codi retornat.'
+      TabOrder = 4
+    end
+    object lMail: TLabel
+      Align = Top
+      StyledSettings = [Family, Style]
+      Margins.Left = 10.000000000000000000
+      Margins.Right = 10.000000000000000000
+      Position.X = 10.000000000000000000
+      Position.Y = 107.000000000000000000
+      Size.Width = 389.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 16.000000000000000000
+      TextSettings.FontColor = claFirebrick
+      TextSettings.HorzAlign = Center
+      Text = 'CORREU ELECTR'#210'NIC'
+      TabOrder = 7
+    end
+    object eMail: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Align = Top
+      TabOrder = 0
+      KeyboardType = EmailAddress
+      TextSettings.Font.Size = 16.000000000000000000
+      Position.X = 5.000000000000000000
+      Position.Y = 134.000000000000000000
+      Margins.Left = 5.000000000000000000
+      Margins.Top = 5.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Margins.Bottom = 5.000000000000000000
+      Size.Width = 399.000000000000000000
+      Size.Height = 35.000000000000000000
+      Size.PlatformDefault = False
+      StyledSettings = [Family, Style, FontColor]
+    end
+    object lDate: TLabel
+      Align = Top
+      StyledSettings = [Family, Style]
+      Margins.Left = 10.000000000000000000
+      Margins.Right = 10.000000000000000000
+      Position.X = 10.000000000000000000
+      Position.Y = 174.000000000000000000
+      Size.Width = 389.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 16.000000000000000000
+      TextSettings.FontColor = claFirebrick
+      TextSettings.HorzAlign = Center
+      Text = 'DATA DE NAIXEMENT'
+      TabOrder = 6
+    end
+    object eDate: TDateEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Date = 43171.000000000000000000
+      Format = 'dd/mm/yyyy'
+      Align = Top
+      Margins.Left = 5.000000000000000000
+      Margins.Top = 5.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Margins.Bottom = 5.000000000000000000
+      Position.X = 5.000000000000000000
+      Position.Y = 201.000000000000000000
+      Size.Width = 399.000000000000000000
+      Size.Height = 35.000000000000000000
+      Size.PlatformDefault = False
+      StyledSettings = [Family, Style, FontColor]
+      TabOrder = 1
+      TextSettings.Font.Size = 16.000000000000000000
+    end
+    object lMobile: TLabel
+      Align = Top
+      StyledSettings = [Family, Style]
+      Margins.Left = 10.000000000000000000
+      Margins.Right = 10.000000000000000000
+      Position.X = 10.000000000000000000
+      Position.Y = 241.000000000000000000
+      Size.Width = 389.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 16.000000000000000000
+      TextSettings.FontColor = claFirebrick
+      TextSettings.HorzAlign = Center
+      Text = 'M'#210'BIL DE CONTACTE'
+      TabOrder = 5
+    end
+    object eMobile: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Align = Top
+      TabOrder = 2
+      KeyboardType = PhonePad
+      TextSettings.Font.Size = 16.000000000000000000
+      Position.X = 5.000000000000000000
+      Position.Y = 268.000000000000000000
+      Margins.Left = 5.000000000000000000
+      Margins.Top = 5.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Margins.Bottom = 5.000000000000000000
+      Size.Width = 399.000000000000000000
+      Size.Height = 35.000000000000000000
+      Size.PlatformDefault = False
+      StyledSettings = [Family, Style, FontColor]
+    end
+    object tcFooter: TTabControl
+      Align = Top
+      Margins.Left = 20.000000000000000000
+      Margins.Top = 20.000000000000000000
+      Margins.Right = 20.000000000000000000
+      Position.X = 20.000000000000000000
+      Position.Y = 328.000000000000000000
+      Size.Width = 369.000000000000000000
+      Size.Height = 120.000000000000000000
+      Size.PlatformDefault = False
+      TabIndex = 1
+      TabOrder = 3
+      TabPosition = None
+      Sizes = (
+        369s
+        120s
+        369s
+        120s)
+      object tiButton: TTabItem
+        CustomIcon = <
+          item
+          end>
+        IsSelected = False
+        Size.Width = 8.000000000000000000
+        Size.Height = 8.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = ''
+        TabOrder = 0
+        Text = 'tiButton'
+        ExplicitSize.cx = 8.000000000000000000
+        ExplicitSize.cy = 8.000000000000000000
+        object bCode: TButton
+          Align = Top
+          StyledSettings = [Family, Size, Style]
+          Size.Width = 369.000000000000000000
+          Size.Height = 40.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          Text = 'OBTENIR CODI'
+          TextSettings.FontColor = claFirebrick
+          OnClick = bCodeClick
+        end
+        object lNoCode: TLabel
+          Align = Top
+          StyledSettings = [Family, Style]
+          Margins.Top = 20.000000000000000000
+          Position.Y = 60.000000000000000000
+          Size.Width = 369.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Size = 16.000000000000000000
+          TextSettings.FontColor = claFirebrick
+          TextSettings.HorzAlign = Center
+          Text = 'Entrar sense validaci'#243
+          TabOrder = 1
+        end
+      end
+      object tiEdit: TTabItem
+        CustomIcon = <
+          item
+          end>
+        IsSelected = True
+        Size.Width = 8.000000000000000000
+        Size.Height = 8.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = ''
+        TabOrder = 0
+        Text = 'tiEdit'
+        ExplicitSize.cx = 8.000000000000000000
+        ExplicitSize.cy = 8.000000000000000000
+        object eValCode: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Align = Top
+          TabOrder = 0
+          TextSettings.Font.Size = 16.000000000000000000
+          Position.X = 5.000000000000000000
+          Position.Y = 27.000000000000000000
+          Margins.Left = 5.000000000000000000
+          Margins.Top = 5.000000000000000000
+          Margins.Right = 5.000000000000000000
+          Margins.Bottom = 5.000000000000000000
+          Size.Width = 359.000000000000000000
+          Size.Height = 35.000000000000000000
+          Size.PlatformDefault = False
+          StyledSettings = [Family, Style, FontColor]
+        end
+        object lValCode: TLabel
+          Align = Top
+          StyledSettings = [Family, Style]
+          Margins.Left = 10.000000000000000000
+          Margins.Right = 10.000000000000000000
+          Position.X = 10.000000000000000000
+          Size.Width = 349.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Size = 16.000000000000000000
+          TextSettings.FontColor = claFirebrick
+          TextSettings.HorzAlign = Center
+          Text = 'CODI DE VALIDACI'#211
+          TabOrder = 1
+        end
+      end
+    end
+  end
+end

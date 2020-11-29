@@ -1,0 +1,6 @@
+Decompose an string by a separator and returns a position on it.
+
+@param(S string with all fields)
+@param(FieldIndex integer with position to return)
+@param(Delimiter char with the string delimiter)
+@return(string with the result)

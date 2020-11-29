@@ -1,0 +1,3 @@
+Returns absolute path to the application ini file.
+
+@return(string with the ini file path)

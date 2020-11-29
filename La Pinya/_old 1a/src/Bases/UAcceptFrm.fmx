@@ -1,0 +1,30 @@
+inherited AcceptFrm: TAcceptFrm
+  Caption = 'BaseFrm1'
+  DesignerMasterStyle = 0
+  inherited pHeader: TToolBar
+    inherited bBack: TButton
+      TabOrder = 2
+    end
+    object bOk: TButton
+      Align = Right
+      ModalResult = 1
+      Position.X = 595.000000000000000000
+      Size.Width = 45.000000000000000000
+      Size.Height = 45.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'bStyle'
+      TabOrder = 1
+      Text = 'OK'
+      OnClick = bOkClick
+    end
+  end
+  inherited pFooter: TToolBar
+    object aiIndicator: TAniIndicator
+      Align = Left
+      Size.Width = 45.000000000000000000
+      Size.Height = 45.000000000000000000
+      Size.PlatformDefault = False
+      Visible = False
+    end
+  end
+end

@@ -1,0 +1,4 @@
+@abstract(Create a new child form and shows it.)
+
+@param(ClassForm TFmxObjectClass class of new child form)
+@param(DataObject TObject to set into Child.TagObject property. Can be nil)

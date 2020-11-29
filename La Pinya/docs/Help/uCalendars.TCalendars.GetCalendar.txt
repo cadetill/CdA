@@ -1,0 +1,5 @@
+@abstract(Get all calendars from server.)
+
+Do a call to server and receive all defined calendars.
+
+@return(Returns a TCalendars object)

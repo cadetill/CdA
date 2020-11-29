@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2020/10/01 12:17:17.000.743,=D:\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2020/10/01 12:30:56.000.460,D:\Documents\Embarcadero\Studio\Projects\Unit2.pas=D:\Documents\Dropbox\Programacio\CdA\La Pinya\src\UMainFrm.pas</Transaction>
+    <Transaction>2020/10/01 12:30:56.000.460,D:\Documents\Embarcadero\Studio\Projects\Unit2.fmx=D:\Documents\Dropbox\Programacio\CdA\La Pinya\src\UMainFrm.fmx</Transaction>
+    <Transaction>2020/10/01 12:31:22.000.092,D:\Documents\Embarcadero\Studio\Projects\Project2.dproj=D:\Documents\Dropbox\Programacio\CdA\La Pinya\CollApp.dproj</Transaction>
+    <Transaction>2020/10/01 12:35:47.000.556,=D:\Documents\Dropbox\Programacio\CdA\La Pinya\src\Classes\uCalendar.pas</Transaction>
+    <Transaction>2020/10/01 12:35:47.000.559,=D:\Documents\Dropbox\Programacio\CdA\La Pinya\src\Classes\Pkg.Json.DTO.pas</Transaction>
+    <Transaction>2020/10/02 16:24:24.000.836,=D:\Documents\Dropbox\Programacio\CdA\La Pinya\src\Interfaces\uInterfaces.pas</Transaction>
+    <Transaction>2020/10/05 18:26:11.000.303,=D:\Documents\Dropbox\Programacio\CdA\La Pinya\src\Classes\uGenFunc.pas</Transaction>
+    <Transaction>2020/10/05 18:27:03.000.752,=D:\Documents\Dropbox\Programacio\CdA\La Pinya\src\Classes\uMessage.pas</Transaction>
+    <Transaction>2020/10/05 18:27:28.000.876,=D:\Documents\Dropbox\Programacio\CdA\La Pinya\src\Classes\uToastUnit.pas</Transaction>
+    <Transaction>2020/10/06 09:41:03.000.303,=D:\Documents\Dropbox\Programacio\CdA\La Pinya\src\Classes\NetworkState.iOS.pas</Transaction>
+    <Transaction>2020/10/06 09:41:03.000.313,=D:\Documents\Dropbox\Programacio\CdA\La Pinya\src\Classes\NetworkState.Android.pas</Transaction>
+    <Transaction>2020/10/06 09:41:03.000.306,=D:\Documents\Dropbox\Programacio\CdA\La Pinya\src\Classes\NetworkState.pas</Transaction>
+    <Transaction>2020/10/06 09:41:03.000.310,=D:\Documents\Dropbox\Programacio\CdA\La Pinya\src\Classes\NetworkState.Windows.pas</Transaction>
+    <Transaction>2020/10/06 12:00:15.000.158,=D:\Documents\Dropbox\Programacio\CdA\La Pinya\src\UCalendarsFrm.pas</Transaction>
+    <Transaction>2020/10/06 12:01:35.000.229,D:\Documents\Dropbox\Programacio\CdA\La Pinya\src\Classes\uCalendar.pas=D:\Documents\Dropbox\Programacio\CdA\La Pinya\src\Classes\uCalendars.pas</Transaction>
+    <Transaction>2020/10/09 10:08:25.000.928,=D:\Documents\Dropbox\Programacio\CdA\La Pinya\src\UCalendarFrm.pas</Transaction>
+    <Transaction>2020/10/10 10:55:01.000.672,=D:\Documents\Dropbox\Programacio\CdA\La Pinya\Unit1.pas</Transaction>
+    <Transaction>2020/10/10 23:20:06.000.971,D:\Documents\Dropbox\Programacio\CdA\La Pinya\src\Classes\uResultRequest.pas=D:\Documents\Dropbox\Programacio\CdA\La Pinya\Unit1.pas</Transaction>
+  </Transactions>
+	<ActiveMobileDevice>
+		<NoProfile iOSSimulator="iPhone5" Android="127.0.0.1:62001"/>
+	</ActiveMobileDevice>
+</BorlandProject>

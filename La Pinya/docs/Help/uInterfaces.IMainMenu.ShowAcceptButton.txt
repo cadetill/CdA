@@ -1,0 +1,3 @@
+@abstract(Shows (or hide) Accept button.)
+
+@param(State boolean to show or hide button)

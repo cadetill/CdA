@@ -1,0 +1,4 @@
+@abstract(Replace normal characters for special characters.)
+
+@param(Value string to denormalize)
+@return(new string)

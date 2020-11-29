@@ -1,0 +1,699 @@
+object SociFrm: TSociFrm
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 538
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object tcPages: TTabControl
+    Align = Client
+    Size.Width = 640.000000000000000000
+    Size.Height = 538.000000000000000000
+    Size.PlatformDefault = False
+    TabIndex = 1
+    TabOrder = 0
+    TabPosition = PlatformDefault
+    Sizes = (
+      640s
+      512s
+      640s
+      512s
+      640s
+      512s)
+    object tiGeneral: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 103.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'Dades Generals'
+      ExplicitSize.cx = 103.000000000000000000
+      ExplicitSize.cy = 26.000000000000000000
+      object sbGeneral: TScrollBox
+        Align = Client
+        Size.Width = 640.000000000000000000
+        Size.Height = 512.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Viewport.Width = 640.000000000000000000
+        Viewport.Height = 512.000000000000000000
+        object rNom: TRectangle
+          Align = Top
+          Fill.Color = claNull
+          Margins.Left = 5.000000000000000000
+          Margins.Top = 5.000000000000000000
+          Margins.Right = 5.000000000000000000
+          Position.X = 5.000000000000000000
+          Position.Y = 5.000000000000000000
+          Size.Width = 630.000000000000000000
+          Size.Height = 40.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Color = claNull
+          object lNom: TLabel
+            Align = Left
+            Size.Width = 113.000000000000000000
+            Size.Height = 40.000000000000000000
+            Size.PlatformDefault = False
+            Text = 'Nom'
+            TabOrder = 0
+          end
+          object eNom: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            Align = Client
+            TabOrder = 1
+            Size.Width = 517.000000000000000000
+            Size.Height = 40.000000000000000000
+            Size.PlatformDefault = False
+          end
+        end
+        object rMalNom: TRectangle
+          Align = Top
+          Fill.Color = claNull
+          Margins.Left = 5.000000000000000000
+          Margins.Top = 5.000000000000000000
+          Margins.Right = 5.000000000000000000
+          Position.X = 5.000000000000000000
+          Position.Y = 50.000000000000000000
+          Size.Width = 630.000000000000000000
+          Size.Height = 40.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Color = claNull
+          object lMalNom: TLabel
+            Align = Left
+            Size.Width = 113.000000000000000000
+            Size.Height = 40.000000000000000000
+            Size.PlatformDefault = False
+            Text = 'Malnom'
+            TabOrder = 0
+          end
+          object eMalNom: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            Align = Client
+            TabOrder = 1
+            Size.Width = 517.000000000000000000
+            Size.Height = 40.000000000000000000
+            Size.PlatformDefault = False
+          end
+        end
+        object rDataNaix: TRectangle
+          Align = Top
+          Fill.Color = claNull
+          Margins.Left = 5.000000000000000000
+          Margins.Top = 5.000000000000000000
+          Margins.Right = 5.000000000000000000
+          Position.X = 5.000000000000000000
+          Position.Y = 95.000000000000000000
+          Size.Width = 630.000000000000000000
+          Size.Height = 40.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Color = claNull
+          object lDataNaix: TLabel
+            Align = Left
+            Size.Width = 113.000000000000000000
+            Size.Height = 40.000000000000000000
+            Size.PlatformDefault = False
+            Text = 'Data Naixement'
+            TabOrder = 0
+          end
+          object eDataNaix: TDateEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            Date = 43696.000000000000000000
+            Format = 'dd/mm/yyyy'
+            Align = Client
+            Size.Width = 517.000000000000000000
+            Size.Height = 40.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 1
+          end
+        end
+        object rMail: TRectangle
+          Align = Top
+          Fill.Color = claNull
+          Margins.Left = 5.000000000000000000
+          Margins.Top = 5.000000000000000000
+          Margins.Right = 5.000000000000000000
+          Position.X = 5.000000000000000000
+          Position.Y = 140.000000000000000000
+          Size.Width = 630.000000000000000000
+          Size.Height = 40.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Color = claNull
+          object lMail: TLabel
+            Align = Left
+            Size.Width = 113.000000000000000000
+            Size.Height = 40.000000000000000000
+            Size.PlatformDefault = False
+            Text = 'Correu Electr'#242'nic'
+            TabOrder = 0
+          end
+          object eMail: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            Align = Client
+            TabOrder = 1
+            KeyboardType = EmailAddress
+            Size.Width = 517.000000000000000000
+            Size.Height = 40.000000000000000000
+            Size.PlatformDefault = False
+          end
+        end
+        object rMobil: TRectangle
+          Align = Top
+          Fill.Color = claNull
+          Margins.Left = 5.000000000000000000
+          Margins.Top = 5.000000000000000000
+          Margins.Right = 5.000000000000000000
+          Position.X = 5.000000000000000000
+          Position.Y = 185.000000000000000000
+          Size.Width = 630.000000000000000000
+          Size.Height = 40.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Color = claNull
+          object lMobil: TLabel
+            Align = Left
+            Size.Width = 113.000000000000000000
+            Size.Height = 40.000000000000000000
+            Size.PlatformDefault = False
+            Text = 'M'#242'bil'
+            TabOrder = 0
+          end
+          object eMobil: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            Align = Client
+            TabOrder = 1
+            KeyboardType = NamePhonePad
+            Size.Width = 517.000000000000000000
+            Size.Height = 40.000000000000000000
+            Size.PlatformDefault = False
+          end
+        end
+        object rSexe: TRectangle
+          Align = Top
+          Fill.Color = claNull
+          Margins.Left = 5.000000000000000000
+          Margins.Top = 5.000000000000000000
+          Margins.Right = 5.000000000000000000
+          Position.X = 5.000000000000000000
+          Position.Y = 230.000000000000000000
+          Size.Width = 630.000000000000000000
+          Size.Height = 40.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Color = claNull
+          object lSexe: TLabel
+            Align = Left
+            Size.Width = 113.000000000000000000
+            Size.Height = 40.000000000000000000
+            Size.PlatformDefault = False
+            Text = 'Sexe'
+            TabOrder = 0
+          end
+          object cbSexe: TComboBox
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            Align = Client
+            Items.Strings = (
+              'Home'
+              'Dona')
+            Size.Width = 517.000000000000000000
+            Size.Height = 40.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 1
+          end
+        end
+        object rAdresa: TRectangle
+          Align = Top
+          Fill.Color = claNull
+          Margins.Left = 5.000000000000000000
+          Margins.Top = 5.000000000000000000
+          Margins.Right = 5.000000000000000000
+          Position.X = 5.000000000000000000
+          Position.Y = 275.000000000000000000
+          Size.Width = 630.000000000000000000
+          Size.Height = 40.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Color = claNull
+          object lAdresa: TLabel
+            Align = Left
+            Size.Width = 113.000000000000000000
+            Size.Height = 40.000000000000000000
+            Size.PlatformDefault = False
+            Text = 'Adre'#231'a'
+            TabOrder = 0
+          end
+          object eAdresa: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            Align = Client
+            TabOrder = 1
+            Size.Width = 517.000000000000000000
+            Size.Height = 40.000000000000000000
+            Size.PlatformDefault = False
+          end
+        end
+        object rPoblacio: TRectangle
+          Align = Top
+          Fill.Color = claNull
+          Margins.Left = 5.000000000000000000
+          Margins.Top = 5.000000000000000000
+          Margins.Right = 5.000000000000000000
+          Position.X = 5.000000000000000000
+          Position.Y = 320.000000000000000000
+          Size.Width = 630.000000000000000000
+          Size.Height = 40.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Color = claNull
+          object lPoblacio: TLabel
+            Align = Left
+            Size.Width = 113.000000000000000000
+            Size.Height = 40.000000000000000000
+            Size.PlatformDefault = False
+            Text = 'Poblaci'#243
+            TabOrder = 0
+          end
+          object ePoblacio: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            Align = Client
+            TabOrder = 1
+            Size.Width = 517.000000000000000000
+            Size.Height = 40.000000000000000000
+            Size.PlatformDefault = False
+          end
+        end
+        object rCP: TRectangle
+          Align = Top
+          Fill.Color = claNull
+          Margins.Left = 5.000000000000000000
+          Margins.Top = 5.000000000000000000
+          Margins.Right = 5.000000000000000000
+          Position.X = 5.000000000000000000
+          Position.Y = 365.000000000000000000
+          Size.Width = 630.000000000000000000
+          Size.Height = 40.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Color = claNull
+          object lCP: TLabel
+            Align = Left
+            Size.Width = 113.000000000000000000
+            Size.Height = 40.000000000000000000
+            Size.PlatformDefault = False
+            Text = 'C.P.'
+            TabOrder = 0
+          end
+          object eCP: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            Align = Client
+            TabOrder = 1
+            Size.Width = 517.000000000000000000
+            Size.Height = 40.000000000000000000
+            Size.PlatformDefault = False
+          end
+        end
+        object rPais: TRectangle
+          Align = Top
+          Fill.Color = claNull
+          Margins.Left = 5.000000000000000000
+          Margins.Top = 5.000000000000000000
+          Margins.Right = 5.000000000000000000
+          Position.X = 5.000000000000000000
+          Position.Y = 410.000000000000000000
+          Size.Width = 630.000000000000000000
+          Size.Height = 40.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Color = claNull
+          object lPais: TLabel
+            Align = Left
+            Size.Width = 113.000000000000000000
+            Size.Height = 40.000000000000000000
+            Size.PlatformDefault = False
+            Text = 'Pa'#237's'
+            TabOrder = 0
+          end
+          object ePais: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            Align = Client
+            TabOrder = 1
+            Size.Width = 517.000000000000000000
+            Size.Height = 40.000000000000000000
+            Size.PlatformDefault = False
+          end
+        end
+      end
+    end
+    object tiDadesCastelleres: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = True
+      Size.Width = 113.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'Dades Castelleres'
+      ExplicitSize.cx = 113.000000000000000000
+      ExplicitSize.cy = 26.000000000000000000
+      object sbCastelleres: TScrollBox
+        Align = Client
+        Size.Width = 640.000000000000000000
+        Size.Height = 512.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Viewport.Width = 640.000000000000000000
+        Viewport.Height = 512.000000000000000000
+        object rDataBaixa: TRectangle
+          Align = Top
+          Fill.Color = claNull
+          Margins.Left = 5.000000000000000000
+          Margins.Top = 5.000000000000000000
+          Margins.Right = 5.000000000000000000
+          Position.X = 5.000000000000000000
+          Position.Y = 50.000000000000000000
+          Size.Width = 630.000000000000000000
+          Size.Height = 40.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Color = claNull
+          object lDataBaixa: TLabel
+            Align = Left
+            Size.Width = 113.000000000000000000
+            Size.Height = 40.000000000000000000
+            Size.PlatformDefault = False
+            Text = 'Data Baixa'
+            TabOrder = 0
+          end
+          object eDataBaixa: TDateEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            Date = 43696.000000000000000000
+            Format = 'dd/mm/yyyy'
+            Align = Client
+            Size.Width = 517.000000000000000000
+            Size.Height = 40.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 1
+          end
+        end
+        object rDataAlta: TRectangle
+          Align = Top
+          Fill.Color = claNull
+          Margins.Left = 5.000000000000000000
+          Margins.Top = 5.000000000000000000
+          Margins.Right = 5.000000000000000000
+          Position.X = 5.000000000000000000
+          Position.Y = 5.000000000000000000
+          Size.Width = 630.000000000000000000
+          Size.Height = 40.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Color = claNull
+          object lDataAlta: TLabel
+            Align = Left
+            Size.Width = 113.000000000000000000
+            Size.Height = 40.000000000000000000
+            Size.PlatformDefault = False
+            Text = 'Data Alta'
+            TabOrder = 0
+          end
+          object eDataAlta: TDateEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            Date = 43696.000000000000000000
+            Format = 'dd/mm/yyyy'
+            Align = Client
+            Size.Width = 517.000000000000000000
+            Size.Height = 40.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 1
+          end
+        end
+        object rRols: TRectangle
+          Align = Top
+          Fill.Color = claNull
+          Margins.Left = 5.000000000000000000
+          Margins.Top = 5.000000000000000000
+          Margins.Right = 5.000000000000000000
+          Position.X = 5.000000000000000000
+          Position.Y = 95.000000000000000000
+          Size.Width = 630.000000000000000000
+          Size.Height = 190.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Color = claNull
+          object rRolsSelect: TRectangle
+            Align = Top
+            Fill.Color = claNull
+            Size.Width = 630.000000000000000000
+            Size.Height = 40.000000000000000000
+            Size.PlatformDefault = False
+            Stroke.Color = claNull
+            object lRols: TLabel
+              Align = Left
+              Size.Width = 113.000000000000000000
+              Size.Height = 40.000000000000000000
+              Size.PlatformDefault = False
+              Text = 'Rols'
+              TabOrder = 0
+            end
+            object cbRols: TComboBox
+              Touch.InteractiveGestures = [LongTap, DoubleTap]
+              Align = Client
+              Items.Strings = (
+                'Home'
+                'Dona')
+              Size.Width = 471.000000000000000000
+              Size.Height = 40.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 1
+            end
+            object bAddRol: TSpeedButton
+              Align = Right
+              Position.X = 584.000000000000000000
+              Size.Width = 46.000000000000000000
+              Size.Height = 40.000000000000000000
+              Size.PlatformDefault = False
+              StyleLookup = 'additembutton'
+              Text = 'bAddRol'
+              OnClick = bAddRolClick
+            end
+          end
+          object lbRols: TListBox
+            Align = Client
+            Margins.Left = 10.000000000000000000
+            Margins.Top = 2.000000000000000000
+            Margins.Right = 10.000000000000000000
+            Size.Width = 610.000000000000000000
+            Size.Height = 148.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 1
+            DisableFocusEffect = True
+            ItemHeight = 50.000000000000000000
+            DefaultItemStyles.ItemStyle = ''
+            DefaultItemStyles.GroupHeaderStyle = ''
+            DefaultItemStyles.GroupFooterStyle = ''
+            Viewport.Width = 606.000000000000000000
+            Viewport.Height = 144.000000000000000000
+          end
+        end
+        object rVinculats: TRectangle
+          Align = Top
+          Fill.Color = claNull
+          Margins.Left = 5.000000000000000000
+          Margins.Top = 5.000000000000000000
+          Margins.Right = 5.000000000000000000
+          Position.X = 5.000000000000000000
+          Position.Y = 290.000000000000000000
+          Size.Width = 630.000000000000000000
+          Size.Height = 190.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Color = claNull
+          object rVinculatsSelect: TRectangle
+            Align = Top
+            Fill.Color = claNull
+            Size.Width = 630.000000000000000000
+            Size.Height = 40.000000000000000000
+            Size.PlatformDefault = False
+            Stroke.Color = claNull
+            object lVinculats: TLabel
+              Align = Left
+              Size.Width = 113.000000000000000000
+              Size.Height = 40.000000000000000000
+              Size.PlatformDefault = False
+              Text = 'Vinculats'
+              TabOrder = 0
+            end
+            object cbVinculats: TComboBox
+              Touch.InteractiveGestures = [LongTap, DoubleTap]
+              Align = Client
+              Items.Strings = (
+                'Home'
+                'Dona')
+              Size.Width = 471.000000000000000000
+              Size.Height = 40.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 1
+            end
+            object bVinculats: TSpeedButton
+              Align = Right
+              Position.X = 584.000000000000000000
+              Size.Width = 46.000000000000000000
+              Size.Height = 40.000000000000000000
+              Size.PlatformDefault = False
+              StyleLookup = 'additembutton'
+              Text = 'bAddRol'
+              OnClick = bVinculatsClick
+            end
+          end
+          object lbVinculats: TListBox
+            Align = Client
+            Margins.Left = 10.000000000000000000
+            Margins.Top = 2.000000000000000000
+            Margins.Right = 10.000000000000000000
+            Size.Width = 610.000000000000000000
+            Size.Height = 148.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 1
+            DisableFocusEffect = True
+            ItemHeight = 50.000000000000000000
+            DefaultItemStyles.ItemStyle = ''
+            DefaultItemStyles.GroupHeaderStyle = ''
+            DefaultItemStyles.GroupFooterStyle = ''
+            Viewport.Width = 606.000000000000000000
+            Viewport.Height = 144.000000000000000000
+          end
+        end
+      end
+    end
+    object tiDadesTecniques: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 109.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'Dades T'#232'cniques'
+      ExplicitSize.cx = 109.000000000000000000
+      ExplicitSize.cy = 26.000000000000000000
+      object sbTecniques: TScrollBox
+        Align = Client
+        Size.Width = 640.000000000000000000
+        Size.Height = 512.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Viewport.Width = 640.000000000000000000
+        Viewport.Height = 512.000000000000000000
+        object rAltEsp: TRectangle
+          Align = Top
+          Fill.Color = claNull
+          Margins.Left = 5.000000000000000000
+          Margins.Top = 5.000000000000000000
+          Margins.Right = 5.000000000000000000
+          Position.X = 5.000000000000000000
+          Position.Y = 5.000000000000000000
+          Size.Width = 630.000000000000000000
+          Size.Height = 40.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Color = claNull
+          object lAltEsp: TLabel
+            Align = Left
+            Size.Width = 113.000000000000000000
+            Size.Height = 40.000000000000000000
+            Size.PlatformDefault = False
+            Text = 'Al'#231'ada Espatlles'
+            TabOrder = 0
+          end
+          object eAltEsp: TNumberBox
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            Align = Client
+            TabOrder = 1
+            Cursor = crIBeam
+            DecimalDigits = 0
+            Max = 500.000000000000000000
+            HorzIncrement = 0.000000000000000000
+            VertIncrement = 0.000000000000000000
+            Size.Width = 517.000000000000000000
+            Size.Height = 40.000000000000000000
+            Size.PlatformDefault = False
+          end
+        end
+        object rAltMa: TRectangle
+          Align = Top
+          Fill.Color = claNull
+          Margins.Left = 5.000000000000000000
+          Margins.Top = 5.000000000000000000
+          Margins.Right = 5.000000000000000000
+          Position.X = 5.000000000000000000
+          Position.Y = 50.000000000000000000
+          Size.Width = 630.000000000000000000
+          Size.Height = 40.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Color = claNull
+          object lAltMa: TLabel
+            Align = Left
+            Size.Width = 113.000000000000000000
+            Size.Height = 40.000000000000000000
+            Size.PlatformDefault = False
+            Text = 'Al'#231'ada M'#224
+            TabOrder = 0
+          end
+          object eAltMa: TNumberBox
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            Align = Client
+            TabOrder = 1
+            Cursor = crIBeam
+            DecimalDigits = 0
+            Max = 500.000000000000000000
+            HorzIncrement = 0.000000000000000000
+            VertIncrement = 0.000000000000000000
+            Size.Width = 517.000000000000000000
+            Size.Height = 40.000000000000000000
+            Size.PlatformDefault = False
+          end
+        end
+        object rIsCasteller: TRectangle
+          Align = Top
+          Fill.Color = claNull
+          Margins.Left = 5.000000000000000000
+          Margins.Top = 5.000000000000000000
+          Margins.Right = 5.000000000000000000
+          Position.X = 5.000000000000000000
+          Position.Y = 95.000000000000000000
+          Size.Width = 630.000000000000000000
+          Size.Height = 40.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Color = claNull
+          object cbIsCasteller: TCheckBox
+            Align = Client
+            Size.Width = 630.000000000000000000
+            Size.Height = 40.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            Text = #201's Casteller'
+          end
+        end
+        object rIsGraller: TRectangle
+          Align = Top
+          Fill.Color = claNull
+          Margins.Left = 5.000000000000000000
+          Margins.Top = 5.000000000000000000
+          Margins.Right = 5.000000000000000000
+          Position.X = 5.000000000000000000
+          Position.Y = 140.000000000000000000
+          Size.Width = 630.000000000000000000
+          Size.Height = 40.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Color = claNull
+          object cbIsGraller: TCheckBox
+            Align = Client
+            Size.Width = 630.000000000000000000
+            Size.Height = 40.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            Text = #201's Graller'
+          end
+        end
+      end
+    end
+  end
+end

@@ -1,0 +1,5 @@
+Sorts an array with QuickSort sort method.
+
+@param(A array to sort)
+@param(iLo integer with low position)
+@param(iHi integer with high position)
