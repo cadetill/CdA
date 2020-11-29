@@ -1,0 +1,1 @@
+Event fired when a calendar's property changes.

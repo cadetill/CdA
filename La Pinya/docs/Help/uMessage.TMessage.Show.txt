@@ -1,0 +1,3 @@
+Shows a message to the user. If device is an Android device, the message is a toast.
+
+@param(Msj is the message to be shown.)

@@ -1,0 +1,580 @@
+inherited TestFrm: TTestFrm
+  FormFactor.Devices = [Desktop, iPhone, iPad]
+  DesignerMasterStyle = 0
+  inherited gplLayout: TGridPanelLayout
+    ColumnCollection = <
+      item
+        Value = 100.000000000000000000
+      end>
+    ControlCollection = <
+      item
+        Column = 0
+        Control = pFilter
+        Row = 0
+      end
+      item
+        Column = 0
+        Control = pTempUser
+        Row = 1
+      end
+      item
+        Column = 0
+        Control = lbSeason
+        Row = 2
+      end>
+    RowCollection = <
+      item
+        SizeStyle = Absolute
+        Value = 50.000000000000000000
+      end
+      item
+        SizeStyle = Absolute
+        Value = 100.000000000000000000
+      end
+      item
+        Value = 100.000000000000000000
+      end
+      item
+        SizeStyle = Auto
+      end>
+    object pFilter: TPanel
+      Align = Client
+      Size.Width = 640.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'pContent'
+      TabOrder = 0
+      object bDiades: TCornerButton
+        Tag = 2
+        StaysPressed = True
+        Align = Left
+        Margins.Left = 10.000000000000000000
+        Margins.Top = 10.000000000000000000
+        Margins.Right = 5.000000000000000000
+        Margins.Bottom = 5.000000000000000000
+        Position.X = 10.000000000000000000
+        Position.Y = 10.000000000000000000
+        Sides = [Top, Left, Bottom, Right]
+        Size.Width = 217.000000000000000000
+        Size.Height = 35.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Text = 'DIADES'
+        XRadius = 3.000000000000000000
+        YRadius = 3.000000000000000000
+        OnClick = bDiadesClick
+      end
+      object bAssajos: TCornerButton
+        Tag = 3
+        StaysPressed = True
+        Align = Client
+        Margins.Left = 5.000000000000000000
+        Margins.Top = 10.000000000000000000
+        Margins.Right = 5.000000000000000000
+        Margins.Bottom = 5.000000000000000000
+        Sides = [Top, Left, Bottom, Right]
+        Size.Width = 191.000000000000000000
+        Size.Height = 35.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        Text = 'ASSAJOS'
+        XRadius = 3.000000000000000000
+        YRadius = 3.000000000000000000
+        OnClick = bAssajosClick
+      end
+      object bEvents: TCornerButton
+        Tag = 1
+        StaysPressed = True
+        Align = Right
+        Margins.Left = 5.000000000000000000
+        Margins.Top = 10.000000000000000000
+        Margins.Right = 10.000000000000000000
+        Margins.Bottom = 5.000000000000000000
+        Position.X = 438.000000000000000000
+        Position.Y = 10.000000000000000000
+        Sides = [Top, Left, Bottom, Right]
+        Size.Width = 192.000000000000000000
+        Size.Height = 35.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        Text = 'EVENTS'
+        XRadius = 3.000000000000000000
+        YRadius = 3.000000000000000000
+        OnClick = bEventsClick
+      end
+    end
+    object pTempUser: TPanel
+      Align = Client
+      Size.Width = 640.000000000000000000
+      Size.Height = 100.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'pContent'
+      TabOrder = 1
+      object cbTemporades: TComboBox
+        Align = Top
+        Margins.Left = 10.000000000000000000
+        Margins.Top = 10.000000000000000000
+        Margins.Right = 10.000000000000000000
+        Position.X = 10.000000000000000000
+        Position.Y = 10.000000000000000000
+        Size.Width = 620.000000000000000000
+        Size.Height = 35.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'sComboBox'
+        TabOrder = 0
+        OnChange = cbTemporadesChange
+      end
+      object cbSoci: TComboBox
+        Align = Top
+        Margins.Left = 10.000000000000000000
+        Margins.Top = 10.000000000000000000
+        Margins.Right = 10.000000000000000000
+        Position.X = 10.000000000000000000
+        Position.Y = 55.000000000000000000
+        Size.Width = 620.000000000000000000
+        Size.Height = 35.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'sComboBox'
+        TabOrder = 1
+        OnChange = cbSociChange
+      end
+    end
+    object lbSeason: TListBox
+      Align = Client
+      Size.Width = 640.000000000000000000
+      Size.Height = 330.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'lbSeasonStyle1'
+      TabOrder = 2
+      DisableFocusEffect = True
+      DefaultItemStyles.ItemStyle = ''
+      DefaultItemStyles.GroupHeaderStyle = ''
+      DefaultItemStyles.GroupFooterStyle = ''
+      Viewport.Width = 636.000000000000000000
+      Viewport.Height = 326.000000000000000000
+      object ListBoxItem1: TListBoxItem
+        Size.Width = 636.000000000000000000
+        Size.Height = 233.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'sListBoxItem'
+        TabOrder = 0
+        object recCal: TCalloutRectangle
+          Align = Client
+          Fill.Color = claWhite
+          Margins.Left = 10.000000000000000000
+          Margins.Top = 10.000000000000000000
+          Margins.Right = 10.000000000000000000
+          Margins.Bottom = 10.000000000000000000
+          Size.Width = 616.000000000000000000
+          Size.Height = 213.000000000000000000
+          Size.PlatformDefault = False
+          XRadius = 20.000000000000000000
+          YRadius = 20.000000000000000000
+          CalloutWidth = 23.000000000000000000
+          CalloutLength = 11.000000000000000000
+          CalloutOffset = 20.000000000000000000
+          object pImages: TPanel
+            Align = Left
+            Margins.Left = 10.000000000000000000
+            Margins.Right = 10.000000000000000000
+            Margins.Bottom = 20.000000000000000000
+            Position.X = 10.000000000000000000
+            Position.Y = 60.000000000000000000
+            Size.Width = 20.000000000000000000
+            Size.Height = 133.000000000000000000
+            Size.PlatformDefault = False
+            StyleLookup = 'pContent'
+            TabOrder = 0
+            object imgCalendar: TImage
+              MultiResBitmap.Height = 29
+              MultiResBitmap.Width = 29
+              MultiResBitmap = <
+                item
+                  Width = 29
+                  Height = 29
+                  PNG = {
+                    89504E470D0A1A0A0000000D494844520000001D0000001D0806000000569367
+                    0F000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+                    02D949444154484BEDD6D98B8E511CC0F1312386B12BFB9A7D197241F69450B2
+                    5D9050FC01AEDDB8E38EE4C2CD5C48B971A72CA50825D9A344F6A52C59B3947D
+                    09DFEFE39C99338FE735EFCDCBCDFCEAD3CCFB7BCEB39DF33BE7395525620876
+                    E11D7EE23156A31A455183757802DB7BDE4E0C4659D101DBF1192FF1085FF01A
+                    53501433F006B6B3BDE77DC236D4A259143D791F0C457B6CC20ADC0CBFA7A128
+                    A6A21DAEC1F69BE1CDBC4E2F348B7853BBA71F466304BAC2B88473B07B6D3B00
+                    630AF487C77D4BDB5F84D10DA3609BBEF03E556D60E399580B9FAA0EE3D01BD3
+                    711687B000B77117F9F04165BBA5B047CEE019AEE3035E6037CC67DDB01F1640
+                    5EEC4E2F56743CEF000CCF2B3ABE17B5BEA5AF3C11FF22BC4F4D1CD3F8371F4B
+                    B0068E4B39614D38B59665BFFE8C6C4C0DC7F0018ABAC3F9E654F99EE4FEC676
+                    B67F9FE452F75157EA0D63744277343E610B613BDBFB2225C3EAB58115E63CDC
+                    13FE8F313968804F1A63385C28CEE39E89105E6F3DD269638CC72A7C44BD89D8
+                    BDB730CF44122B61C5E5DFD4156807F28B85EDF66179F6AB29E2742BAB7B2B12
+                    FFE5A676876BA6E3D01677E0B8B8DCC9F11C0BBBC6A52EE61D9709B04A3D3FE6
+                    076231DEE25BC8691266E1071AD24272BD3D0DD7D918C382A3480BC98F827997
+                    C4E7264278BDF9F0E11DBF183E8C4BAAD3A93EBDA9B115177EFF9B858535171B
+                    E153C6F02DBDF8115C3511C2E1DA82C3386E22845FA10D701EB7566F6523BDA9
+                    5DD3193D122E8356679A5317F849F46FFE98ED3D2FCD79DDC6214A0BC90B9CC4
+                    43C41809ABD4C248ABD75D80C71CA7A7264278BD85B03ED28FBD1BB4D9C8AA37
+                    9DA7C6095C81175247F4C4C124271FC085FD327CE09877A760655BD16E7562DE
+                    35C0F9EEDC751D6FADDECA453AA6A5D65E7786F9B5D77173BFE3CE225D7B0761
+                    115A5C7BDDD11F831FE5B84B8F612179FC55F6AB29FCE09BF7A3FCD54412169E
+                    7977F8319C5EEE814FC1EACEBA780E6EC0AAAC1477FFBC6D55F52FA8EEE2E388
+                    2A98340000000049454E44AE426082}
+                  FileName = 
+                    'D:\Documents\Dropbox\Programacio\CdA\La Pinya\images\1608599 - c' +
+                    'alendar_32x32.png'
+                end>
+              Align = Top
+              Margins.Bottom = 2.000000000000000000
+              Size.Width = 20.000000000000000000
+              Size.Height = 20.000000000000000000
+              Size.PlatformDefault = False
+            end
+            object imgTime: TImage
+              MultiResBitmap.Height = 32
+              MultiResBitmap.Width = 32
+              MultiResBitmap = <
+                item
+                  Width = 32
+                  Height = 32
+                  PNG = {
+                    89504E470D0A1A0A0000000D4948445200000020000000200806000000737A7A
+                    F4000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+                    026B494441545847ED974BCB4D5118800FB9979244941818C8C44832104561C0
+                    7F30E14748663295F82132456E89BE4C940973F74B0CDC0ACFB3BFB58F77AFB3
+                    F6E59CEFCC78EA699DDDB7F6BBD65E9777AD6FF4CFB32C9543598B87F000EEC2
+                    0D688C8FF8021FE21DFC8A7365275EC32FF8BBC7CF781577E092598917F01B96
+                    1AEBD277CEA3316662333EC052F069BC8B9BB048DB1AB071E77277F5D4E4355E
+                    C7057C8936B215F7E129DC8239CFD0B5F3AE7AEAC1212B7DF92B3C8D5D43EADF
+                    AC63DDFC7D4762D07438E7F9CB37B175180B58F736E6718CDD89AB3D5F7036BE
+                    06DB7882CF716FF5F417B7ACD318637DC7CEDDE1568B2F38947D5F5ED73D5E3D
+                    35712DBDC118F30A16B1C7F93E773EFBA8EB963A206730C6FC84AB710203C48A
+                    7EFD904553D76FEB808DB9FA63ECA358B13C95627A8DB8D57E2EFE5C12CEFB8D
+                    C59F63F6A7B2D101737BC47D3E2F1EA7B266DC56EC80074BC424332FF2581B53
+                    D9E8409E159DAB9C8B18E7B254672A62073C5223A6D79CF5A92CF12B9525B6A5
+                    B2E6432A1B1DF03C8F98DB732EE18982C7D0A4D3461ECBC435C1ACDBB00FB7E1
+                    7B8CB18FE00426222F13B1E29044D4C7598C319DEA5558C49B4CAC3C241577E1
+                    D1FC1663CCCBD88A07457E1879AA393AD3B20EEF638C65ECEDD889D7A8F892BA
+                    C03C5886E297E78DEB39ECC585E7E5217FD953CD83A5789024FC9B739E0FBBDE
+                    C215D8A0ED4AE6BCFBD57BAAA726AE6873BBE9B5CE70EE73B7DA491C67B9C053
+                    3C8CE3FD3F043B511A8969F5CB4B9D1A84D3E135CA13AD14BC4B179C733E31EC
+                    B3E0EEF026E365A2D458D47DEE56EB5DED32EDBF662EB283E879EE915A0FAD73
+                    6B7A7D84F7F007FE6700A3D11F3EFD041A58C80A210000000049454E44AE4260
+                    82}
+                  FileName = 
+                    'D:\Documents\Dropbox\Programacio\CdA\La Pinya\images\1608633 - c' +
+                    'lock o_32x32.png'
+                end>
+              Align = Top
+              Margins.Bottom = 2.000000000000000000
+              Position.Y = 22.000000000000000000
+              Size.Width = 20.000000000000000000
+              Size.Height = 20.000000000000000000
+              Size.PlatformDefault = False
+            end
+            object imgPlace: TImage
+              MultiResBitmap.Height = 32
+              MultiResBitmap.Width = 32
+              MultiResBitmap = <
+                item
+                  Width = 32
+                  Height = 32
+                  PNG = {
+                    89504E470D0A1A0A0000000D4948445200000020000000200806000000737A7A
+                    F4000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+                    01CA494441545847EDD63B4B1C5118C6F1F5120B6F4590880AD1C6C2D6C2B401
+                    03011B053F8058D9891F2190DEC24A411BC1C642B1095A04049B9054365E1AEF
+                    287841048D16DEFE0FBB2EC7C33B87DDB954FAC08F1966CF9C7776CE9933937B
+                    F3A9286CCB4913FAF1052D501F27F88B459C239334601C77788AA0DFD4A61EA9
+                    A6039BB08A5A36D08E54D28C5D58854276F00989A2F15D865540F6B1E71D73FD
+                    429C79564C1FAC8EA7D08A97B4611A56DBEF889D25F81DFE40547EC26FBF8058
+                    A9C435DCCE3411AB10956A6CC33DE70A91C3A02251D12DAECBEF16A37FF390DF
+                    35730FDD35378D889C8CA10BF08B2BA7856D28569BC875217401BAFD7E4A79B6
+                    3F17B66E340C6547177709773C8F508BA8E8AE1DC33D477724F6A33803B73399
+                    853511756C0E7EFB49C44E171EE177BA8A5EE81FCB37ACC16FA7733B91289AF9
+                    7EC7A59A47E2F4C0EABC14DD4825BF61150859416AD1185B4542BE22B5E831FA
+                    07AB90E50F12BD05AD0CC22A661940EAD1C2B405ABA04B5F43A1153651866115
+                    750D21B3D4E010566139C007649A3158C5651499474BAFBEFDFDE26708BDA8CC
+                    C4992C3798C8EFBE8A8EFDCFEF669F8F705FD51785636527F47D17CA2DB4D46A
+                    38D631027D9EBFA7CCE472CF9B5BFDAA6F1E04620000000049454E44AE426082}
+                  FileName = 
+                    'D:\Documents\Dropbox\Programacio\CdA\La Pinya\images\1608533 - m' +
+                    'ap marker_32x32.png'
+                end>
+              Align = Top
+              Margins.Bottom = 2.000000000000000000
+              Position.Y = 44.000000000000000000
+              Size.Width = 20.000000000000000000
+              Size.Height = 20.000000000000000000
+              Size.PlatformDefault = False
+            end
+            object imgMeeting: TImage
+              MultiResBitmap.Height = 32
+              MultiResBitmap.Width = 32
+              MultiResBitmap = <
+                item
+                  Width = 32
+                  Height = 32
+                  PNG = {
+                    89504E470D0A1A0A0000000D4948445200000020000000200806000000737A7A
+                    F4000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+                    0294494441545847ED9639CF4D4118803FFB5289882D8442212A91080A21A150
+                    D80A7F40C38F10516A2844F81D8216B1C54E21D1D0DB9750D80A9EE7DEB937EF
+                    993B67F3E9789227736EEE9C993933F3CE3B53FF3C3352D99505B803B7E13A5C
+                    84B6F1115FE01DBC8E5FF1AFB216CFE317FCD5E2673C876B70DACCC113F80D4B
+                    9D35E93BC7D136FE88A5781B4B8DF7F1062EC122757BC0CE5DCBF5835F555EE3
+                    457C882FD14E56E066DC8FCB30E719BA77DE0D7EB5E09495BEFC151EC6A629F5
+                    3FEB58377FDF99E8B41CAE79FEF215AC9DC602D6BD86793BB6DD88BB3DDF7076
+                    3E1FFB62C8BA8CB1ADEFD8181D865A7CC1A9ECF3E539EEA53718DB3C8B451C71
+                    1EE7AE6709D7F2109EC2D3E97936963882B1CD4F380F27D883B1A25F5FDA34AB
+                    F009C6BAFA0857628E9DB9FB63DDDD3860662AC5E33562A8FD1C3E8E71409770
+                    E3E057954DE87FF94CB8EE97878F63B6A4B23200CFF688719E73004B9D8F7010
+                    7B878F15EEA772C4B8AF3800134BC44326676B2A9B187F5D206F6B712A2B03C8
+                    4F45D72AA76FF66C250EC0941AF178CD31DDB6713795917C737E48656500E6F3
+                    88677BCE057C3C7C2CF200F30D27795BCF5359A16B18FA35865CACAB6EB4E598
+                    6318BEC75877174EE041E4652256AC3B880CB58378326974CCC2124731B6E952
+                    CFC522DE6462E5E91EC5A6E6B718DB3C83B59828F26464567376FAB2106F616C
+                    CBB65763235EA3E24B6A5633B174C52FCF3BD763D88A1BCFCB43FEB259CDC452
+                    4C2409FF73CDF369D7AB3891B0EA0E16D7DDAFDE30F855C51D6DA8B9EB47279C
+                    9161A8EDC3F12917788A3B711CFF5D7010A599E8AB5F5E1A54275C0EAF5166B4
+                    52E34DBAE15CF3BA7B422F8C0E6F325E264A9D458D7343AD75B74BDFE4E226DB
+                    8E663C53EA686A5D5B8FD77B78137FE07F3A3035F51B6F2A09C14A7760AB0000
+                    000049454E44AE426082}
+                  FileName = 
+                    'D:\Documents\Dropbox\Programacio\CdA\La Pinya\images\1608480 - c' +
+                    'ircle dot o_32x32.png'
+                end>
+              Align = Top
+              Margins.Bottom = 2.000000000000000000
+              Position.Y = 66.000000000000000000
+              Size.Width = 20.000000000000000000
+              Size.Height = 20.000000000000000000
+              Size.PlatformDefault = False
+            end
+            object imgBus: TImage
+              MultiResBitmap.Height = 32
+              MultiResBitmap.Width = 32
+              MultiResBitmap = <
+                item
+                  Width = 32
+                  Height = 32
+                  PNG = {
+                    89504E470D0A1A0A0000000D4948445200000020000000200806000000737A7A
+                    F4000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+                    0268494441545847CD97CBAB4D511CC7B777E91211AE3CF22A4C505E5D193034
+                    3050FE03339219C500E56268626A60206546185074BB2537E59947CABD228981
+                    440AE1F35D2F6BEDD679EDBB9DEB539FD6EFACCE59E7B7D77B8F2B5A3309B7E0
+                    565C8BCBB01767E06414DFF113BEC397F8000770107F602566E169FC88BF2BFA
+                    014FA1DACAD2A807B6E3459C6D3E15C52FD493A9D176188FCBD1B7AF87D88DB7
+                    CCA7162CC02F183FC951EC947E8CDBF88C1ABA845C0FECC733360C3CC673A89E
+                    6807F5C01E5C653EFD652F9EB561632E609C799D9EC7845C0F8CE0221B16EF51
+                    B37B34CCC439362C8671890DF368FC7DB6F7504B70B468A96A59FA76E7634063
+                    15D3E74A71032BAFE108ED11376D68D09E126896C07D57D641DC56924099BBE8
+                    BB6AB52A6A620DFA76875491632AAACBF5A56F3811EB42F34043A1B67F620F1A
+                    E221588FFE4F1FA1BE5817FAF327362C26E0461BA6096C70A5A873FC3D719BEB
+                    5C9924B0C295423D50370F5D2974A21AE204E6BA52A88BFC515B075370930D0D
+                    FE904BB88E7EA6FE6B2FA3A1BC0F748B70048C55028146093CC383A81B91EE06
+                    55D11DE0241EC217AA68869F033AB1A6ABC2A1BB60790CDB75337A74877C83AA
+                    BFA20A91EB81ABA8CC3DBA5CBEB56147BCC23B3634E858D74326E41258EA4A8F
+                    32CF2E9B16E80E30CD868172DB09F1323C82DAAF17E3355757452DB785A84474
+                    AFF4F5610862BAB90F349D035D65CC13882FA53B5197D16DB84B1511C7516F39
+                    9D300F0FDB3070096FA3967A761E8803581E33BDE574CA4A2CB7B30F13FECB39
+                    F0DC951E6D4A553622FDE6AB0D034F5DD914CD8B13A81FBFC61D5815CD2B6DBF
+                    3A4F8E61E945A828FE00173BEFDA2F4345E00000000049454E44AE426082}
+                  FileName = 
+                    'D:\Documents\Dropbox\Programacio\CdA\La Pinya\images\1608593 - b' +
+                    'us_32x32.png'
+                end>
+              Align = Top
+              Margins.Bottom = 2.000000000000000000
+              Position.Y = 88.000000000000000000
+              Size.Width = 20.000000000000000000
+              Size.Height = 20.000000000000000000
+              Size.PlatformDefault = False
+            end
+            object imgColles: TImage
+              MultiResBitmap.Height = 32
+              MultiResBitmap.Width = 32
+              MultiResBitmap = <
+                item
+                  Width = 32
+                  Height = 32
+                  PNG = {
+                    89504E470D0A1A0A0000000D4948445200000020000000200806000000737A7A
+                    F4000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+                    02C5494441545847B5D64BC80D611CC7F1715DB8151B2277B946EEB705C28295
+                    2849D9D84858B86D24215B212559295908251B49914B6E1B5EC92589082B4411
+                    C9EDFB9B3333FDE7E97FE6CCBCCDF9D5A779CF73669EF39CE77D9EFF7322936E
+                    D886E7F883CF388D11E86C46E10CBEE02FD4F756E8B372E98A73F8E7F88809A8
+                    9AC9D097F0FAD4A0BA20CB7A7837A6EE21F7408BE8DE87F0FA4AAD4396ABF06E
+                    B2C6A26CA6C0EBC3BA8C78EA95A1C9B528C393ABD20BCBB0095BB03C694B53A6
+                    BF61C935CE2D78A3B4F43FED813DF89AB4596ADB8DEE9899B415B9862C5A99DE
+                    4DA967D037BC62DA9AD1D4F6C64BD3E6D98C2C3DD16C167E603E4E99B6564E62
+                    017E9A36EB3A349BB968D447F00DE98DB7A1E99C67DACA9A8D39B86BDAD4F761
+                    D8F5125DC0594C8A5F3546A6E2D33F7ED5C809D8CECB38863403A03ED36FADF5
+                    741E17B55F75739A3BB88437D08C4C85D687DAA7A34AEE63310EE211BE6324B4
+                    6334A359C29187B4555F046D653C854AAEF75E26AD0345D1F47D6AFC59292AE1
+                    7AB630650630035A8C55A3C537ABF16771DCA931B4A5C64327A4F7BEE73754BA
+                    759A7AEF5B6EA3F50BE370C0B4B5B20F13A18178EF5B6EA368E5AFC64068B7E8
+                    DF751CDEBDD651E85E3D33086BA01DE1DD2BD1FBA04154D3FB622754219F6003
+                    D4A906F518E133DA6A2BA10FDF08ED829BD88E3ED88FF09977EA50C5611AD215
+                    AB6AF51A3A2CC223586D3BD0019D8EA3A1A8EEBF856AC5212C848DCE92251803
+                    D51745BBA4430308A36FA0553F377EE5E701F41BE255FCAA3190A550E16A16CD
+                    E422E8A75961D6229CAABAAC42CBE8A4F21EAE838EF3C2F44395FD5E95B674BA
+                    06E2849550552F6CAB335AF0B975127E58677E7E574DEE33C2010C4EAEEDCC90
+                    E41A271C80D640BBA30297251C805717EA4EEE33C3017C48AEED8C4A7FD3E804
+                    53A5F2B6501DB4C5558E0BB317DEC375D8855251C9D449A61F925E4755E870BB
+                    8115081245FF01876EDB071ACAFBAA0000000049454E44AE426082}
+                  FileName = 
+                    'D:\Documents\Dropbox\Programacio\CdA\La Pinya\images\1608916 - g' +
+                    'roup_32x32.png'
+                end>
+              Align = Top
+              Margins.Bottom = 2.000000000000000000
+              Position.Y = 110.000000000000000000
+              Size.Width = 20.000000000000000000
+              Size.Height = 20.000000000000000000
+              Size.PlatformDefault = False
+            end
+          end
+          object pData: TPanel
+            Align = Client
+            Margins.Right = 10.000000000000000000
+            Margins.Bottom = 20.000000000000000000
+            Size.Width = 566.000000000000000000
+            Size.Height = 133.000000000000000000
+            Size.PlatformDefault = False
+            StyleLookup = 'pContent'
+            TabOrder = 1
+            object llCalendar: TLabel
+              Align = Top
+              Margins.Bottom = 2.000000000000000000
+              Size.Width = 566.000000000000000000
+              Size.Height = 20.000000000000000000
+              Size.PlatformDefault = False
+              StyleLookup = 'sLabelContentEvent'
+              TextSettings.WordWrap = False
+              Text = '20/01/2018'
+              TabOrder = 0
+            end
+            object lTime: TLabel
+              Align = Top
+              Margins.Bottom = 2.000000000000000000
+              Position.Y = 88.000000000000000000
+              Size.Width = 566.000000000000000000
+              Size.Height = 20.000000000000000000
+              Size.PlatformDefault = False
+              StyleLookup = 'sLabelContentEvent'
+              TextSettings.WordWrap = False
+              Text = '10h30'
+              TabOrder = 1
+            end
+            object lPlace: TLabel
+              Align = Top
+              Margins.Bottom = 2.000000000000000000
+              Position.Y = 66.000000000000000000
+              Size.Width = 566.000000000000000000
+              Size.Height = 20.000000000000000000
+              Size.PlatformDefault = False
+              StyleLookup = 'sLabelContentEvent'
+              TextSettings.WordWrap = False
+              Text = 
+                'Vallnord - Pal Arinsal. Sector Pal, Carretera de la Caubella, 1,' +
+                ' AD400 La Massana, Andorra'
+              TabOrder = 2
+            end
+            object lMeeting: TLabel
+              Align = Top
+              Margins.Bottom = 2.000000000000000000
+              Position.Y = 44.000000000000000000
+              Size.Width = 566.000000000000000000
+              Size.Height = 20.000000000000000000
+              Size.PlatformDefault = False
+              StyleLookup = 'sLabelContentEvent'
+              TextSettings.WordWrap = False
+              Text = 
+                'Vallnord - Pal Arinsal. Sector Pal, Carretera de la Caubella, 1,' +
+                ' AD400 La Massana, Andorra'
+              TabOrder = 3
+            end
+            object lBus: TLabel
+              Align = Top
+              Margins.Bottom = 2.000000000000000000
+              Position.Y = 22.000000000000000000
+              Size.Width = 566.000000000000000000
+              Size.Height = 20.000000000000000000
+              Size.PlatformDefault = False
+              StyleLookup = 'sLabelContentEvent'
+              TextSettings.WordWrap = False
+              Text = '--:-- / 10h00 Estaci'#243' Nadal'
+              TabOrder = 4
+            end
+            object lColles: TLabel
+              Align = Top
+              AutoSize = True
+              Margins.Bottom = 2.000000000000000000
+              Position.Y = 110.000000000000000000
+              Size.Width = 566.000000000000000000
+              Size.Height = 38.000000000000000000
+              Size.PlatformDefault = False
+              StyleLookup = 'sLabelContentEvent'
+              TextSettings.VertAlign = Leading
+              TextSettings.WordWrap = False
+              Text = 'Castellers de Calders'#13#10'Castellers de Rub'#237
+              TabOrder = 5
+            end
+          end
+          object pTitre: TPanel
+            Align = Top
+            Margins.Left = 5.000000000000000000
+            Margins.Top = 20.000000000000000000
+            Margins.Right = 5.000000000000000000
+            Position.X = 5.000000000000000000
+            Position.Y = 20.000000000000000000
+            Size.Width = 606.000000000000000000
+            Size.Height = 29.000000000000000000
+            Size.PlatformDefault = False
+            StyleLookup = 'pContent'
+            TabOrder = 2
+            object lType: TLabel
+              Align = Left
+              AutoSize = True
+              Margins.Left = 20.000000000000000000
+              Position.X = 20.000000000000000000
+              Size.Width = 62.000000000000000000
+              Size.Height = 29.000000000000000000
+              Size.PlatformDefault = False
+              StyleLookup = 'sLabelTitolEvent'
+              TextSettings.WordWrap = False
+              Text = 'Assaig:'
+              TabOrder = 1
+            end
+            object lDesc: TLabel
+              Align = Client
+              Margins.Left = 5.000000000000000000
+              Size.Width = 519.000000000000000000
+              Size.Height = 29.000000000000000000
+              Size.PlatformDefault = False
+              StyleLookup = 'sLabelTitolEvent'
+              Text = 'Escola Andorrana'
+              TabOrder = 0
+            end
+          end
+          object lnCal: TLine
+            Align = Top
+            LineType = Top
+            Margins.Left = 20.000000000000000000
+            Margins.Top = 5.000000000000000000
+            Margins.Right = 20.000000000000000000
+            Margins.Bottom = 5.000000000000000000
+            Position.X = 20.000000000000000000
+            Position.Y = 54.000000000000000000
+            Size.Width = 576.000000000000000000
+            Size.Height = 1.000000000000000000
+            Size.PlatformDefault = False
+            Stroke.Color = claFirebrick
+          end
+        end
+      end
+    end
+  end
+end

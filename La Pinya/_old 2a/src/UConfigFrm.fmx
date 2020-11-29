@@ -1,0 +1,335 @@
+inherited ConfigFrm: TConfigFrm
+  Caption = 'BaseModalFrm1'
+  ClientHeight = 560
+  ClientWidth = 522
+  DesignerMasterStyle = 0
+  inherited lyMain: TLayout
+    Size.Width = 522.000000000000000000
+    Size.Height = 560.000000000000000000
+    object sbContent: TScrollBox
+      Align = Client
+      Size.Width = 522.000000000000000000
+      Size.Height = 560.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Viewport.Width = 522.000000000000000000
+      Viewport.Height = 560.000000000000000000
+      object pCastellers: TPanel
+        Align = Top
+        Size.Width = 522.000000000000000000
+        Size.Height = 217.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'pContent'
+        TabOrder = 0
+        object lTitre: TLabel
+          Align = Top
+          Margins.Left = 10.000000000000000000
+          Margins.Top = 20.000000000000000000
+          Margins.Right = 10.000000000000000000
+          Position.X = 10.000000000000000000
+          Position.Y = 20.000000000000000000
+          Size.Width = 502.000000000000000000
+          Size.Height = 19.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'sLabelContent'
+          Text = 'CASTELLERS ACTIUS'
+          TabOrder = 0
+        end
+        object lbCastAct: TListBox
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Align = Top
+          Margins.Left = 10.000000000000000000
+          Margins.Top = 5.000000000000000000
+          Margins.Right = 10.000000000000000000
+          Position.X = 10.000000000000000000
+          Position.Y = 44.000000000000000000
+          Size.Width = 502.000000000000000000
+          Size.Height = 119.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+          DisableFocusEffect = True
+          ItemHeight = 35.000000000000000000
+          DefaultItemStyles.ItemStyle = ''
+          DefaultItemStyles.GroupHeaderStyle = ''
+          DefaultItemStyles.GroupFooterStyle = ''
+          Viewport.Width = 498.000000000000000000
+          Viewport.Height = 115.000000000000000000
+          object ListBoxItem1: TListBoxItem
+            Size.Width = 498.000000000000000000
+            Size.Height = 35.000000000000000000
+            Size.PlatformDefault = False
+            StyleLookup = 'sListBoxItem'
+            TabOrder = 0
+            Text = 'ListBoxItem1'
+            object imgDel: TImage
+              MultiResBitmap.Height = 48
+              MultiResBitmap.Width = 48
+              MultiResBitmap = <
+                item
+                  Width = 48
+                  Height = 48
+                  PNG = {
+                    89504E470D0A1A0A0000000D49484452000000300000003008060000005702F9
+                    87000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+                    0207494441546843ED99BD4B1C411887D72FFC42130515C44A081AB0B14B130B
+                    3BB15050FF031BC1C242B0106C04C1C2C67F4048932AD8982A24762A6861E537
+                    D82862A5362228EAEFB7332F0C97DB8FBBBDB9C99179E0E17D6FE6F676DFDB99
+                    657727F078B251A563566AE114FC026BD810C30BDC853F74EE9C2EB80FDF0A74
+                    0F7640E76CC17C0798C64D9889AC43A81F1EAB34E41EDEAA34129EB18F2A0DF9
+                    042F545A7ED6A1F98F0EC0243E43739B35E88416F800E540B6615A7E43D9EE0E
+                    36C1B23303E520E8244CCB0434B79D864511350716E157954632083B551AF207
+                    3EAB34913A38ACD210CE9B439546C233BCAAD26438A9CC7FE85FF004FE45B58E
+                    154BD4105A8032847A21AF1CC24F1D6D31AA233982972A0D87505157AC39689E
+                    4ADB98FB9A65431C153F847C01AEC95A006FA3793F445BD960D008A58FB9C907
+                    C8F63EC8DFB04ADC245E86D2BEC30683EF50FABEB1C1E0004ADF121B0CA49D5A
+                    9FC46D3A92761D85B83EF36E34B7AF20FC24768D2FC035BE00D7F8025CE30B70
+                    8D2FC035BE00D7642DE05C4772AAA370A62389EB33732BF8B71236F92F0A78D5
+                    51C87D402F25CD3A0A892F8BD31470A5A330A6A30DC67514E4B56224699698F8
+                    707E03EBC34F41F004AF555A727AA0EC878B27DDF031FC949115685E1DCAE13C
+                    2C195C90E0BA6EBE1DD97003A6BAC014B24AC9EF8EC021D8C0060B707872A5E7
+                    1764211E8F5D82E01DF5B3D6A33B4FDA750000000049454E44AE426082}
+                  FileName = 
+                    'D:\Documents\DropBox\Programacio\CdA\La Pinya\images\1608715 - o' +
+                    ' trash_48x48.png'
+                end>
+              Align = MostRight
+              Position.X = 463.000000000000000000
+              Size.Width = 35.000000000000000000
+              Size.Height = 35.000000000000000000
+              Size.PlatformDefault = False
+            end
+          end
+        end
+        object bNewUser: TButton
+          Action = aNewUser
+          Align = Top
+          Enabled = True
+          StyledSettings = [Family, Size, Style]
+          ImageIndex = -1
+          Margins.Left = 10.000000000000000000
+          Margins.Top = 5.000000000000000000
+          Margins.Right = 10.000000000000000000
+          Position.X = 10.000000000000000000
+          Position.Y = 168.000000000000000000
+          Size.Width = 502.000000000000000000
+          Size.Height = 40.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 2
+          TextSettings.FontColor = claFirebrick
+        end
+      end
+      object pNotify: TPanel
+        Align = Top
+        Position.Y = 217.000000000000000000
+        Size.Width = 522.000000000000000000
+        Size.Height = 230.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'pContent'
+        TabOrder = 1
+        object lContent: TLabel
+          Align = Top
+          Margins.Left = 10.000000000000000000
+          Margins.Top = 20.000000000000000000
+          Margins.Right = 10.000000000000000000
+          Position.X = 10.000000000000000000
+          Position.Y = 20.000000000000000000
+          Size.Width = 502.000000000000000000
+          Size.Height = 17.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'sLabelContent'
+          Text = 'NOTIFICACIONS'
+          TabOrder = 0
+        end
+        object lyDiades: TLayout
+          Align = Top
+          Margins.Left = 10.000000000000000000
+          Margins.Top = 5.000000000000000000
+          Margins.Right = 10.000000000000000000
+          Position.X = 10.000000000000000000
+          Position.Y = 42.000000000000000000
+          Size.Width = 502.000000000000000000
+          Size.Height = 35.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+          object swDiades: TSwitch
+            Align = Right
+            IsChecked = False
+            Position.X = 402.000000000000000000
+            Size.Width = 100.000000000000000000
+            Size.Height = 35.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+          end
+          object lDiades: TLabel
+            Align = Right
+            Margins.Right = 20.000000000000000000
+            Position.X = 262.000000000000000000
+            Size.Width = 120.000000000000000000
+            Size.Height = 35.000000000000000000
+            Size.PlatformDefault = False
+            StyleLookup = 'sLabelContent'
+            TextSettings.HorzAlign = Trailing
+            Text = 'Diades'
+            TabOrder = 1
+          end
+        end
+        object lyAssajos: TLayout
+          Align = Top
+          Margins.Left = 10.000000000000000000
+          Margins.Top = 5.000000000000000000
+          Margins.Right = 10.000000000000000000
+          Position.X = 10.000000000000000000
+          Position.Y = 82.000000000000000000
+          Size.Width = 502.000000000000000000
+          Size.Height = 35.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 2
+          object swAssajos: TSwitch
+            Align = Right
+            IsChecked = False
+            Position.X = 402.000000000000000000
+            Size.Width = 100.000000000000000000
+            Size.Height = 35.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+          end
+          object lAssajos: TLabel
+            Align = Right
+            Margins.Right = 20.000000000000000000
+            Position.X = 262.000000000000000000
+            Size.Width = 120.000000000000000000
+            Size.Height = 35.000000000000000000
+            Size.PlatformDefault = False
+            StyleLookup = 'sLabelContent'
+            TextSettings.HorzAlign = Trailing
+            Text = 'Assajos'
+            TabOrder = 1
+          end
+        end
+        object lyEvents: TLayout
+          Align = Top
+          Margins.Left = 10.000000000000000000
+          Margins.Top = 5.000000000000000000
+          Margins.Right = 10.000000000000000000
+          Position.X = 10.000000000000000000
+          Position.Y = 122.000000000000000000
+          Size.Width = 502.000000000000000000
+          Size.Height = 35.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 3
+          object swEvents: TSwitch
+            Align = Right
+            IsChecked = False
+            Position.X = 402.000000000000000000
+            Size.Width = 100.000000000000000000
+            Size.Height = 35.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+          end
+          object lEvents: TLabel
+            Align = Right
+            Margins.Right = 20.000000000000000000
+            Position.X = 262.000000000000000000
+            Size.Width = 120.000000000000000000
+            Size.Height = 35.000000000000000000
+            Size.PlatformDefault = False
+            StyleLookup = 'sLabelContent'
+            TextSettings.HorzAlign = Trailing
+            Text = 'Events'
+            TabOrder = 1
+          end
+        end
+        object lyNews: TLayout
+          Align = Top
+          Margins.Left = 10.000000000000000000
+          Margins.Top = 5.000000000000000000
+          Margins.Right = 10.000000000000000000
+          Position.X = 10.000000000000000000
+          Position.Y = 162.000000000000000000
+          Size.Width = 502.000000000000000000
+          Size.Height = 35.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 4
+          object swNews: TSwitch
+            Align = Right
+            IsChecked = False
+            Position.X = 402.000000000000000000
+            Size.Width = 100.000000000000000000
+            Size.Height = 35.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+          end
+          object lNews: TLabel
+            Align = Right
+            Margins.Right = 20.000000000000000000
+            Position.X = 262.000000000000000000
+            Size.Width = 120.000000000000000000
+            Size.Height = 35.000000000000000000
+            Size.PlatformDefault = False
+            StyleLookup = 'sLabelContent'
+            TextSettings.HorzAlign = Trailing
+            Text = 'Not'#237'cies'
+            TabOrder = 1
+          end
+        end
+      end
+      object pInfo: TPanel
+        Align = Top
+        Position.Y = 447.000000000000000000
+        Size.Width = 522.000000000000000000
+        Size.Height = 93.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'pContent'
+        TabOrder = 2
+        object lVersion: TLabel
+          Align = Top
+          Margins.Left = 10.000000000000000000
+          Margins.Top = 20.000000000000000000
+          Margins.Right = 10.000000000000000000
+          Position.X = 10.000000000000000000
+          Position.Y = 20.000000000000000000
+          Size.Width = 502.000000000000000000
+          Size.Height = 23.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'sLabelContent'
+          Text = 'Versi'#243
+          TabOrder = 0
+        end
+        object lErrors: TLabel
+          Align = Top
+          Margins.Left = 10.000000000000000000
+          Margins.Right = 10.000000000000000000
+          Position.X = 10.000000000000000000
+          Position.Y = 43.000000000000000000
+          Size.Width = 502.000000000000000000
+          Size.Height = 24.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'sLabelContent'
+          Text = 'Per errors, contactar amb cadetill@gmail.com'
+          TabOrder = 1
+        end
+        object lInfo: TLabel
+          Align = Top
+          Margins.Left = 10.000000000000000000
+          Margins.Right = 10.000000000000000000
+          Position.X = 10.000000000000000000
+          Position.Y = 67.000000000000000000
+          Size.Width = 502.000000000000000000
+          Size.Height = 24.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'sLabelContent'
+          Text = 'Per informacio contactar amb castellers.andorra@gmail.com'
+          TabOrder = 2
+        end
+      end
+    end
+  end
+  object ActionList1: TActionList
+    Left = 290
+    Top = 106
+    object aNewUser: TAction
+      Text = 'NOU USUARI'
+      OnExecute = aNewUserExecute
+    end
+  end
+end

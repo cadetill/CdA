@@ -1,0 +1,4 @@
+@abstract(Search a Calendar by Id into the @link(Items) list.)
+If the calendar doesn't exists, returns -1. If exists, returns his position into the list.
+
+@param(Id string with the calendar identifier value)

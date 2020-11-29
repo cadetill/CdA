@@ -1,0 +1,2 @@
+@abstract(An individual calendar.)
+Contains information about an individual calendar from the colla castellera.

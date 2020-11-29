@@ -1,0 +1,2 @@
+@abstract(Class constructor.)
+Initialize properties of the object.

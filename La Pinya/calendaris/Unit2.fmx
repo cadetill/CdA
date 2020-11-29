@@ -1,0 +1,250 @@
+object Form2: TForm2
+  Left = 0
+  Top = 0
+  Caption = 'Form2'
+  ClientHeight = 704
+  ClientWidth = 802
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object bGetCalendars: TButton
+    Position.X = 152.000000000000000000
+    Position.Y = 24.000000000000000000
+    Size.Width = 105.000000000000000000
+    Size.Height = 38.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 4
+    Text = 'Get Calendaris'
+    OnClick = bGetCalendarsClick
+  end
+  object bGetEventsGC: TButton
+    Position.X = 264.000000000000000000
+    Position.Y = 24.000000000000000000
+    Size.Width = 105.000000000000000000
+    Size.Height = 38.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 3
+    Text = 'Get Events'
+    OnClick = bGetEventsGCClick
+  end
+  object bGetEventsCdA: TButton
+    Position.X = 376.000000000000000000
+    Position.Y = 24.000000000000000000
+    Size.Width = 113.000000000000000000
+    Size.Height = 38.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    Text = 'Get Events CdA'
+    OnClick = bGetEventsCdAClick
+  end
+  object Panel1: TPanel
+    Anchors = [akLeft, akTop, akRight, akBottom]
+    Position.X = 8.000000000000000000
+    Position.Y = 64.000000000000000000
+    Size.Width = 787.000000000000000000
+    Size.Height = 633.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 5
+    object lbCalendars: TListBox
+      Anchors = [akLeft, akTop, akRight, akBottom]
+      Position.X = 8.000000000000000000
+      Position.Y = 56.000000000000000000
+      Size.Width = 771.000000000000000000
+      Size.Height = 569.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'lbCalendarsStyle1'
+      TabOrder = 1
+      DisableFocusEffect = True
+      ItemHeight = 40.000000000000000000
+      DefaultItemStyles.ItemStyle = 'listboxitembottomdetail'
+      DefaultItemStyles.GroupHeaderStyle = ''
+      DefaultItemStyles.GroupFooterStyle = ''
+      Viewport.Width = 767.000000000000000000
+      Viewport.Height = 565.000000000000000000
+      object lbSeason: TListBox
+        Anchors = [akLeft, akTop, akRight, akBottom]
+        Position.X = -4.000000000000000000
+        Position.Y = 384.000000000000000000
+        Size.Width = 771.000000000000000000
+        Size.Height = 181.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        DisableFocusEffect = True
+        ItemHeight = 40.000000000000000000
+        DefaultItemStyles.ItemStyle = 'listboxitembottomdetail'
+        DefaultItemStyles.GroupHeaderStyle = ''
+        DefaultItemStyles.GroupFooterStyle = ''
+        Viewport.Width = 767.000000000000000000
+        Viewport.Height = 177.000000000000000000
+        object ListBoxItem1: TListBoxItem
+          ItemData.Detail = 'dasdad'
+          Size.Width = 767.000000000000000000
+          Size.Height = 40.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          Text = 'ListBoxItem1'
+          object Image3: TImage
+            MultiResBitmap = <
+              item
+              end>
+            Align = Right
+            Position.X = 727.000000000000000000
+            Size.Width = 40.000000000000000000
+            Size.Height = 40.000000000000000000
+            Size.PlatformDefault = False
+          end
+        end
+      end
+    end
+    object lbItems: TListBox
+      Anchors = [akLeft, akTop, akRight, akBottom]
+      Position.X = 8.000000000000000000
+      Position.Y = 192.000000000000000000
+      Size.Width = 771.000000000000000000
+      Size.Height = 249.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      DisableFocusEffect = True
+      ItemHeight = 40.000000000000000000
+      DefaultItemStyles.ItemStyle = 'listboxitembottomdetail'
+      DefaultItemStyles.GroupHeaderStyle = ''
+      DefaultItemStyles.GroupFooterStyle = ''
+      Viewport.Width = 767.000000000000000000
+      Viewport.Height = 245.000000000000000000
+      object ListBoxItem2: TListBoxItem
+        ItemData.Detail = 'dasdad'
+        Size.Width = 767.000000000000000000
+        Size.Height = 40.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Text = 'ListBoxItem1'
+        object Image2: TImage
+          MultiResBitmap = <
+            item
+            end>
+          Align = Right
+          Position.X = 727.000000000000000000
+          Size.Width = 40.000000000000000000
+          Size.Height = 40.000000000000000000
+          Size.PlatformDefault = False
+        end
+      end
+    end
+    object cbTemporades: TComboBox
+      Position.X = 16.000000000000000000
+      Position.Y = 16.000000000000000000
+      Size.Width = 217.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+    end
+    object Image1: TImage
+      MultiResBitmap = <
+        item
+          Width = 32
+          Height = 32
+          PNG = {
+            89504E470D0A1A0A0000000D4948445200000020000000200806000000737A7A
+            F4000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+            00EE494441545847ED974B0E01411086C7E310AC85B58D583885D8388105128E
+            200EC13DC40D6C3C7676228EE2F157571BD15364BA33130BF5255FAA7A35FFA4
+            5F33D1DF53B0D587129CC19619BDD8C239BC99518EF4E1FD833DE845D1561F2A
+            B64A546D4D4D48804CD1001AE0E701DC83A80C47B06E46324DD8E136C1061EB9
+            1539C105BC9A91C0044A074C960E618C3B05DFDE3C2B1AB61A7411BA01688EF2
+            E6EDB67403AC619ED729AD7E7A468CF43D400BB1C6AD48170EB84DB0842B6E45
+            CEF0C26D3853E86EADA763E885EE020DA0014202EC216D39173AC076DCA627E4
+            C7846843F7C7841E7EE05651D212450F8CF43DD3B10E5FE60000000049454E44
+            AE426082}
+          FileName = 
+            'D:\Documents\Dropbox\Programacio\CdA\La Pinya\images\1608798 - p' +
+            'lus_32x32.png'
+        end>
+      Cursor = crHandPoint
+      Position.X = 240.000000000000000000
+      Position.Y = 16.000000000000000000
+      Size.Width = 32.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      OnClick = Image1Click
+    end
+  end
+  object Button4: TButton
+    Position.X = 688.000000000000000000
+    Position.Y = 24.000000000000000000
+    Size.Width = 104.000000000000000000
+    Size.Height = 38.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 8
+    Text = 'Demo Messatge'
+    OnClick = Button4Click
+  end
+  object bGetSeasons: TButton
+    Position.X = 16.000000000000000000
+    Position.Y = 24.000000000000000000
+    Size.Width = 105.000000000000000000
+    Size.Height = 38.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    Text = 'Get Temporades'
+    OnClick = bGetSeasonsClick
+  end
+  object bMergeEvents: TButton
+    Position.X = 496.000000000000000000
+    Position.Y = 24.000000000000000000
+    Size.Width = 113.000000000000000000
+    Size.Height = 38.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    Text = 'Merge Events'
+    OnClick = bMergeEventsClick
+  end
+  object ImageList1: TImageList
+    Source = <
+      item
+        MultiResBitmap.Height = 48
+        MultiResBitmap.Width = 48
+        MultiResBitmap.LoadSize = 0
+        MultiResBitmap = <
+          item
+            Width = 48
+            Height = 48
+            PNG = {
+              89504E470D0A1A0A0000000D49484452000000300000003008060000005702F9
+              87000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+              0207494441546843ED99BD4B1C411887D72FFC42130515C44A081AB0B14B130B
+              3BB15050FF031BC1C242B0106C04C1C2C67F4048932AD8982A24762A6861E537
+              D82862A5362228EAEFB7332F0C97DB8FBBBDB9C99179E0E17D6FE6F676DFDB99
+              657727F078B251A563566AE114FC026BD810C30BDC853F74EE9C2EB80FDF0A74
+              0F7640E76CC17C0798C64D9889AC43A81F1EAB34E41EDEAA34129EB18F2A0DF9
+              042F545A7ED6A1F98F0EC0243E43739B35E88416F800E540B6615A7E43D9EE0E
+              36C1B23303E520E8244CCB0434B79D864511350716E157954632083B551AF207
+              3EAB34913A38ACD210CE9B439546C233BCAAD26438A9CC7FE85FF004FE45B58E
+              154BD4105A8032847A21AF1CC24F1D6D31AA233982972A0D87505157AC39689E
+              4ADB98FB9A65431C153F847C01AEC95A006FA3793F445BD960D008A58FB9C907
+              C8F63EC8DFB04ADC245E86D2BEC30683EF50FABEB1C1E0004ADF121B0CA49D5A
+              9FC46D3A92761D85B83EF36E34B7AF20FC24768D2FC035BE00D7F8025CE30B70
+              8D2FC035BE00D7642DE05C4772AAA370A62389EB33732BF8B71236F92F0A78D5
+              51C87D402F25CD3A0A892F8BD31470A5A330A6A30DC67514E4B56224699698F8
+              707E03EBC34F41F004AF555A727AA0EC878B27DDF031FC949115685E1DCAE13C
+              2C195C90E0BA6EBE1DD97003A6BAC014B24AC9EF8EC021D8C0060B707872A5E7
+              1764211E8F5D82E01DF5B3D6A33B4FDA750000000049454E44AE426082}
+            FileName = 
+              'D:\Documents\Dropbox\Programacio\CdA\La Pinya\images\1608715 - o' +
+              ' trash_48x48.png'
+          end>
+        Name = 'trash'
+      end>
+    Destination = <
+      item
+        Layers = <
+          item
+            Name = 'trash'
+            SourceRect.Right = 48.000000000000000000
+            SourceRect.Bottom = 48.000000000000000000
+          end>
+      end>
+    Left = 528
+    Top = 72
+  end
+end

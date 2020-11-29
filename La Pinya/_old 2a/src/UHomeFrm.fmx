@@ -1,0 +1,340 @@
+inherited HomeFrm: THomeFrm
+  Caption = 'NOTICIES'
+  ClientHeight = 599
+  OnShow = FormShow
+  DesignerMasterStyle = 0
+  inherited lyMain: TLayout
+    Size.Height = 599.000000000000000000
+    object lbNews: TListBox
+      Align = Client
+      Size.Width = 640.000000000000000000
+      Size.Height = 549.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      DisableFocusEffect = True
+      DefaultItemStyles.ItemStyle = ''
+      DefaultItemStyles.GroupHeaderStyle = ''
+      DefaultItemStyles.GroupFooterStyle = ''
+      Viewport.Width = 636.000000000000000000
+      Viewport.Height = 545.000000000000000000
+      object lbItem1: TListBoxItem
+        Size.Width = 636.000000000000000000
+        Size.Height = 257.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        object recContent: TRectangle
+          Align = Client
+          Margins.Left = 20.000000000000000000
+          Margins.Top = 20.000000000000000000
+          Margins.Right = 20.000000000000000000
+          Margins.Bottom = 20.000000000000000000
+          Size.Width = 596.000000000000000000
+          Size.Height = 217.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Color = claFirebrick
+          XRadius = 20.000000000000000000
+          YRadius = 20.000000000000000000
+          object lFooter: TLabel
+            Align = Bottom
+            StyledSettings = [Family, Style]
+            Margins.Right = 20.000000000000000000
+            Margins.Bottom = 5.000000000000000000
+            Position.Y = 195.000000000000000000
+            Size.Width = 576.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 14.000000000000000000
+            TextSettings.FontColor = claFirebrick
+            TextSettings.HorzAlign = Trailing
+            Text = '05/03/2018 12:05:33'
+            TabOrder = 0
+          end
+          object lnFooter: TLine
+            Align = Bottom
+            LineType = Top
+            Margins.Left = 20.000000000000000000
+            Margins.Right = 20.000000000000000000
+            Position.X = 20.000000000000000000
+            Position.Y = 189.000000000000000000
+            Size.Width = 556.000000000000000000
+            Size.Height = 6.000000000000000000
+            Size.PlatformDefault = False
+            Stroke.Color = claFirebrick
+          end
+          object lnHeader: TLine
+            Align = Top
+            LineType = Bottom
+            Margins.Left = 20.000000000000000000
+            Margins.Right = 20.000000000000000000
+            Position.X = 20.000000000000000000
+            Position.Y = 34.000000000000000000
+            Size.Width = 556.000000000000000000
+            Size.Height = 6.000000000000000000
+            Size.PlatformDefault = False
+            Stroke.Color = claFirebrick
+          end
+          object lHeader: TLabel
+            Align = Top
+            StyledSettings = [Family, Style]
+            Margins.Top = 5.000000000000000000
+            Margins.Right = 20.000000000000000000
+            Position.Y = 5.000000000000000000
+            Size.Width = 576.000000000000000000
+            Size.Height = 29.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 24.000000000000000000
+            TextSettings.FontColor = claFirebrick
+            TextSettings.HorzAlign = Center
+            Text = #191'Qu'#233' es Lorem Ipsum?'
+            TabOrder = 3
+            object imgEdit: TImage
+              MultiResBitmap.Height = 48
+              MultiResBitmap.Width = 48
+              MultiResBitmap = <
+                item
+                  Width = 48
+                  Height = 48
+                  PNG = {
+                    89504E470D0A1A0A0000000D49484452000000300000003008060000005702F9
+                    87000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+                    01CF494441546843ED99BB4A04310045C7472358FB0FFE818816E2B3102CF413
+                    FC0B51B495AD445B1F885F207E801682A0BD85A5A88576828AA0DEBB33811032
+                    999D8979CC92030732D985DC0BD9DDD94C9648F4070370281FB60B86DE816FF0
+                    07DEC009D80A18FE08FE2A7EC05918350C7F02D5F04296988351C2F0A750175C
+                    9625E661540CC333A80BAC9325166034AC425D50939F701146C336D40535C912
+                    4B3008DC367B70BC7B95D3B4C424F48ABCE75FA06D896BE80DDD07D6B6C437F4
+                    82E9DBC6A6C413744E59F82BC8DB058E9B96D8804E290BBF0947E1AB3457B704
+                    7FB99DDEF05585BF94E684BD963886D185175695E00D5FB4E18565250E61F4E1
+                    856A891538980FDDF09FE1856A0967B8082FEC40A7B80CCF3DDFBA6D234CE14D
+                    A4F025A6F026FA32FC016C6D787A0BEF94B93A0609FF0ECF95B9263A0F4FB6A0
+                    BC28C34F432ECC00F26B75F4129EEC43B1284FC5185ED0B484B7F0442E70CF09
+                    85BA25BC8627550548AF25BC8727728147B82C3906055525828427720155F56C
+                    92012FA0FA3EAFE16D169A2994E11FF075C8F31F2F342DC04740FC6D18E95EE5
+                    780FAFC3B4859EE143E15731270CB6E7554C05CA0C1ADE76E1E0DB860F9865D6
+                    E0543EAC844720BB30E89E4F24ACC8B23F8BA660937739A2210000000049454E
+                    44AE426082}
+                  FileName = 
+                    'D:\Documents\DropBox\Programacio\CdA\La Pinya\images\1608787 - p' +
+                    'encil_48x48.png'
+                end>
+              Align = MostRight
+              Position.X = 518.000000000000000000
+              Size.Width = 29.000000000000000000
+              Size.Height = 29.000000000000000000
+              Size.PlatformDefault = False
+            end
+            object imgDel: TImage
+              MultiResBitmap.Height = 48
+              MultiResBitmap.Width = 48
+              MultiResBitmap = <
+                item
+                  Width = 48
+                  Height = 48
+                  PNG = {
+                    89504E470D0A1A0A0000000D49484452000000300000003008060000005702F9
+                    87000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+                    0207494441546843ED99BD4B1C411887D72FFC42130515C44A081AB0B14B130B
+                    3BB15050FF031BC1C242B0106C04C1C2C67F4048932AD8982A24762A6861E537
+                    D82862A5362228EAEFB7332F0C97DB8FBBBDB9C99179E0E17D6FE6F676DFDB99
+                    657727F078B251A563566AE114FC026BD810C30BDC853F74EE9C2EB80FDF0A74
+                    0F7640E76CC17C0798C64D9889AC43A81F1EAB34E41EDEAA34129EB18F2A0DF9
+                    042F545A7ED6A1F98F0EC0243E43739B35E88416F800E540B6615A7E43D9EE0E
+                    36C1B23303E520E8244CCB0434B79D864511350716E157954632083B551AF207
+                    3EAB34913A38ACD210CE9B439546C233BCAAD26438A9CC7FE85FF004FE45B58E
+                    154BD4105A8032847A21AF1CC24F1D6D31AA233982972A0D87505157AC39689E
+                    4ADB98FB9A65431C153F847C01AEC95A006FA3793F445BD960D008A58FB9C907
+                    C8F63EC8DFB04ADC245E86D2BEC30683EF50FABEB1C1E0004ADF121B0CA49D5A
+                    9FC46D3A92761D85B83EF36E34B7AF20FC24768D2FC035BE00D7F8025CE30B70
+                    8D2FC035BE00D7642DE05C4772AAA370A62389EB33732BF8B71236F92F0A78D5
+                    51C87D402F25CD3A0A892F8BD31470A5A330A6A30DC67514E4B56224699698F8
+                    707E03EBC34F41F004AF555A727AA0EC878B27DDF031FC949115685E1DCAE13C
+                    2C195C90E0BA6EBE1DD97003A6BAC014B24AC9EF8EC021D8C0060B707872A5E7
+                    1764211E8F5D82E01DF5B3D6A33B4FDA750000000049454E44AE426082}
+                  FileName = 
+                    'D:\Documents\DropBox\Programacio\CdA\La Pinya\images\1608715 - o' +
+                    ' trash_48x48.png'
+                end>
+              Align = MostRight
+              Position.X = 547.000000000000000000
+              Size.Width = 29.000000000000000000
+              Size.Height = 29.000000000000000000
+              Size.PlatformDefault = False
+            end
+          end
+        end
+        object lbItem1m: TText
+          Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+          Margins.Left = 20.000000000000000000
+          Margins.Right = 50.000000000000000000
+          Position.X = 76.000000000000000000
+          Position.Y = 64.000000000000000000
+          Size.Width = 486.000000000000000000
+          Size.Height = 137.000000000000000000
+          Size.PlatformDefault = False
+          Text = 
+            'Lorem Ipsum es simplemente el texto de relleno de las imprentas ' +
+            'y archivos de texto. Lorem Ipsum ha sido el texto de relleno est' +
+            #225'ndar de las industrias desde el a'#241'o 1500, cuando un impresor (N' +
+            '. del T. persona que se dedica a la imprenta) desconocido us'#243' un' +
+            'a galer'#237'a de textos y los mezcl'#243' de tal manera que logr'#243' hacer u' +
+            'n libro de textos especimen. No s'#243'lo sobrevivi'#243' 500 a'#241'os, sino q' +
+            'ue tambien ingres'#243' como texto de relleno en documentos electr'#243'ni' +
+            'cos, quedando esencialmente igual al original. Fue popularizado ' +
+            'en los 60s con la creaci'#243'n de las hojas "Letraset", las cuales c' +
+            'ontenian pasajes de Lorem Ipsum, y m'#225's recientemente con softwar' +
+            'e de autoedici'#243'n, como por ejemplo Aldus PageMaker, el cual incl' +
+            'uye versiones de Lorem Ipsum.'
+          TextSettings.Font.Size = 16.000000000000000000
+          TextSettings.HorzAlign = Leading
+        end
+      end
+    end
+    object recMenu: TRectangle
+      Align = Bottom
+      Fill.Color = claWhite
+      Position.Y = 549.000000000000000000
+      Size.Width = 640.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Color = claWhite
+      object bAdd: TButton
+        Action = actAddNews
+        Align = Left
+        Enabled = True
+        ImageIndex = -1
+        Margins.Left = 5.000000000000000000
+        Margins.Top = 5.000000000000000000
+        Margins.Right = 5.000000000000000000
+        Margins.Bottom = 5.000000000000000000
+        Position.X = 5.000000000000000000
+        Position.Y = 5.000000000000000000
+        Size.Width = 40.000000000000000000
+        Size.Height = 40.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        object imgAdd: TImage
+          MultiResBitmap.Height = 48
+          MultiResBitmap.Width = 48
+          MultiResBitmap = <
+            item
+              Width = 48
+              Height = 48
+              PNG = {
+                89504E470D0A1A0A0000000D49484452000000300000003008060000005702F9
+                87000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+                014A494441546843ED99BF4AC3501487A3A0D5C5B188E2640797BE836017111F
+                C2E7282E82E0E043B8387475F52DDAA19B8B0E42A13AFA67D0EF3419AA3D496E
+                E86D4F94F3C1C7BD094938BFD0DE1C92C471E663251B63B18E67D89E6CFDE40B
+                FB78839FB2A38EF4500A2DF2166BC90E6A056B36310AABD91883AD6C0CA1CAB1
+                85C40C608207B0C60358E301ACF100D6FCF90079DD68032FF104D7644700D289
+                EEA5D3521EF1239D96229DEB1D9E63E839C9356A4D98A55718CC10B58B583AC0
+                19F2FE03A13F9B65A2D6E4AB90351EC09ABC00CFD958272AD57484EFA82D6716
+                BEE121CE50F45E681F3B18BAA46E63379D967281A3745A8A3C89EFF161B2B540
+                0E50BB7B9A2D8C82AF42D678006B3C80351EC01A0F30853C6143A972ECD2D8C4
+                579C6E1934C7286F3D6AC929BEA056B828C51F6334627FA5143670177F5F5B02
+                3CA1B4E98EE338FF8224F90687A1B4F8CF188B250000000049454E44AE426082}
+              FileName = 
+                'D:\Documents\DropBox\Programacio\CdA\La Pinya\images\1608798 - p' +
+                'lus_48x48.png'
+            end>
+          Align = Client
+          HitTest = False
+          Size.Width = 40.000000000000000000
+          Size.Height = 40.000000000000000000
+          Size.PlatformDefault = False
+        end
+        object seAdd: TShadowEffect
+          Distance = 3.000000000000000000
+          Direction = 45.000000000000000000
+          Softness = 0.300000011920929000
+          Opacity = 0.600000023841857900
+          ShadowColor = claBlack
+        end
+      end
+      object bMore: TButton
+        Action = actMoreNews
+        Align = MostRight
+        Enabled = True
+        ImageIndex = -1
+        Margins.Left = 5.000000000000000000
+        Margins.Top = 5.000000000000000000
+        Margins.Right = 5.000000000000000000
+        Margins.Bottom = 5.000000000000000000
+        Position.X = 595.000000000000000000
+        Position.Y = 5.000000000000000000
+        Size.Width = 40.000000000000000000
+        Size.Height = 40.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        object imgMore: TImage
+          MultiResBitmap.Height = 48
+          MultiResBitmap.Width = 48
+          MultiResBitmap = <
+            item
+              Width = 48
+              Height = 48
+              PNG = {
+                89504E470D0A1A0A0000000D49484452000000300000003008060000005702F9
+                87000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+                0137494441546843EDD53B4A43411487F1ABE06305B15410AC740B1250B010DC
+                8685950B100B112C84ECC556ECB4B054413B0B2B4117E0031FDF9964F0DCC949
+                BCA491C8FF071FB97399DC644298A9444444444444C6D544EFB5344387B44953
+                76A3F048FB7496463F16A8432B6954F745D7B44B0F76C3D9207B5E2B8DEADEE9
+                84F6E8CD6E34714CF681C37AA545CA26E996A2B9BE1BB2B9D912D9178BE6FA8E
+                A8B13B8A1E52B64D992D269A13354FD90E4573CA6CE17DFC2FE1457F9B889FD7
+                F43D6694F785F3062D606C68017FEDDF2EC0F6F926FCBC27FAEC5E0EF541CFDD
+                CB6494CFFAD51AD93E1F6D67B90B9A26CFF6EA68AEEF80BC59BAA4686EEE85DA
+                D467D0496C6C5F5FA768FBB25FC34EC7F264B4E7ADD272EFDAB32F7245E76954
+                6727FF16CDA5519D9DC4A7749F462222222222222282AAFA069047722B26816C
+                A60000000049454E44AE426082}
+              FileName = 
+                'D:\Documents\DropBox\Programacio\CdA\La Pinya\images\1608674 - e' +
+                'llipsis h_48x48.png'
+            end>
+          Align = Client
+          HitTest = False
+          Size.Width = 40.000000000000000000
+          Size.Height = 40.000000000000000000
+          Size.PlatformDefault = False
+        end
+        object seMore: TShadowEffect
+          Distance = 3.000000000000000000
+          Direction = 45.000000000000000000
+          Softness = 0.300000011920929000
+          Opacity = 0.600000023841857900
+          ShadowColor = claBlack
+        end
+      end
+    end
+  end
+  object Text1: TText
+    Size.Width = 50.000000000000000000
+    Size.Height = 50.000000000000000000
+    Size.PlatformDefault = False
+    Text = 
+      'Lorem Ipsum es simplemente el texto de relleno de las imprentas ' +
+      'y archivos de texto. Lorem Ipsum ha sido el texto de relleno est' +
+      #225'ndar de las industrias desde el a'#241'o 1500, cuando un impresor (N' +
+      '. del T. persona que se dedica a la imprenta) desconocido us'#243' un' +
+      'a galer'#237'a de textos y los mezcl'#243' de tal manera que logr'#243' hacer u' +
+      'n libro de textos especimen. No s'#243'lo sobrevivi'#243' 500 a'#241'os, sino q' +
+      'ue tambien ingres'#243' como texto de relleno en documentos electr'#243'ni' +
+      'cos, quedando esencialmente igual al original. Fue popularizado ' +
+      'en los 60s con la creaci'#243'n de las hojas "Letraset", las cuales c' +
+      'ontenian pasajes de Lorem Ipsum, y m'#225's recientemente con softwar' +
+      'e de autoedici'#243'n, como por ejemplo Aldus PageMaker, el cual incl' +
+      'uye versiones de Lorem Ipsum.'#13#10
+    TextSettings.HorzAlign = Leading
+    Visible = False
+  end
+  object ActionList1: TActionList
+    Left = 312
+    Top = 376
+    object actAddNews: TAction
+      OnExecute = actAddNewsExecute
+    end
+    object actMoreNews: TAction
+      OnExecute = actMoreNewsExecute
+    end
+  end
+end

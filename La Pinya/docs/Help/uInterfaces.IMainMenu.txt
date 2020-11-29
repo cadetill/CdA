@@ -1,0 +1,1 @@
+@abstract(Interface to be implemented in then Main menu.)

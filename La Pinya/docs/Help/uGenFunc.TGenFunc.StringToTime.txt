@@ -1,0 +1,6 @@
+@abstract(Converts a string to a time.)
+
+If the string can't be convert, returns 00:00:00
+
+@param(Value string with a datetime to convert)
+@return(string converted to time)

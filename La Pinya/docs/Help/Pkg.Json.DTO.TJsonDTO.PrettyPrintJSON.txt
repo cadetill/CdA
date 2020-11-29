@@ -1,0 +1,4 @@
+@abstract(Formats a Json to be print.)
+
+@param(aJson string with a Json information)
+@return(string with a formatted Json)

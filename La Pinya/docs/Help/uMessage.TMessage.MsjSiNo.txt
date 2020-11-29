@@ -1,0 +1,6 @@
+Does a question to the user.
+
+@param(Msj string with the question to show to the user.)
+@param(Args array of const with the parameters needed to format message.)
+@param(YesProc procedure to execute if user select YES button. Can be nil.)
+@param(NoProc procedure to execute if user select NO button. Can be nil.)

@@ -1,0 +1,6 @@
+@abstract(Copy Text to clipboard.)
+
+If the operation can be do, function returns true. Otherwise return false.
+
+@param(Text string to copy)
+@return(true if it can be copied)

@@ -1,0 +1,2 @@
+@abstract(Result of a request.)
+Result of a request of an insert, update or delete statement.

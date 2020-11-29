@@ -1,0 +1,54 @@
+object BaseFrm: TBaseFrm
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 480
+  ClientWidth = 640
+  StyleBook = sbStyles
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnClose = FormClose
+  DesignerMasterStyle = 0
+  object pHeader: TToolBar
+    Size.Width = 640.000000000000000000
+    Size.Height = 45.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'pStyle'
+    TabOrder = 0
+    object bBack: TButton
+      Align = Left
+      Size.Width = 45.000000000000000000
+      Size.Height = 45.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'backtoolbutton'
+      TabOrder = 0
+      OnClick = bBackClick
+    end
+  end
+  object pFooter: TToolBar
+    Align = Bottom
+    Position.Y = 435.000000000000000000
+    Size.Width = 640.000000000000000000
+    Size.Height = 45.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'pStyle'
+    TabOrder = 1
+  end
+  object sbStyles: TStyleBook
+    Styles = <
+      item
+      end
+      item
+        Platform = 'Windows 10 Desktop'
+        ResourcesBin = {
+          464D585F5354594C4520322E35010606705374796C6503B10000545046300A54
+          52656374616E676C6506705374796C65095374796C654E616D65060670537479
+          6C6505416C69676E070643656E7465720A46696C6C2E436F6C6F720708636C61
+          57686974650748697454657374080A53697A652E576964746805000000000000
+          00A008400B53697A652E4865696768740500000000000000B404401453697A65
+          2E506C6174666F726D44656661756C74080C5374726F6B652E436F6C6F720709
+          7846464343434343430000}
+      end>
+  end
+end
