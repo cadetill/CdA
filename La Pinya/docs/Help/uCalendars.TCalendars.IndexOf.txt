@@ -2,3 +2,4 @@
 If the calendar doesn't exists, returns -1. If exists, returns his position into the list.
 
 @param(Id string with the calendar identifier value)
+@return(Position of the item)
