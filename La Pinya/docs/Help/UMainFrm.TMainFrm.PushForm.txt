@@ -1,0 +1,5 @@
+@abstract(Shows a child form.)
+
+If a child form is displayed, that is put into stack list and the new form is displayed
+
+@param(AForm TCustomForm to display)

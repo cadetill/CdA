@@ -1,0 +1,2 @@
+@abstract(Removes the first form from the cue list and shows it.)
+

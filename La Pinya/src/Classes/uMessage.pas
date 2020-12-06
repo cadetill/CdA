@@ -1,5 +1,5 @@
 {
-  @abstract(unit to manage messages showed to the user)
+  @abstract(Unit to manage messages showed to the user)
   @author(Xavier Martinez (cadetill) <cadetill@gmail.com>)
   @created(October 11, 2020)
   @lastmod(October 11, 2020)
@@ -81,7 +81,7 @@ begin
       {$IFDEF ANDROID}
       uToastUnit.Toast(Msj, TToastLength.LongToast);
       {$ELSE}
-      ShowMessage(Msj);
+      TMessage.MsjAttn(Msj, []);
       {$ENDIF}
     end);
 end;

@@ -1,5 +1,5 @@
 {
-  @abstract(unit to manage calendars)
+  @abstract(Unit to manage calendars)
   @author(Xavier Martinez (cadetill) <cadetill@gmail.com>)
   @created(October 06, 2020)
   @lastmod(October 06, 2020)
@@ -67,6 +67,7 @@ type
 
     // @include(..\..\docs\help\uCalendars.TCalendars.GetCalendar.txt)
     class function GetCalendar: TCalendars;
+    (* esto es una prueba*)
     class function EditCalendar(const Item: TCalendar): TResultRequest;
     //class function AddCalendar(const IdCalendari, Key: string): TResultRequest;
     //class function DelCalendar(const Id: string): TResultRequest;

@@ -1,5 +1,5 @@
 {
-  @abstract(unit to define interfaces)
+  @abstract(Unit to define interfaces)
   @author(Xavier Martinez (cadetill) <cadetill@gmail.com>)
   @created(October 06, 2020)
   @lastmod(October 06, 2020)

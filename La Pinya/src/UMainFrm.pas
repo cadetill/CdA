@@ -1,3 +1,16 @@
+{
+  @abstract(unit with main form)
+  @author(Xavier Martinez (cadetill) <cadetill@gmail.com>)
+  @created(October 10, 2020)
+  @lastmod(October 10, 2020)
+
+  The UMainFrm unit contains the Main form of the application. This form will manage all child forms.
+
+  Change List @br
+  @unorderedList(
+    @item(10/10/2020 : first version)
+  )
+}
 unit UMainFrm;
 
 interface
@@ -10,6 +23,8 @@ uses
   UInterfaces;
 
 type
+  { -------------------------------------------------------------------------- }
+  // @include(..\docs\help\UMainFrm.TMainFrm.txt)
   TMainFrm = class(TForm, IMainMenu)
     mvMenu: TMultiView;
     pContent: TPanel;
@@ -57,17 +72,25 @@ type
       Shift: TShiftState);
     procedure rSocisClick(Sender: TObject);
     procedure rRolsClick(Sender: TObject);
-  private
+  protected
+    // @include(..\docs\help\UMainFrm.TMainFrm.FFrmList.txt)
     FFrmList: TObjectList<TCustomForm>;
 
+    // @include(..\docs\help\UMainFrm.TMainFrm.PushForm.txt)
     procedure PushForm(AForm: TCustomForm);
+    // @include(..\docs\help\UMainFrm.TMainFrm.PopForm.txt)
     procedure PopForm;
 
+    // @include(..\docs\help\UMainFrm.TMainFrm.ShowAcceptButton.txt)
     procedure CreateForm(ClassForm: TFmxObjectClass; DataObject: TObject);
+    // @include(..\docs\help\UMainFrm.TMainFrm.ShowAcceptButton.txt)
     procedure ShowAcceptButton(State: Boolean);
+    // @include(..\docs\help\UMainFrm.TMainFrm.ShowAni.txt)
     function ShowAni(Show: Boolean): Boolean;
   public
+    // @include(..\docs\help\UMainFrm.TMainFrm.Create.txt)
     constructor Create(AOwner: TComponent); override;
+    // @include(..\docs\help\UMainFrm.TMainFrm.Destroy.txt)
     destructor Destroy; override;
   end;
 

@@ -1,5 +1,5 @@
 {
-  @abstract(unit with general functions)
+  @abstract(Unit with general functions)
   @author(Xavier Martinez (cadetill) <cadetill@gmail.com>)
   @created(October 11, 2020)
   @lastmod(October 11, 2020)
@@ -45,9 +45,9 @@ type
     // @include(..\..\docs\help\uGenFunc.TGenFunc.StringToTime.txt)
     class function StringToTime(Value: string): TTime; static;
     // @include(..\..\docs\help\uGenFunc.TGenFunc.NormalizeString.txt)
-    class function NormalizeString(Value: string): string; static;
+    class function NormalizeString(Value: string): string; static; deprecated;
     // @include(..\..\docs\help\uGenFunc.TGenFunc.DeNormalizeString.txt)
-    class function DeNormalizeString(Value: string): string; static;
+    class function DeNormalizeString(Value: string): string; static; deprecated;
 
     // @include(..\..\docs\help\uGenFunc.TGenFunc.IsConnected.txt)
     class function IsConnected: Boolean; static;

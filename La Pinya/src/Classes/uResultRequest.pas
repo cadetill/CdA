@@ -20,18 +20,18 @@ uses
 
 type
   { -------------------------------------------------------------------------- }
-  // @include(..\..\docs\help\uCalendars.TResultRequest.txt)
+  // @include(..\..\docs\help\uResultRequest.TResultRequest.txt)
   TResultRequest = class(TJsonDTO)
   private
     FDetail01: string;
-    FId: Boolean;
+    FId: string;
     FMaster: string;
   public
-    // @include(..\..\docs\help\uCalendars.TResultRequest.Detail01.txt)
+    // @include(..\..\docs\help\uResultRequest.TResultRequest.Detail01.txt)
     property Detail01: string read FDetail01 write FDetail01;
-    // @include(..\..\docs\help\uCalendars.TResultRequest.Id.txt)
-    property Id: Boolean read FId write FId;
-    // @include(..\..\docs\help\uCalendars.TResultRequest.Master.txt)
+    // @include(..\..\docs\help\uResultRequest.TResultRequest.Id.txt)
+    property Id: string read FId write FId;
+    // @include(..\..\docs\help\uResultRequest.TResultRequest.Master.txt)
     property Master: string read FMaster write FMaster;
   end;
 

@@ -1,0 +1,6 @@
+@abstract(Shows/hide accept button.)
+
+Procedure from @link(IMainMenu) interface.
+This method is called from child forms and shows/hides accept button from Main form if he need it. 
+
+@param(State Boolean for show/hide accept button)

@@ -1,0 +1,1 @@
+CollApp es una aplicación para gestionar collas castelleras.

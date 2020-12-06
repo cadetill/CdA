@@ -1,6 +1,6 @@
 [Main]
 StoreRelativePaths=1
-Language=en
+Language=es
 OutputDir=Help\HTML
 GenerateFormat=0
 ProjectName=
@@ -25,8 +25,8 @@ Sorting_7=0
 Sorting_8=1
 Sorting_9=1
 CssFileName=pasdoc.css
-IntroductionFileName=
-ConclusionFileName=
+IntroductionFileName=Intro.txt
+ConclusionFileName=Conculsion.txt
 WriteUsesList=1
 AutoAbstract=0
 AutoLink=1
@@ -48,13 +48,15 @@ Item_2=WIN32
 Item_3=CPU386
 
 [Header]
-Count=6
+Count=8
 Item_0=<table class="container">
 Item_1=<tr>
 Item_2=<td>El meu blog a <a href="http://www.cadetill.com" target="_blank">el blog de cadetill</a></td>
 Item_3=<td class="cadetill">Copyright &copy; Xavier Mart&iacute;nez (cadetill).</td>
 Item_4=</tr>
 Item_5=</table>
+Item_6=<hr>
+Item_7=
 
 [Footer]
 Count=8
@@ -68,9 +70,7 @@ Item_6=</tr>
 Item_7=</table>
 
 [IncludeDirectories]
-Count=2
-Item_0=..\src\Classes
-Item_1=..\src\Interfaces
+Count=0
 
 [Files]
 Count=7

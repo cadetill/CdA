@@ -1,0 +1,5 @@
+@abstract(Main application form.)
+
+The Main form has the application menu and the buttons necessary for manipulate child forms.
+
+Implements @link(IMainMenu) interface to interact with childs forms

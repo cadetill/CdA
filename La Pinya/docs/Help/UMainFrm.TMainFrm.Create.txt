@@ -1,0 +1,5 @@
+@abstract(Constructor of the class.)
+
+Initializes all variables and objects, and call Home child form.
+
+@param(AOwner TComponent owner)
