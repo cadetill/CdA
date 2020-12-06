@@ -24,7 +24,7 @@ Sorting_6=0
 Sorting_7=0
 Sorting_8=1
 Sorting_9=1
-CssFileName=pasdoc.css
+CssFileName=
 IntroductionFileName=Intro.txt
 ConclusionFileName=Conculsion.txt
 WriteUsesList=1
@@ -40,13 +40,19 @@ VizGraphUses=1
 CheckSpelling=1
 LatexGraphicsPackage=1
 
+
+
+
+
+
+
+
 [Defines]
 Count=4
 Item_0=FPC
 Item_1=MSWINDOWS
 Item_2=WIN32
 Item_3=CPU386
-
 [Header]
 Count=8
 Item_0=<table class="container">
@@ -57,7 +63,6 @@ Item_4=</tr>
 Item_5=</table>
 Item_6=<hr>
 Item_7=
-
 [Footer]
 Count=8
 Item_0=<br />
@@ -68,12 +73,10 @@ Item_4=<td>El meu blog a <a href="http://www.cadetill.com" target="_blank">el bl
 Item_5=<td class="cadetill">Copyright &copy; Xavier Mart&iacute;nez (cadetill).</td>
 Item_6=</tr>
 Item_7=</table>
-
 [IncludeDirectories]
 Count=0
-
 [Files]
-Count=7
+Count=8
 Item_0=..\src\Classes\Pkg.Json.DTO.pas
 Item_1=..\src\Classes\uCalendars.pas
 Item_2=..\src\Classes\uGenFunc.pas
@@ -81,12 +84,10 @@ Item_3=..\src\Classes\uMessage.pas
 Item_4=..\src\Classes\uResultRequest.pas
 Item_5=..\src\Classes\uToastUnit.pas
 Item_6=..\src\Interfaces\uInterfaces.pas
-
+Item_7=..\src\UMainFrm.pas
 [HyphenatedWords]
 Count=0
-
 [SpecialMarkers]
 Count=0
-
 [IgnoreWords]
 Count=0

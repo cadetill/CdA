@@ -26,51 +26,95 @@ type
   { -------------------------------------------------------------------------- }
   // @include(..\docs\help\UMainFrm.TMainFrm.txt)
   TMainFrm = class(TForm, IMainMenu)
+    // @exclude
     mvMenu: TMultiView;
+    // @exclude
     pContent: TPanel;
+    // @exclude
     tlbHeader: TToolBar;
+    // @exclude
     bMenu: TSpeedButton;
+    // @exclude
     rMenuTop: TRectangle;
+    // @exclude
     vsMenu: TVertScrollBox;
+    // @exclude
     rCalendars: TRectangle;
+    // @exclude
     imgCalendars: TImage;
+    // @exclude
     rMenu1: TRectangle;
+    // @exclude
     tcMenu: TTabControl;
+    // @exclude
     tiAdmin: TTabItem;
+    // @exclude
     cMenuTop: TCircle;
+    // @exclude
     rHeader: TRectangle;
+    // @exclude
     bBack: TSpeedButton;
+    // @exclude
     lHeader: TLabel;
+    // @exclude
     bOk: TSpeedButton;
+    // @exclude
     aiIndicator: TAniIndicator;
+    // @exclude
     lCalendars: TLabel;
+    // @exclude
     rSeasons: TRectangle;
+    // @exclude
     lSeasons: TLabel;
+    // @exclude
     imgSeasons: TImage;
+    // @exclude
     imgAdmin: TImage;
+    // @exclude
     imgGeneral: TImage;
+    // @exclude
     tiGeneral: TTabItem;
+    // @exclude
     rEvents: TRectangle;
+    // @exclude
     lEvents: TLabel;
+    // @exclude
     imgEvents: TImage;
+    // @exclude
     rGeneral: TRectangle;
+    // @exclude
     rAdmin: TRectangle;
+    // @exclude
     rRols: TRectangle;
+    // @exclude
     lRols: TLabel;
+    // @exclude
     imgRols: TImage;
+    // @exclude
     rSocis: TRectangle;
+    // @exclude
     lSocis: TLabel;
+    // @exclude
     imgSocis: TImage;
+    // @include(..\docs\help\UMainFrm.TMainFrm.bOkClick.txt)
     procedure bOkClick(Sender: TObject);
+    // @include(..\docs\help\UMainFrm.TMainFrm.bBackClick.txt)
     procedure bBackClick(Sender: TObject);
+    // @include(..\docs\help\UMainFrm.TMainFrm.rCalendarsClick.txt)
     procedure rCalendarsClick(Sender: TObject);
+    // @include(..\docs\help\UMainFrm.TMainFrm.rSeasonsClick.txt)
     procedure rSeasonsClick(Sender: TObject);
+    // @include(..\docs\help\UMainFrm.TMainFrm.rGeneralClick.txt)
     procedure rGeneralClick(Sender: TObject);
+    // @include(..\docs\help\UMainFrm.TMainFrm.rAdminClick.txt)
     procedure rAdminClick(Sender: TObject);
+    // @include(..\docs\help\UMainFrm.TMainFrm.rEventsClick.txt)
     procedure rEventsClick(Sender: TObject);
-    procedure FormKeyUp(Sender: TObject; var Key: Word; var KeyChar: Char;
-      Shift: TShiftState);
+    // @include(..\docs\help\UMainFrm.TMainFrm.FormKeyUp.txt)
+    procedure FormKeyUp(Sender: TObject; var Key: Word; var KeyChar: Char; Shift: TShiftState);
+    // @include(..\docs\help\UMainFrm.TMainFrm.rSocisClick.txt)
     procedure rSocisClick(Sender: TObject);
+    // @include(..\docs\help\UMainFrm.TMainFrm.rRolsClick.txt)
     procedure rRolsClick(Sender: TObject);
   protected
     // @include(..\docs\help\UMainFrm.TMainFrm.FFrmList.txt)

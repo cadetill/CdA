@@ -86,6 +86,7 @@ begin
   end
   );
   Thrd.OnTerminate := ThreadTerminated;
+  Thrd.FreeOnTerminate := True;
   Thrd.Start;
 
   repeat
