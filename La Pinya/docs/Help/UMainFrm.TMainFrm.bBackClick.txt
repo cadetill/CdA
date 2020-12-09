@@ -1,0 +1,5 @@
+@abstract(Go to the previous child form.)
+
+Recovers the last child form from the @link(FFrmList) stack and shows it. If the stack is empty, closes the application.
+
+@param(Sender TObject object)

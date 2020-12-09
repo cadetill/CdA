@@ -1,0 +1,3 @@
+@abstract(List of all defined calendars.)
+
+Call @link(TCalendars.GetCalendar) to fill this list.

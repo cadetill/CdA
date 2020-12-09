@@ -1,3 +1,16 @@
+{
+  @abstract(Unit with the list of calendars)
+  @author(Xavier Martinez (cadetill) <cadetill@gmail.com>)
+  @created(October 10, 2020)
+  @lastmod(October 10, 2020)
+
+  The UCalendarsFrm unit contains the list of all calendars defineds. You can edit, delete and add calendars.
+
+  Change List @br
+  @unorderedList(
+    @item(10/10/2020 : first version)
+  )
+}
 unit UCalendarsFrm;
 
 interface
@@ -9,36 +22,56 @@ uses
   uInterfaces, uCalendars;
 
 type
+  { -------------------------------------------------------------------------- }
+  // @include(..\docs\help\UCalendarsFrm.TCalendarsFrm.txt)
   TCalendarsFrm = class(TForm, IChildren)
+    // @exclude
     lbCalendars: TListBox;
+    // @exclude
     ListBoxItem1: TListBoxItem;
+    // @exclude
     lbiSearch: TSearchBox;
+    // @exclude
     bAdd: TSpeedButton;
+    // @exclude
     SpeedButton1: TSpeedButton;
+    // @exclude
     SpeedButton2: TSpeedButton;
+    // @exclude
     SpeedButton3: TSpeedButton;
+    // @include(..\docs\help\UCalendarsFrm.TCalendarsFrm.bAddClick.txt)
     procedure bAddClick(Sender: TObject);
-  private
+  protected
+    // @include(..\docs\help\UCalendarsFrm.TCalendarsFrm.FCal.txt)
     FCal: TCalendars;
 
+    // @include(..\docs\help\UCalendarsFrm.TCalendarsFrm.CreateItems.txt)
     procedure CreateItems;
+    // @include(..\docs\help\UCalendarsFrm.TCalendarsFrm.CreateItem.txt)
     procedure CreateItem(Cal: TCalendar);
+    // @include(..\docs\help\UCalendarsFrm.TCalendarsFrm.OnClickBEdit.txt)
     procedure OnClickBEdit(Sender: TObject);
+    // @include(..\docs\help\UCalendarsFrm.TCalendarsFrm.OnClickBDel.txt)
     procedure OnClickBDel(Sender: TObject);
+    // @include(..\docs\help\UCalendarsFrm.TCalendarsFrm.OnChangeCalendar.txt)
     procedure OnChangeCalendar(Sender: TObject);
   public
+    // @include(..\docs\help\UCalendarsFrm.TCalendarsFrm.Create.txt)
     constructor Create(AOwner: TComponent); override;
+    // @include(..\docs\help\UCalendarsFrm.TCalendarsFrm.Destroy.txt)
     destructor Destroy; override;
 
+    // @include(..\docs\help\UCalendarsFrm.TCalendarsFrm.SetCaption.txt)
     function SetCaption: string;
+    // @include(..\docs\help\UCalendarsFrm.TCalendarsFrm.ShowOkButton.txt)
     function ShowOkButton: Boolean;
+    // @include(..\docs\help\UCalendarsFrm.TCalendarsFrm.ShowBackButton.txt)
     function ShowBackButton: Boolean;
+    // @include(..\docs\help\UCalendarsFrm.TCalendarsFrm.AcceptForm.txt)
     function AcceptForm: Boolean;
+    // @include(..\docs\help\UCalendarsFrm.TCalendarsFrm.AfterShow.txt)
     procedure AfterShow;
   end;
-
-var
-  CalendarsFrm: TCalendarsFrm;
 
 implementation
 

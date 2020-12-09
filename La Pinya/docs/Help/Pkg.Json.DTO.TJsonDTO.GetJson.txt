@@ -1,4 +1,6 @@
 @abstract(Do a REST connection.)
+
 Does a REST connection and returns the Json received or/and error Json.
+
 @param(Params TJSONObject object with parameters needed)
 @return(string with a Json information)

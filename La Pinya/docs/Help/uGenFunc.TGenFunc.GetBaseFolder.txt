@@ -1,8 +1,8 @@
 @abstract(Returns the path to the folder where the application files are stored.)
 
-In Windows the folder is the same of the application.
-In Android the folder is TPath.GetDocumentsPath + CollAPP
-In Mac/iOS the folder is TPath.GetSharedDownloadsPath + CollAPP
+In Windows the folder is the same of the application.@br
+In Android the folder is TPath.GetDocumentsPath + CollAPP@br
+In Mac/iOS the folder is TPath.GetSharedDownloadsPath + CollAPP@br@br
 
 If the folder doesn't exists, it will be created.
 

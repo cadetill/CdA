@@ -1,5 +1,5 @@
 {
-  @abstract(unit with main form)
+  @abstract(Unit with main form)
   @author(Xavier Martinez (cadetill) <cadetill@gmail.com>)
   @created(October 10, 2020)
   @lastmod(October 10, 2020)

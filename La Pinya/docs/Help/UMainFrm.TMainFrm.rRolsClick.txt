@@ -1,0 +1,5 @@
+@abstract(Call TRolsFrm child form.)
+
+Put into the @link(FFrmList) stack the actual visible child form and shows TRolsFrm form.
+
+@param(Sender TObject object)

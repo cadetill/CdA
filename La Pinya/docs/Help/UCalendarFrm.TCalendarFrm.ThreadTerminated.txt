@@ -1,0 +1,5 @@
+@abstract(Event fired when the REST thread of update is finished.)
+
+This event set to True @link(FThreadEnd) property.
+
+@param(Sender TObject object who call the event)

@@ -1,0 +1,5 @@
+@abstract(Deletes a calendar.)
+
+Deletes selected calendar.
+
+@param(Sender TObject object)

@@ -1,0 +1,5 @@
+@abstract(Call TSocisFrm child form.)
+
+Put into the @link(FFrmList) stack the actual visible child form and shows TSocisFrm form.
+
+@param(Sender TObject object)

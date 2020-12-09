@@ -1,0 +1,4 @@
+@abstract(Class for show or edit a specific @link(TCalendar).)
+
+The TCalendarFrm form class has the information of an specific @link(TCalendar). We can modify this information.@br
+Implements @link(IChildren) interface to interact with main form.

@@ -1,0 +1,4 @@
+@abstract(Controls the hardware buttons of a mobile device.)
+
+
+@param(Sender TObject object)

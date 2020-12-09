@@ -1,0 +1,3 @@
+@abstract(Shows general menu.)
+
+@param(Sender TObject object)

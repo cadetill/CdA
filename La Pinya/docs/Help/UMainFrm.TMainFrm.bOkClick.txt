@@ -1,0 +1,5 @@
+@abstract(Execute @link(AcceptForm) method from @link(IChildren) interface.)
+
+If the showed child form implements @link(IChildren) interface, the @link(AcceptForm) method is executed.
+
+@param(Sender TObject object)

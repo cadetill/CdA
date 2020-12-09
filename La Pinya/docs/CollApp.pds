@@ -29,7 +29,7 @@ IntroductionFileName=Intro.txt
 ConclusionFileName=Conculsion.txt
 WriteUsesList=1
 AutoAbstract=0
-AutoLink=1
+AutoLink=0
 HandleMacros=1
 UseTipueSearch=1
 LineBreakQuality=0
@@ -76,7 +76,7 @@ Item_7=</table>
 [IncludeDirectories]
 Count=0
 [Files]
-Count=8
+Count=10
 Item_0=..\src\Classes\Pkg.Json.DTO.pas
 Item_1=..\src\Classes\uCalendars.pas
 Item_2=..\src\Classes\uGenFunc.pas
@@ -85,6 +85,8 @@ Item_4=..\src\Classes\uResultRequest.pas
 Item_5=..\src\Classes\uToastUnit.pas
 Item_6=..\src\Interfaces\uInterfaces.pas
 Item_7=..\src\UMainFrm.pas
+Item_8=..\src\UCalendarsFrm.pas
+Item_9=..\src\UCalendarFrm.pas
 [HyphenatedWords]
 Count=0
 [SpecialMarkers]

@@ -1,3 +1,16 @@
+{
+  @abstract(Unit for show or edit a specific @link(TCalendar))
+  @author(Xavier Martinez (cadetill) <cadetill@gmail.com>)
+  @created(October 10, 2020)
+  @lastmod(October 10, 2020)
+
+  The UCalendarFrm unit contains the information of an individual @link(TCalendar). You can modify this information.
+
+  Change List @br
+  @unorderedList(
+    @item(10/10/2020 : first version)
+  )
+}
 unit UCalendarFrm;
 
 interface
@@ -9,33 +22,53 @@ uses
   uInterfaces;
 
 type
+  { -------------------------------------------------------------------------- }
+  // @include(..\docs\help\UCalendarFrm.TCalendarFrm.txt)
   TCalendarFrm = class(TForm, IChildren)
+    // @exclude
     rKey: TRectangle;
+    // @exclude
     lKey: TLabel;
+    // @exclude
     eKey: TEdit;
+    // @exclude
     rIdCal: TRectangle;
+    // @exclude
     lIdCal: TLabel;
+    // @exclude
     eIdCal: TEdit;
+    // @exclude
     rNom: TRectangle;
+    // @exclude
     lNom: TLabel;
+    // @exclude
     eNom: TEdit;
+    // @exclude
     rNomCurt: TRectangle;
+    // @exclude
     lNomCurt: TLabel;
+    // @exclude
     eNomCurt: TEdit;
+    // @exclude
     sbData: TScrollBox;
-  private
+  protected
+    // @include(..\docs\help\UCalendarFrm.TCalendarFrm.FThreadEnd.txt)
     FThreadEnd: Boolean;
+
+    // @include(..\docs\help\UCalendarFrm.TCalendarFrm.ThreadTerminated.txt)
     procedure ThreadTerminated(Sender: TObject);
   public
+    // @include(..\docs\help\UCalendarsFrm.TCalendarsFrm.SetCaption.txt)
     function SetCaption: string;
+    // @include(..\docs\help\UCalendarsFrm.TCalendarsFrm.ShowOkButton.txt)
     function ShowOkButton: Boolean;
+    // @include(..\docs\help\UCalendarsFrm.TCalendarsFrm.ShowBackButton.txt)
     function ShowBackButton: Boolean;
+    // @include(..\docs\help\UCalendarsFrm.TCalendarsFrm.AcceptForm.txt)
     function AcceptForm: Boolean;
+    // @include(..\docs\help\UCalendarsFrm.TCalendarsFrm.AfterShow.txt)
     procedure AfterShow;
   end;
-
-var
-  CalendarFrm: TCalendarFrm;
 
 implementation
 

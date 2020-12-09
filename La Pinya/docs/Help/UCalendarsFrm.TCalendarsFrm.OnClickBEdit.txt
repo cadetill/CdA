@@ -1,0 +1,5 @@
+@abstract(Edits a calendar.)
+
+Shows @link(TCalendarFrm) with selected calendar.
+
+@param(Sender TObject object)

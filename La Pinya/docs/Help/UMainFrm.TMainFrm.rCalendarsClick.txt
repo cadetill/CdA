@@ -1,0 +1,5 @@
+@abstract(Call TCalendarsFrm child form.)
+
+Put into the @link(FFrmList) stack the actual visible child form and shows TCalendarsFrm form.
+
+@param(Sender TObject object)

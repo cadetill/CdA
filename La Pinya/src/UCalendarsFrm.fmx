@@ -19,8 +19,8 @@ object CalendarsFrm: TCalendarsFrm
     DefaultItemStyles.ItemStyle = 'listboxitembottomdetail'
     DefaultItemStyles.GroupHeaderStyle = ''
     DefaultItemStyles.GroupFooterStyle = ''
-    Viewport.Width = 640.000000000000000000
-    Viewport.Height = 480.000000000000000000
+    Viewport.Width = 636.000000000000000000
+    Viewport.Height = 454.000000000000000000
     object ListBoxItem1: TListBoxItem
       ItemData.Detail = 'detail'
       Size.Width = 636.000000000000000000

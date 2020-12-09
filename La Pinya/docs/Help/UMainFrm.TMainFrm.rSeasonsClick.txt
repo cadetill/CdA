@@ -1,0 +1,5 @@
+@abstract(Call TSeasonsFrm child form.)
+
+Put into the @link(FFrmList) stack the actual visible child form and shows TSeasonsFrm form.
+
+@param(Sender TObject object)

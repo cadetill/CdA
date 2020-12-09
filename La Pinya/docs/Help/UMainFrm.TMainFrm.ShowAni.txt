@@ -1,6 +1,6 @@
 @abstract(Shows/hide load animation.)
 
-Procedure from @link(IMainMenu) interface.
+Procedure from @link(IMainMenu) interface.@br
 If Show is True, shows load animation. Otherwise, hides load animation.
 
 @param(Show Boolean for show/hide load animation)

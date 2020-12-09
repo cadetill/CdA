@@ -1,0 +1,5 @@
+@abstract(Call TEventsFrm child form.)
+
+Put into the @link(FFrmList) stack the actual visible child form and shows TEventsFrm form.
+
+@param(Sender TObject object)
