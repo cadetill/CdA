@@ -6,7 +6,7 @@
  * @author cadetill
  */
 class ca_config {
-  // database connection variables
+  // database connection variables 
   public $dbserver = 'mariadb';
   public $dbnamebd = 'cda';
   public $dbuser = 'cdasql';
@@ -27,10 +27,8 @@ class ca_config {
   
   // authorized functions
   public function isCorrectFunc($func) {      
-    return in_array($func, array('getCalendars',
-                                 'delCalendar',
-                                 'addCalendar',
-                                 'editCalendar'
+    return in_array($func, array('getCalendars',    'delCalendar',  'addCalendar',  'editCalendar',
+                                 'getMembers',      'delMember',    'addMember',    'editMember'
                                 )
                    );
   }

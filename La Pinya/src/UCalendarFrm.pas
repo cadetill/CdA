@@ -57,6 +57,8 @@ type
 
     // @include(..\docs\help\UCalendarFrm.TCalendarFrm.ThreadTerminated.txt)
     procedure ThreadTerminated(Sender: TObject);
+    // @include(..\docs\help\UCalendarFrm.TCalendarFrm.DoCheck.txt)
+    function DoCheck: Boolean;
   public
     // @include(..\docs\help\UCalendarsFrm.TCalendarsFrm.SetCaption.txt)
     function SetCaption: string;
@@ -73,7 +75,7 @@ type
 implementation
 
 uses
-  uCalendars, uGenFunc, uMessage;
+  uCalendars, uGenFunc, uMessage, uResultRequest;
 
 {$R *.fmx}
 
@@ -84,14 +86,10 @@ var
   Intf: IMainMenu;
   Thrd: TThread;
 begin
-  if not TGenFunc.IsConnected then
-  begin
-    TMessage.Show('Sense Connexió');
-    Result := False;
-    Exit;
-  end;
+  Result := DoCheck;
 
-  Result := True;
+  if not Result then
+    Exit;
 
   if not Assigned(TagObject) then Exit;
   if not (TagObject is TCalendar) then Exit;
@@ -105,9 +103,17 @@ begin
   if Supports(Owner, IMainMenu, Intf)  then
     Intf.ShowAni(True);
   Thrd := TThread.CreateAnonymousThread(procedure
+  var
+    Resp: TResultRequest;
   begin
     try
-      TCalendars.EditCalendar(TCalendar(TagObject));
+      Resp := TCalendars.EditCalendar(TCalendar(TagObject));
+      if Resp.Error <> '' then
+        TThread.Synchronize(TThread.CurrentThread,
+          procedure
+          begin
+            TMessage.Show('Error: ' + Resp.Error + #13 + 'Param: ' + Resp.ErrParam);
+          end);
     finally
       TThread.Synchronize(TThread.CurrentThread,
         procedure
@@ -126,8 +132,8 @@ begin
     Sleep(50);
     Application.ProcessMessages;
   until (FThreadEnd);
-//  if Assigned(TCalendar(TagObject).OnChange) then
-//    TCalendar(TagObject).OnChange(TCalendar(TagObject));
+  if Assigned(TCalendar(TagObject).OnChange) then
+    TCalendar(TagObject).OnChange(TCalendar(TagObject));
 end;
 
 procedure TCalendarFrm.AfterShow;
@@ -144,6 +150,26 @@ begin
   eIdCal.Text := TCalendar(TagObject).idcalendar;
   eNom.Text := TCalendar(TagObject).nom;
   eNomCurt.Text := TCalendar(TagObject).nom_curt;
+end;
+
+function TCalendarFrm.DoCheck: Boolean;
+begin
+  Result := (eNom.Text <> '') and
+            (eNomCurt.Text <> '') and
+            (eKey.Text <> '') and
+            (eIdCal.Text <> '');
+  if not Result then
+  begin
+    TMessage.Show('Falta algun camp');
+    Exit;
+  end;
+
+  Result := TGenFunc.IsConnected;
+  if not Result then
+  begin
+    TMessage.Show('Sense Connexió');
+    Exit;
+  end;
 end;
 
 function TCalendarFrm.SetCaption: string;

@@ -77,7 +77,7 @@ implementation
 
 uses
   FMX.DialogService,
-  uMessage, UCalendarFrm, {uResultRequest,} uGenFunc;
+  uMessage, UCalendarFrm, uResultRequest, uGenFunc;
 
 {$R *.fmx}
 
@@ -89,9 +89,17 @@ begin
 end;
 
 procedure TCalendarsFrm.AfterShow;
+begin
+end;
+
+constructor TCalendarsFrm.Create(AOwner: TComponent);
 var
   Intf: IMainMenu;
 begin
+  inherited;
+
+  FCal := TCalendars.Create;
+
   lbCalendars.Clear;
   lbiSearch.Text := '';
 
@@ -126,13 +134,6 @@ begin
     end;
   end
   ).Start;
-end;
-
-constructor TCalendarsFrm.Create(AOwner: TComponent);
-begin
-  inherited;
-
-  FCal := TCalendars.Create;
 end;
 
 procedure TCalendarsFrm.CreateItem(Cal: TCalendar);
@@ -216,7 +217,6 @@ end;
 
 procedure TCalendarsFrm.OnClickBDel(Sender: TObject);
 begin
-{
   if not TGenFunc.IsConnected then
   begin
     TMessage.Show('Sense Connexió');
@@ -229,6 +229,7 @@ begin
   TMessage.MsjSiNo('Realment vol esborrar el calendari "%s"?', [TListBoxItem(TSpeedButton(Sender).Owner).Text],
     procedure
     var
+      Resp: TResultRequest;
       Intf: IMainMenu;
     begin
       if Supports(Owner, IMainMenu, Intf)  then
@@ -236,7 +237,14 @@ begin
 
       TThread.CreateAnonymousThread(procedure
       begin
-        TCalendars.DelCalendar(TSpeedButton(Sender).TagString);
+        Resp := TCalendars.DelCalendar(TSpeedButton(Sender).TagString);
+
+        if Resp.Error <> '' then
+          TThread.Synchronize(TThread.CurrentThread,
+            procedure
+            begin
+              TMessage.Show(Resp.Error);
+            end);
 
         TThread.Synchronize(TThread.CurrentThread,
           procedure
@@ -249,7 +257,6 @@ begin
 
       lbCalendars.RemoveObject(TListBoxItem(TSpeedButton(Sender).Owner));
     end);
-}
 end;
 
 procedure TCalendarsFrm.OnClickBEdit(Sender: TObject);
@@ -292,7 +299,6 @@ end;
 
 procedure TCalendarsFrm.bAddClick(Sender: TObject);
 begin
-{
   if not TGenFunc.IsConnected then
   begin
     TMessage.Show('Sense Connexió');
@@ -312,17 +318,15 @@ begin
         Exit;
 
       Resp := TCalendars.AddCalendar(Trim(AValues[0]), Trim(AValues[1]));
-
-      if TryStrToInt(Resp.id, TmpI) and (TmpI > 0) and (Resp.affected = '1') then
+      if TryStrToInt(Resp.id, TmpI) and (TmpI > 0) and (Resp.Error = '') then
       begin
         TmpI := FCal.Add(Resp.id, Trim(AValues[0]), Trim(AValues[1]));
-        FCal.SaveToFile(TGenFunc.GetBaseFolder + uCalendars.cJsonCalendars);
+        //FCal.SaveToFile(TGenFunc.GetBaseFolder + uCalendars.cJsonCalendars);
         CreateItem(FCal.Items[TmpI]);
       end
       else
         TMessage.MsjErr('Error creant calendari', []);
     end);
-}
 end;
 
 end.

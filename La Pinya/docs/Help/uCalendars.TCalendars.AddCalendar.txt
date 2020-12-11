@@ -1,0 +1,7 @@
+@abstract(Adds a new calendar.)
+
+Does a REST request to server and adds a new calendar.
+
+@params(IdCalendari @link(TCalendar) with data to be modified)
+@params(Key @link(TCalendar) with data to be modified)
+@return(Returns a @link(TResultRequest) object)

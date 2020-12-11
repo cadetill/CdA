@@ -1,0 +1,5 @@
+@abstract(Check if all data is correct.)
+
+Before a REST server call, this method check if all data is correct and no required fields are empty.
+
+@return(A boolean, True if all correct, False otherwise)

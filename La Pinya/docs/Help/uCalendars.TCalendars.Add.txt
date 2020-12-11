@@ -1,0 +1,10 @@
+@abstract(Adds a new @link(TCalendar) into @link(Items) list.)
+
+Adds a new @link(TCalendar) into the @link(Items) list and returns his position.@br
+Initialize this new calendar with an @link(Id), an @link(IdCalendari) and a @link(Key).
+
+@param(Id string with the Id of the new calendar)
+@param(IdCalendari string with the IdCalendari of the new calendar)
+@param(Key string with the key of the new calendar)
+
+@returns(Integer with position into the @link(Items) list)

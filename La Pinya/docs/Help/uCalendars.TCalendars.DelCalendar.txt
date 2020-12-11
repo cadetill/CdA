@@ -1,0 +1,5 @@
+@abstract(Deletes selected calendar.)
+
+Does a REST request to server and deletes an existing calendar.
+
+@params(Id string with calendar id to deletes)

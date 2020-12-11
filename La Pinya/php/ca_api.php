@@ -3,8 +3,8 @@
   // require section
   require_once 'ca_base.php';
   require_once 'ca_config.php';
-  //require_once 'ca_members.php';
   require_once 'ca_calendars.php';
+  require_once 'ca_members.php'; 
 
   // config object  
   $conf = new ca_config();
@@ -17,7 +17,6 @@
   else {
     $func = filter_input(INPUT_GET, 'func');
   }
-
 
   // check if it's a correct function name
   if (!$conf->isCorrectFunc($func)) {
@@ -32,6 +31,13 @@
     case 'editCalendar': 
       $cal = new ca_calendars($conf, $func);
       $response = $cal->execute();
+      break;
+    case 'getMembers': 
+    case 'delMember': 
+    case 'addMember': 
+    case 'editMember': 
+      $m = new ca_members($conf, $func);
+      $response = $m->execute();
       break;
     default:
       return $this->conf->errFuncNotFound;

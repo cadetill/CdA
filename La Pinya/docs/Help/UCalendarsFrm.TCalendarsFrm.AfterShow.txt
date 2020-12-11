@@ -1,4 +1,4 @@
 @abstract(Code to be executed after child form is shown.)
 
-Function from @link(IChildren) interface.@br
-This function is called from @link(TMainFrm) main form after child form is created.
+Method from @link(IChildren) interface.@br
+This method is called from @link(TMainFrm) main form after child form is created.

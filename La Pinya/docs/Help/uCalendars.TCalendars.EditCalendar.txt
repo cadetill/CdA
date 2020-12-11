@@ -1,0 +1,6 @@
+@abstract(Modifies a specific calendar.)
+
+Does a REST request to server and modifies data from a specific calendar.
+
+@params(Item @link(TCalendar) with data to be modified)
+@return(Returns a @link(TResultRequest) object)

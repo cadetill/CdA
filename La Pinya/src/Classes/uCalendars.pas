@@ -59,6 +59,9 @@ type
 
     function GetItems: TObjectList<TCalendar>;
   public
+    // @include(..\..\docs\help\uCalendars.TCalendars.Add.txt)
+    function Add(Id, IdCalendari, Key: string): Integer;
+
     // @include(..\..\docs\help\uCalendars.TCalendars.Destroy.txt)
     destructor Destroy; override;
 
@@ -67,10 +70,12 @@ type
 
     // @include(..\..\docs\help\uCalendars.TCalendars.GetCalendar.txt)
     class function GetCalendar: TCalendars;
-    (* esto es una prueba*)
+    // @include(..\..\docs\help\uCalendars.TCalendars.EditCalendar.txt)
     class function EditCalendar(const Item: TCalendar): TResultRequest;
-    //class function AddCalendar(const IdCalendari, Key: string): TResultRequest;
-    //class function DelCalendar(const Id: string): TResultRequest;
+    // @include(..\..\docs\help\uCalendars.TCalendars.AddCalendar.txt)
+    class function AddCalendar(const IdCalendari, Key: string): TResultRequest;
+    // @include(..\..\docs\help\uCalendars.TCalendars.DelCalendar.txt)
+    class function DelCalendar(const Id: string): TResultRequest;
 
     // @include(..\..\docs\help\uCalendars.TCalendars.Items.txt)
     property Items: TObjectList<TCalendar> read GetItems;
@@ -82,6 +87,52 @@ uses
   System.JSON, System.SysUtils;
 
 { TCalendars }
+
+function TCalendars.Add(Id, IdCalendari, Key: string): Integer;
+begin
+  Result := Items.Add(TCalendar.Create);
+  Items[Result].Id := Id;
+  Items[Result].Idcalendar := IdCalendari;
+  Items[Result].Key := Key;
+end;
+
+class function TCalendars.AddCalendar(const IdCalendari,
+  Key: string): TResultRequest;
+var
+  Json: string;
+  Obj: TJSONObject;
+begin
+  Result := TResultRequest.Create;
+  Obj := TJSONObject.Create;
+  try
+    Obj.AddPair('func', TJSONString.Create('addCalendar'));
+    Obj.AddPair('idcalendar', TJSONString.Create(IdCalendari));
+    Obj.AddPair('key', TJSONString.Create(Key));
+
+    Json := Result.GetJson(Obj);
+    Result.AsJson := Json;
+  finally
+    Obj.DisposeOf;
+  end;
+end;
+
+class function TCalendars.DelCalendar(const Id: string): TResultRequest;
+var
+  Json: string;
+  Obj: TJSONObject;
+begin
+  Result := TResultRequest.Create;
+  Obj := TJSONObject.Create;
+  try
+    Obj.AddPair('func', TJSONString.Create('delCalendar'));
+    Obj.AddPair('id', TJSONString.Create(Id));
+
+    Json := Result.GetJson(Obj);
+    Result.AsJson := Json;
+  finally
+    Obj.DisposeOf;
+  end;
+end;
 
 destructor TCalendars.Destroy;
 begin

@@ -6,14 +6,13 @@
  * @author cadetill
  * @see ca_base
  */
-class ca_calendars extends ca_base {
+class ca_calendars extends ca_base { 
   
   /**
    * class constructor
    * 
    * @param $conf object from ca_config class
    * @param $func function to execute
-   * @param $params parameters needed to do the operations
    */
   public function __construct($conf, $func) {
     parent::__construct($conf, $func);
@@ -132,8 +131,6 @@ class ca_calendars extends ca_base {
    * 
    * @param idcalendar string identifier from Google
    * @param key string key from Google to access calendar
-   * @param nom string name to assign to calendar
-   * @param nom_curt string small name to assign to calendar
    * @return array with records inserted or string with the error that has occurred
    */
   private function addCalendar() {
@@ -143,27 +140,17 @@ class ca_calendars extends ca_base {
       
       $idcalendar = $this->normalizeParam($request['idcalendar']);
       $key = $this->normalizeParam($request['key']);
-      $nom = $this->normalizeParam($request['nom']);
-      $nom_curt = $this->normalizeParam($request['nom_curt']);
     }
     else {
       $idcalendar = $this->normalizeParam(filter_input(INPUT_GET, 'idcalendar'));
       $key = $this->normalizeParam(filter_input(INPUT_GET, 'key'));
-      $nom = $this->normalizeParam(filter_input(INPUT_GET, 'nom'));
-      $nom_curt = $this->normalizeParam(filter_input(INPUT_GET, 'nom_curt'));
-    }
+     }
     
     if ($idcalendar == '') {
       return $this->stringReplace($this->conf->errParamNotFound, 'idcalendar');
     }
     if ($key == '') {
       return $this->stringReplace($this->conf->errParamNotFound, 'key');
-    }
-    if ($nom == '') {
-      return $this->stringReplace($this->conf->errParamNotFound, 'nom');
-    }
-    if ($nom_curt == '') {
-      return $this->stringReplace($this->conf->errParamNotFound, 'nom_curt');
     }
 
     // connect to database
@@ -184,7 +171,7 @@ class ca_calendars extends ca_base {
     } 
     else {
       // add new record
-      $sql = 'insert into '.$this->conf->dbprefix.'calendaris (idcalendar, `key`, nom, nom_curt) values (\''.$idcalendar.'\', \''.$key.'\', \''.$nom.'\', \''.$nom_curt.'\')';
+      $sql = 'insert into '.$this->conf->dbprefix.'calendaris (idcalendar, `key`) values (\''.$idcalendar.'\', \''.$key.'\')';
       $res = $idcon->query( $sql );
       $ret = array(
                    'master' => $res->num_rows,

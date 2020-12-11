@@ -81,7 +81,7 @@ uses
   uGenFunc;
 
 const
-  cUrlBase = 'http://www.castellersandorra.com/ca/wwwroot/ca/';
+  cUrlBase = 'http://www.castellersandorra.com/ca/';
 
 { TJsonDTO }
 

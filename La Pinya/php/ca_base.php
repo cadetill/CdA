@@ -8,7 +8,7 @@
 class ca_base {
   protected $conf;  // object from ca_config class
   protected $error; // last error
-  protected $func; // function to execute
+  protected $func; // function to execute 
 
   /**
    * class constructor

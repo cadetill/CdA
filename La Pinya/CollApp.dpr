@@ -16,7 +16,8 @@ uses
   NetworkState.Android in 'src\Classes\NetworkState.Android.pas',
   UCalendarsFrm in 'src\UCalendarsFrm.pas',
   UCalendarFrm in 'src\UCalendarFrm.pas',
-  uResultRequest in 'src\Classes\uResultRequest.pas';
+  uResultRequest in 'src\Classes\uResultRequest.pas',
+  uMembers in 'src\Classes\uMembers.pas';
 
 {$R *.res}
 

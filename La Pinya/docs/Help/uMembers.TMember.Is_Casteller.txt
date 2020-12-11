@@ -1,0 +1,1 @@
+Indicates if the member is a casteller or not.
