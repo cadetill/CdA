@@ -20,15 +20,16 @@
 
   // check if it's a correct function name
   if (!$conf->isCorrectFunc($func)) {
-    return $conf->errBadRequest;
+    echo $conf->errBadRequest;
+    exit;
   }
-  
+
   // function switch    
   switch ($func) {
     case 'getCalendars': 
-    case 'delCalendar': 
-    case 'addCalendar': 
     case 'editCalendar': 
+    case 'addCalendar': 
+    case 'delCalendar': 
       $cal = new ca_calendars($conf, $func);
       $response = $cal->execute();
       break;
@@ -40,7 +41,9 @@
       $response = $m->execute();
       break;
     default:
-      return $this->conf->errFuncNotFound;
+      $cb = new ca_base($conf, '');
+      echo $cb->stringReplace($conf->errFuncNotFound, $func);
+      exit;
   }
 
   // if empty string, return an error

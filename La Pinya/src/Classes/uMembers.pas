@@ -97,13 +97,13 @@ type
     // @include(..\..\docs\help\uMembers.TMembers.IndexOf.txt)
     function IndexOf(Id: string): Integer;
 
-    // @include(..\..\docs\help\uMembers.TMembers.GetCalendar.txt)
+    // @include(..\..\docs\help\uMembers.TMembers.GetMembers.txt)
     class function GetMembers: TMembers;
-    // @include(..\..\docs\help\uMembers.TMembers.EditCalendar.txt)
+    // @include(..\..\docs\help\uMembers.TMembers.EditMember.txt)
     class function EditMember(const Item: TMember): TResultRequest;
-    // @include(..\..\docs\help\uMembers.TMembers.AddCalendar.txt)
+    // @include(..\..\docs\help\uMembers.TMembers.AddMember.txt)
     class function AddMember(const Nom: string): TResultRequest;
-    // @include(..\..\docs\help\uMembers.TMembers.DelCalendar.txt)
+    // @include(..\..\docs\help\uMembers.TMembers.DelMember.txt)
     class function DelMember(const Id: string): TResultRequest;
 
     // @include(..\..\docs\help\uMembers.TMembers.Items.txt)
