@@ -1,0 +1,4 @@
+@abstract(Base class for list items.)
+
+The TBaseListFrm form class has components and methods neededs for list items.@br
+Implements @link(IChildren) interface to interact with main form.

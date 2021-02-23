@@ -145,7 +145,7 @@ implementation
 
 uses
   FMX.Platform, FMX.VirtualKeyboard,
-  UCalendarsFrm;//, USeasonsFrm, UEventsFrm, USocisFrm, URolsFrm;
+  UCalendarsFrm, UMembersFrm;//, USeasonsFrm, UEventsFrm, URolsFrm;
 
 {$R *.fmx}
 
@@ -334,7 +334,7 @@ end;
 
 procedure TMainFrm.rSocisClick(Sender: TObject);
 begin
-//  CreateForm(TSocisFrm, nil);
+  CreateForm(TMembersFrm, nil);
 end;
 
 procedure TMainFrm.ShowAcceptButton(State: Boolean);

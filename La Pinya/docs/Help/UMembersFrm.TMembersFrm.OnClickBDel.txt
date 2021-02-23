@@ -1,0 +1,5 @@
+@abstract(Deletes a member.)
+
+Deletes selected member.
+
+@param(Sender TObject object)

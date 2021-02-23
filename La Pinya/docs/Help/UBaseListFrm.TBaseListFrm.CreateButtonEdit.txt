@@ -1,0 +1,6 @@
+@abstract(Creates Edit button.)
+
+Creates a new button to edit selected item.
+
+@param(Id string with identifier of item to be edited)
+@param(lbItem TListBoxItem where to add the button)

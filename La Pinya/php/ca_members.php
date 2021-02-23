@@ -56,13 +56,24 @@ class ca_members extends ca_base {
       return $this->error;
     }
 
-    // execute query
+    // query to execute
     $sql = 'select * from '.$this->conf->dbprefix.'socis order by nom';
     $res = $idcon->query( $sql );
     
     // prepare result to return
     $ret = array();
     while($row = $res->fetch_assoc()) {
+      //for every member we get his roles
+      $sql = 'select rs.id, r.descrip '
+           . 'from '.$this->conf->dbprefix.'rols_socis rs '
+           . '  inner join '.$this->conf->dbprefix.'rols r on r.id = rs.id_rol '
+           . 'where rs.id_soci = '.$row['id'];
+      $res1 = $idcon->query( $sql );
+      $rols = array();
+      while($row1 = $res1->fetch_assoc()) {
+        $rols[] = $row1;
+      }
+      $row['Rols'] = $rols;
       $ret[] = $row;
     }
 

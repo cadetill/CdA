@@ -1,0 +1,6 @@
+@abstract(Modifies a specific member.)
+
+Does a REST request to server and modifies data from a specific member.
+
+@params(Item @link(TMember) with data to be modified)
+@return(Returns a @link(TResultRequest) object)

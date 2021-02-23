@@ -56,7 +56,7 @@ class ca_calendars extends ca_base {
       return $this->error;
     }
 
-    // execute query
+    // query to execute
     $sql = 'select * from '.$this->conf->dbprefix.'calendaris order by nom';
     $res = $idcon->query( $sql );
     

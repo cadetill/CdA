@@ -1,0 +1,6 @@
+@abstract(Adds a new member.)
+
+Does a REST request to server and adds a new member.
+
+@params(Nom @link(Nom) from the new member)
+@return(Returns a @link(TResultRequest) object)

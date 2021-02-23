@@ -1,1 +1,3 @@
-CollApp es una aplicación para gestionar collas castelleras.
+CollApp is an application to manage collas castelleras. A "colla castellera" is an group of people to do human towers.@br
+
+For more information about human towers, see @url(https://en.wikipedia.org/wiki/Castell)@br@br

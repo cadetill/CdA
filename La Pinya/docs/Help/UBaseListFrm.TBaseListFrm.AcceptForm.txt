@@ -1,0 +1,4 @@
+@abstract(Code to be executed when Ok button will be pushed.)
+
+Function from @link(IChildren) interface.@br
+This function is called from @link(TMainFrm) main form when the Ok button will be pushed.

@@ -1,0 +1,5 @@
+@abstract(Deletes selected member.)
+
+Does a REST request to server and deletes an existing member.
+
+@params(Id string with member id to deletes)

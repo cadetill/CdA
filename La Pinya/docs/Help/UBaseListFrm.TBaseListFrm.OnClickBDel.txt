@@ -1,0 +1,5 @@
+@abstract(Abstract method for delete an item.)
+
+Deletes selected item.
+
+@param(Sender TObject object)

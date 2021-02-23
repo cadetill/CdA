@@ -335,6 +335,23 @@
         <DCCReference Include="src\UCalendarFrm.pas"/>
         <DCCReference Include="src\Classes\uResultRequest.pas"/>
         <DCCReference Include="src\Classes\uMembers.pas"/>
+        <DCCReference Include="src\BaseFrm\UBaseListFrm.pas">
+            <Form>BaseListFrm</Form>
+            <FormType>fmx</FormType>
+        </DCCReference>
+        <DCCReference Include="src\UMembersFrm.pas">
+            <Form>MembersFrm</Form>
+            <FormType>fmx</FormType>
+        </DCCReference>
+        <DCCReference Include="src\BaseFrm\UBaseGesFrm.pas">
+            <Form>BaseGesFrm</Form>
+            <FormType>fmx</FormType>
+        </DCCReference>
+        <DCCReference Include="src\UMemberFrm.pas">
+            <Form>MemberFrm</Form>
+            <FormType>fmx</FormType>
+        </DCCReference>
+        <DCCReference Include="src\Classes\uRoles.pas"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>

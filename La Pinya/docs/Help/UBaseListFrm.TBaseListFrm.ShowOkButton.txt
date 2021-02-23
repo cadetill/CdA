@@ -1,0 +1,4 @@
+@abstract(Establishes if the "Ok" button will be shown on Main form.)
+
+Function from @link(IChildren) interface.@br
+This function is called from @link(TMainFrm) main form to establish if Ok button will be shown. Returns True if Ok button will be shown and False otherwise

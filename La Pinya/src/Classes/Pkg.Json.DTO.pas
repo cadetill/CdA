@@ -66,6 +66,8 @@ type
     property Error: string read FError write FError;
   end;
 
+  TJsonDTOClass = class of TJsonDTO;
+
   { -------------------------------------------------------------------------- }
   // @exclude
   GenericListReflectAttribute = class(JsonReflectAttribute)

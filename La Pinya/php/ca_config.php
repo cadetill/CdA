@@ -28,7 +28,8 @@ class ca_config {
   // authorized functions
   public function isCorrectFunc($func) {      
     return in_array($func, array('getCalendars',    'delCalendar',  'addCalendar',  'editCalendar',
-                                 'getMembers',      'delMember',    'addMember',    'editMember'
+                                 'getMembers',      'delMember',    'addMember',    'editMember',
+                                 'getRoles',        'delRole',      'addRole',      'editRole'
                                 )
                    );
   }

@@ -1,0 +1,13 @@
+inherited MembersFrm: TMembersFrm
+  Caption = 'BaseListFrm1'
+  DesignerMasterStyle = 0
+  inherited lbData: TListBox
+    Viewport.Width = 640.000000000000000000
+    Viewport.Height = 480.000000000000000000
+    inherited lbiSearch: TSearchBox
+      inherited bAdd: TSpeedButton
+        OnClick = bAddClick
+      end
+    end
+  end
+end

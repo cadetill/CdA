@@ -19,12 +19,12 @@ uses
   System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.Layouts,
   FMX.Edit, FMX.StdCtrls, FMX.Controls.Presentation, FMX.Objects,
-  uInterfaces;
+  UBaseGesFrm;
 
 type
   { -------------------------------------------------------------------------- }
   // @include(..\docs\help\UCalendarFrm.TCalendarFrm.txt)
-  TCalendarFrm = class(TForm, IChildren)
+  TCalendarFrm = class(TBaseGesFrm)
     // @exclude
     rKey: TRectangle;
     // @exclude
@@ -49,33 +49,22 @@ type
     lNomCurt: TLabel;
     // @exclude
     eNomCurt: TEdit;
-    // @exclude
-    sbData: TScrollBox;
   protected
-    // @include(..\docs\help\UCalendarFrm.TCalendarFrm.FThreadEnd.txt)
-    FThreadEnd: Boolean;
-
-    // @include(..\docs\help\UCalendarFrm.TCalendarFrm.ThreadTerminated.txt)
-    procedure ThreadTerminated(Sender: TObject);
     // @include(..\docs\help\UCalendarFrm.TCalendarFrm.DoCheck.txt)
     function DoCheck: Boolean;
   public
-    // @include(..\docs\help\UCalendarsFrm.TCalendarsFrm.SetCaption.txt)
-    function SetCaption: string;
-    // @include(..\docs\help\UCalendarsFrm.TCalendarsFrm.ShowOkButton.txt)
-    function ShowOkButton: Boolean;
-    // @include(..\docs\help\UCalendarsFrm.TCalendarsFrm.ShowBackButton.txt)
-    function ShowBackButton: Boolean;
-    // @include(..\docs\help\UCalendarsFrm.TCalendarsFrm.AcceptForm.txt)
-    function AcceptForm: Boolean;
-    // @include(..\docs\help\UCalendarsFrm.TCalendarsFrm.AfterShow.txt)
-    procedure AfterShow;
+    // @include(..\docs\help\UBaseGesFrm.TBaseGesFrm.SetCaption.txt)
+    function SetCaption: string; override;
+    // @include(..\docs\help\UBaseGesFrm.TBaseGesFrm.AcceptForm.txt)
+    function AcceptForm: Boolean; override;
+    // @include(..\docs\help\UBaseGesFrm.TBaseGesFrm.AfterShow.txt)
+    procedure AfterShow; override;
   end;
 
 implementation
 
 uses
-  uCalendars, uGenFunc, uMessage, uResultRequest;
+  uCalendars, uGenFunc, uMessage, uResultRequest, uInterfaces;
 
 {$R *.fmx}
 
@@ -175,21 +164,6 @@ end;
 function TCalendarFrm.SetCaption: string;
 begin
   Result := 'Definició del Calendari';
-end;
-
-function TCalendarFrm.ShowBackButton: Boolean;
-begin
-  Result := True;
-end;
-
-function TCalendarFrm.ShowOkButton: Boolean;
-begin
-  Result := True;
-end;
-
-procedure TCalendarFrm.ThreadTerminated(Sender: TObject);
-begin
-  FThreadEnd := True;
 end;
 
 end.

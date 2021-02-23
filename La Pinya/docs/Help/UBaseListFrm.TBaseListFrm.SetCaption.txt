@@ -1,0 +1,4 @@
+@abstract(Sets caption form.)
+
+Function from @link(IChildren) interface.@br
+This function is called from @link(TMainFrm) main form to set child form caption.

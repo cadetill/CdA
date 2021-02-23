@@ -1,19 +1,6 @@
-object CalendarFrm: TCalendarFrm
-  Left = 0
-  Top = 0
-  Caption = 'Form1'
-  ClientHeight = 480
-  ClientWidth = 640
-  FormFactor.Width = 320
-  FormFactor.Height = 480
-  FormFactor.Devices = [Desktop]
+inherited CalendarFrm: TCalendarFrm
   DesignerMasterStyle = 0
-  object sbData: TScrollBox
-    Align = Client
-    Size.Width = 640.000000000000000000
-    Size.Height = 480.000000000000000000
-    Size.PlatformDefault = False
-    TabOrder = 2
+  inherited sbData: TScrollBox
     Viewport.Width = 640.000000000000000000
     Viewport.Height = 480.000000000000000000
     object rIdCal: TRectangle
@@ -37,6 +24,35 @@ object CalendarFrm: TCalendarFrm
         TabOrder = 0
       end
       object eIdCal: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = Client
+        TabOrder = 1
+        Size.Width = 517.000000000000000000
+        Size.Height = 40.000000000000000000
+        Size.PlatformDefault = False
+      end
+    end
+    object rKey: TRectangle
+      Align = Top
+      Fill.Color = claNull
+      Margins.Left = 5.000000000000000000
+      Margins.Top = 5.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Position.X = 5.000000000000000000
+      Position.Y = 140.000000000000000000
+      Size.Width = 630.000000000000000000
+      Size.Height = 40.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Color = claNull
+      object lKey: TLabel
+        Align = Left
+        Size.Width = 113.000000000000000000
+        Size.Height = 40.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Key'
+        TabOrder = 0
+      end
+      object eKey: TEdit
         Touch.InteractiveGestures = [LongTap, DoubleTap]
         Align = Client
         TabOrder = 1
@@ -81,7 +97,7 @@ object CalendarFrm: TCalendarFrm
       Margins.Top = 5.000000000000000000
       Margins.Right = 5.000000000000000000
       Position.X = 5.000000000000000000
-      Position.Y = 140.000000000000000000
+      Position.Y = 50.000000000000000000
       Size.Width = 630.000000000000000000
       Size.Height = 40.000000000000000000
       Size.PlatformDefault = False
@@ -95,35 +111,6 @@ object CalendarFrm: TCalendarFrm
         TabOrder = 0
       end
       object eNomCurt: TEdit
-        Touch.InteractiveGestures = [LongTap, DoubleTap]
-        Align = Client
-        TabOrder = 1
-        Size.Width = 517.000000000000000000
-        Size.Height = 40.000000000000000000
-        Size.PlatformDefault = False
-      end
-    end
-    object rKey: TRectangle
-      Align = Top
-      Fill.Color = claNull
-      Margins.Left = 5.000000000000000000
-      Margins.Top = 5.000000000000000000
-      Margins.Right = 5.000000000000000000
-      Position.X = 5.000000000000000000
-      Position.Y = 50.000000000000000000
-      Size.Width = 630.000000000000000000
-      Size.Height = 40.000000000000000000
-      Size.PlatformDefault = False
-      Stroke.Color = claNull
-      object lKey: TLabel
-        Align = Left
-        Size.Width = 113.000000000000000000
-        Size.Height = 40.000000000000000000
-        Size.PlatformDefault = False
-        Text = 'Key'
-        TabOrder = 0
-      end
-      object eKey: TEdit
         Touch.InteractiveGestures = [LongTap, DoubleTap]
         Align = Client
         TabOrder = 1

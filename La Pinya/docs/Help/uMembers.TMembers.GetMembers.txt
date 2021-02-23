@@ -1,0 +1,5 @@
+@abstract(Get all members from server.)
+
+Do a call to server and receive all defined members.
+
+@return(Returns a TMembers object)

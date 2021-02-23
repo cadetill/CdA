@@ -17,7 +17,12 @@ uses
   UCalendarsFrm in 'src\UCalendarsFrm.pas',
   UCalendarFrm in 'src\UCalendarFrm.pas',
   uResultRequest in 'src\Classes\uResultRequest.pas',
-  uMembers in 'src\Classes\uMembers.pas';
+  uMembers in 'src\Classes\uMembers.pas',
+  UBaseListFrm in 'src\BaseFrm\UBaseListFrm.pas' {BaseListFrm},
+  UMembersFrm in 'src\UMembersFrm.pas' {MembersFrm},
+  UBaseGesFrm in 'src\BaseFrm\UBaseGesFrm.pas' {BaseGesFrm},
+  UMemberFrm in 'src\UMemberFrm.pas' {MemberFrm},
+  uRoles in 'src\Classes\uRoles.pas';
 
 {$R *.res}
 

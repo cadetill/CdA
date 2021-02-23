@@ -1,0 +1,6 @@
+@abstract(Creates Del button.)
+
+Creates a new button to delete selected item.
+
+@param(Id string with identifier of item to be deleted)
+@param(lbItem TListBoxItem where to add the button)

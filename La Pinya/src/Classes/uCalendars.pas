@@ -70,10 +70,10 @@ type
 
     // @include(..\..\docs\help\uCalendars.TCalendars.GetCalendar.txt)
     class function GetCalendar: TCalendars;
-    // @include(..\..\docs\help\uCalendars.TCalendars.EditCalendar.txt)
-    class function EditCalendar(const Item: TCalendar): TResultRequest;
     // @include(..\..\docs\help\uCalendars.TCalendars.AddCalendar.txt)
     class function AddCalendar(const IdCalendari, Key: string): TResultRequest;
+    // @include(..\..\docs\help\uCalendars.TCalendars.EditCalendar.txt)
+    class function EditCalendar(const Item: TCalendar): TResultRequest;
     // @include(..\..\docs\help\uCalendars.TCalendars.DelCalendar.txt)
     class function DelCalendar(const Id: string): TResultRequest;
 

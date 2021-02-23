@@ -1,0 +1,5 @@
+@abstract(Edits a member.)
+
+Shows @link(TMemberFrm) with selected member.
+
+@param(Sender TObject object)

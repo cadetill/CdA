@@ -1,0 +1,7 @@
+@abstract(Create a new listbox item and return it.)
+
+Create a new TListBoxItem with information passed by parameter.
+
+@param(Text string to set into Text property)
+@param(Detail string to set into Detail property)
+@param(Id string with identifier of item to set into TagString property)

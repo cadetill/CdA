@@ -1,0 +1,5 @@
+@abstract(Abstract method for edit a item.)
+
+Shows the selected item.
+
+@param(Sender TObject object)

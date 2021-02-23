@@ -1,4 +1,3 @@
 @abstract(Class with the list of calendars.)
 
-The TCalendarsFrm form class has a list of all calendars. We can add new calendars and delete or modify the existing ones.@br
-Implements @link(IChildren) interface to interact with main form.
+The TCalendarsFrm form class has a list of all calendars. We can add new calendars and delete or modify the existing ones.

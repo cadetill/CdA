@@ -1,0 +1,9 @@
+@abstract(Adds a new @link(TMember) into @link(Items) list.)
+
+Adds a new @link(TMember) into the @link(Items) list and returns his position.@br
+Initialize this new member with an @link(Id) and an @link(Nom).
+
+@param(Id string with the Id of the new member)
+@param(Nom string with the name of the new member)
+
+@returns(Integer with position into the @link(Items) list)

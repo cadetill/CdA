@@ -19,40 +19,26 @@ uses
   System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.StdCtrls,
   FMX.Controls.Presentation, FMX.Edit, FMX.SearchBox, FMX.ListBox, FMX.Layouts,
-  uInterfaces, uCalendars;
+  UBaseListFrm, uCalendars;
 
 type
   { -------------------------------------------------------------------------- }
   // @include(..\docs\help\UCalendarsFrm.TCalendarsFrm.txt)
-  TCalendarsFrm = class(TForm, IChildren)
-    // @exclude
-    lbCalendars: TListBox;
-    // @exclude
-    ListBoxItem1: TListBoxItem;
-    // @exclude
-    lbiSearch: TSearchBox;
-    // @exclude
-    bAdd: TSpeedButton;
-    // @exclude
-    SpeedButton1: TSpeedButton;
-    // @exclude
-    SpeedButton2: TSpeedButton;
-    // @exclude
-    SpeedButton3: TSpeedButton;
+  TCalendarsFrm = class(TBaseListFrm)
     // @include(..\docs\help\UCalendarsFrm.TCalendarsFrm.bAddClick.txt)
     procedure bAddClick(Sender: TObject);
   protected
     // @include(..\docs\help\UCalendarsFrm.TCalendarsFrm.FCal.txt)
-    FCal: TCalendars;
+    FData: TCalendars;
 
     // @include(..\docs\help\UCalendarsFrm.TCalendarsFrm.CreateItems.txt)
     procedure CreateItems;
     // @include(..\docs\help\UCalendarsFrm.TCalendarsFrm.CreateItem.txt)
     procedure CreateItem(Cal: TCalendar);
     // @include(..\docs\help\UCalendarsFrm.TCalendarsFrm.OnClickBEdit.txt)
-    procedure OnClickBEdit(Sender: TObject);
+    procedure OnClickBEdit(Sender: TObject); override;
     // @include(..\docs\help\UCalendarsFrm.TCalendarsFrm.OnClickBDel.txt)
-    procedure OnClickBDel(Sender: TObject);
+    procedure OnClickBDel(Sender: TObject); override;
     // @include(..\docs\help\UCalendarsFrm.TCalendarsFrm.OnChangeCalendar.txt)
     procedure OnChangeCalendar(Sender: TObject);
   public
@@ -61,36 +47,19 @@ type
     // @include(..\docs\help\UCalendarsFrm.TCalendarsFrm.Destroy.txt)
     destructor Destroy; override;
 
-    // @include(..\docs\help\UCalendarsFrm.TCalendarsFrm.SetCaption.txt)
-    function SetCaption: string;
-    // @include(..\docs\help\UCalendarsFrm.TCalendarsFrm.ShowOkButton.txt)
-    function ShowOkButton: Boolean;
-    // @include(..\docs\help\UCalendarsFrm.TCalendarsFrm.ShowBackButton.txt)
-    function ShowBackButton: Boolean;
-    // @include(..\docs\help\UCalendarsFrm.TCalendarsFrm.AcceptForm.txt)
-    function AcceptForm: Boolean;
-    // @include(..\docs\help\UCalendarsFrm.TCalendarsFrm.AfterShow.txt)
-    procedure AfterShow;
+    // @include(..\docs\help\UBaseListFrm.TBaseListFrm.SetCaption.txt)
+    function SetCaption: string; override;
   end;
 
 implementation
 
 uses
   FMX.DialogService,
-  uMessage, UCalendarFrm, uResultRequest, uGenFunc;
+  uMessage, UCalendarFrm, uResultRequest, uGenFunc, uInterfaces;
 
 {$R *.fmx}
 
 { TCalendarsFrm }
-
-function TCalendarsFrm.AcceptForm: Boolean;
-begin
-  Result := True;
-end;
-
-procedure TCalendarsFrm.AfterShow;
-begin
-end;
 
 constructor TCalendarsFrm.Create(AOwner: TComponent);
 var
@@ -98,9 +67,7 @@ var
 begin
   inherited;
 
-  FCal := TCalendars.Create;
-
-  lbCalendars.Clear;
+  lbData.Clear;
   lbiSearch.Text := '';
 
   if Supports(Owner, IMainMenu, Intf)  then
@@ -109,13 +76,13 @@ begin
   TThread.CreateAnonymousThread(procedure
   begin
     try
-      FCal := TCalendars.GetCalendar;
-      if FCal.Error <> '' then
+      FData := TCalendars.GetCalendar;
+      if FData.Error <> '' then
       begin
         TThread.Synchronize(TThread.CurrentThread,
           procedure
           begin
-            TMessage.Show(FCal.Error);
+            TMessage.Show(FData.Error);
           end);
       end;
 
@@ -144,11 +111,11 @@ var
 begin
   Cal.OnChange := OnChangeCalendar;
 
-  lbItem := TListBoxItem.Create(lbCalendars);
+  lbItem := TListBoxItem.Create(lbData);
   lbItem.Text := Cal.Nom;
   lbItem.TagString := Cal.Id;
   lbItem.ItemData.Detail := 'Id.Calendari: ' + Cal.Idcalendar;
-  lbCalendars.AddObject(lbItem);
+  lbData.AddObject(lbItem);
 
   BDel := TSpeedButton.Create(lbItem);
   BDel.Align := TAlignLayout.Right;
@@ -171,22 +138,22 @@ procedure TCalendarsFrm.CreateItems;
 var
   i: Integer;
 begin
-  if not Assigned(FCal) then
+  if not Assigned(FData) then
     Exit;
-    
-  lbCalendars.BeginUpdate;
+
+  lbData.BeginUpdate;
   try
-    for i := 0 to FCal.Items.Count - 1 do
-      CreateItem(FCal.Items[i]);
+    for i := 0 to FData.Items.Count - 1 do
+      CreateItem(FData.Items[i]);
   finally
-    lbCalendars.EndUpdate;
+    lbData.EndUpdate;
   end;
 end;
 
 destructor TCalendarsFrm.Destroy;
 begin
-  if Assigned(FCal) then
-    FCal.DisposeOf;
+  if Assigned(FData) then
+    FData.DisposeOf;
 
   inherited;
 end;
@@ -199,17 +166,17 @@ begin
   if not (Sender is TCalendar) then
     Exit;
 
-  Idx := FCal.IndexOf(TCalendar(Sender).id);
+  Idx := FData.IndexOf(TCalendar(Sender).id);
   if Idx < 0 then
     Exit;
 
-  for i := 0 to lbCalendars.Count - 1 do
+  for i := 0 to lbData.Count - 1 do
   begin
-    if SameText(lbCalendars.ItemByIndex(i).TagString, TCalendar(Sender).id) then
+    if SameText(lbData.ItemByIndex(i).TagString, TCalendar(Sender).id) then
     begin
-      lbCalendars.ItemIndex := i;
-      lbCalendars.ItemByIndex(i).Text := TCalendar(Sender).nom;
-      lbCalendars.ItemByIndex(i).ItemData.Detail := 'Id.Calendari: ' + TCalendar(Sender).idcalendar;
+      lbData.ItemIndex := i;
+      lbData.ItemByIndex(i).Text := TCalendar(Sender).nom;
+      lbData.ItemByIndex(i).ItemData.Detail := 'Id.Calendari: ' + TCalendar(Sender).idcalendar;
       Break;
     end;
   end;
@@ -255,7 +222,7 @@ begin
       end
       ).Start;
 
-      lbCalendars.RemoveObject(TListBoxItem(TSpeedButton(Sender).Owner));
+      lbData.RemoveObject(TListBoxItem(TSpeedButton(Sender).Owner));
     end);
 end;
 
@@ -273,28 +240,18 @@ begin
   if not (Sender is TSpeedButton) then
     Exit;
 
-  Idx := FCal.IndexOf(TSpeedButton(Sender).TagString);
+  Idx := FData.IndexOf(TSpeedButton(Sender).TagString);
   if Idx < 0 then
     Exit;
 
-  // si es pot, creem formulari d'assistència
+  // si es pot, creem formulari
   if Supports(Owner, IMainMenu, Intf) then
-    Intf.CreateForm(TCalendarFrm, FCal.Items[Idx]);
+    Intf.CreateForm(TCalendarFrm, FData.Items[Idx]);
 end;
 
 function TCalendarsFrm.SetCaption: string;
 begin
   Result := 'Calendaris de la colla';
-end;
-
-function TCalendarsFrm.ShowBackButton: Boolean;
-begin
-  Result := True;
-end;
-
-function TCalendarsFrm.ShowOkButton: Boolean;
-begin
-  Result := False;
 end;
 
 procedure TCalendarsFrm.bAddClick(Sender: TObject);
@@ -320,9 +277,8 @@ begin
       Resp := TCalendars.AddCalendar(Trim(AValues[0]), Trim(AValues[1]));
       if TryStrToInt(Resp.id, TmpI) and (TmpI > 0) and (Resp.Error = '') then
       begin
-        TmpI := FCal.Add(Resp.id, Trim(AValues[0]), Trim(AValues[1]));
-        //FCal.SaveToFile(TGenFunc.GetBaseFolder + uCalendars.cJsonCalendars);
-        CreateItem(FCal.Items[TmpI]);
+        TmpI := FData.Add(Resp.id, Trim(AValues[0]), Trim(AValues[1]));
+        CreateItem(FData.Items[TmpI]);
       end
       else
         TMessage.MsjErr('Error creant calendari', []);

@@ -5,6 +5,7 @@
   require_once 'ca_config.php';
   require_once 'ca_calendars.php';
   require_once 'ca_members.php'; 
+  require_once 'ca_roles.php'; 
 
   // config object  
   $conf = new ca_config();
@@ -39,6 +40,13 @@
     case 'editMember': 
       $m = new ca_members($conf, $func);
       $response = $m->execute();
+      break;
+    case 'getRoles': 
+    case 'delRole': 
+    case 'addRole': 
+    case 'editRole': 
+      $r = new ca_roles($conf, $func);
+      $response = $r->execute();
       break;
     default:
       $cb = new ca_base($conf, '');

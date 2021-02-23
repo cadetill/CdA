@@ -1,0 +1,3 @@
+@abstract(Creates all items.)
+
+Call @link(CreateItem) to create all members from @link(FData) list.

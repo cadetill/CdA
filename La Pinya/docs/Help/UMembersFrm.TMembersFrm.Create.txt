@@ -1,0 +1,5 @@
+@abstract(Constructor of the class.)
+
+Initializes @link(FData) object.
+
+@param(AOwner TComponent owner)
